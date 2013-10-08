@@ -1,0 +1,93 @@
+EESchema-DOCLIB  Version 2.0  Date: 23/09/2013 11:00:33
+#
+$CMP ERF8-025-07.0-L-DV-T
+D 0.8MM EDGE RATE SOCKET 
+F http://www.samtec.com/documents/webfiles/cpdf/ERF8-XXX-XX.X-X-DV-XXXX-XX-MKT.pdf
+$ENDCMP
+#
+$CMP FDS8979
+F transistors/mos/*.*
+$ENDCMP
+#
+$CMP LED_RGB
+K LED
+$ENDCMP
+#
+$CMP LM193
+D Dual Voltage Comparator
+K Comp
+F ns/lm193.pdf
+$ENDCMP
+#
+$CMP LM293
+D Dual Voltage Comparator
+K Comp
+F ns/lm193.pdf
+$ENDCMP
+#
+$CMP LM393
+D Dual Voltage Comparator
+K Comp
+F ns/lm193.pdf
+$ENDCMP
+#
+$CMP MAX9032AKA
+D Dual Voltage Comparator
+K Comp
+F ns/lm193.pdf
+$ENDCMP
+#
+$CMP MAX9302AKA
+D Dual Voltage Comparator
+K Comp
+F ns/lm193.pdf
+$ENDCMP
+#
+$CMP MIC69153YML
+D Single Supply VIN, Low VIN, Low VOUT, 1.5A LDO
+K DC/DC
+F http://www.micrel.com/_PDF/mic69150.pdf
+$ENDCMP
+#
+$CMP MOSFET_N
+F transistors/mos/*.*
+$ENDCMP
+#
+$CMP NB4L52
+D D Flip-Flop with Reset
+$ENDCMP
+#
+$CMP NB6L11M
+D 1:2 CML FanOut
+$ENDCMP
+#
+$CMP SN65LVDS20
+D LVDS REPEATER/TRANSLATOR WITH ENABLE
+F http://www.ti.com/lit/ds/symlink/sn65lvp20.pdf
+$ENDCMP
+#
+$CMP SN65LVP20
+D LVPECL REPEATER/TRANSLATOR WITH ENABLE
+F http://www.ti.com/lit/ds/symlink/sn65lvp20.pdf
+$ENDCMP
+#
+$CMP TPS542941
+D 2A/3A Dual Channel Synchronous Step-Down Switcher with Integrated FET
+K DC/DC
+F http://www.ti.com/lit/ds/symlink/tps542941.pdf
+$ENDCMP
+#
+$CMP TVS_BIDIR
+D Diode zener
+K DEV DIODE
+$ENDCMP
+#
+$CMP XC6SLX25T-BG484
+D SPARTAN-6  FG484
+$ENDCMP
+#
+$CMP XC6SLX45T-FGG484
+D SPARTAN-6  FG484
+$ENDCMP
+#
+#End Doc Library
