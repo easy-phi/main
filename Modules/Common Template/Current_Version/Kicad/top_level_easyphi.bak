@@ -37,7 +37,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 2
 Title ""
-Date "8 oct 2013"
+Date "18 oct 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -1227,4 +1227,15 @@ Wire Wire Line
 Connection ~ 13000 5750
 Text Notes 12200 10950 0    59   ~ 0
 Easy-phi module template - CERN OHL
+$Comp
+L LOGO #G?
+U 1 1 5261604F
+P 11000 10750
+F 0 "#G?" H 11000 10250 60  0001 C CNN
+F 1 "LOGO" H 11000 11250 60  0001 C CNN
+F 2 "" H 11000 10750 60  0000 C CNN
+F 3 "" H 11000 10750 60  0000 C CNN
+	1    11000 10750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

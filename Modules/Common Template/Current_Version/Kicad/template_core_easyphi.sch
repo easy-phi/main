@@ -37,7 +37,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 2 2
 Title ""
-Date "8 oct 2013"
+Date "18 oct 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -3971,4 +3971,15 @@ Text Label 4450 2000 0    40   ~ 0
 5V_PGOOD
 Text Notes 12200 10950 0    59   ~ 0
 Easy-phi module template - CERN OHL
+$Comp
+L LOGO #G?
+U 1 1 526179E3
+P 15200 10150
+F 0 "#G?" H 15200 9650 60  0001 C CNN
+F 1 "LOGO" H 15200 10650 60  0001 C CNN
+F 2 "" H 15200 10150 60  0000 C CNN
+F 3 "" H 15200 10150 60  0000 C CNN
+	1    15200 10150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

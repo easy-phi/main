@@ -37,7 +37,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 2
 Title ""
-Date "8 oct 2013"
+Date "18 oct 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -505,75 +505,75 @@ $EndComp
 Text Notes 3300 9700 0    60   ~ 0
 R5 = ((Itriplow * 0.03) + 4.7mV) / 37uA\nSlew rate set to max 3.3V/ms
 Wire Notes Line
-	12550 8500 14900 8500
+	11850 8500 14200 8500
 Wire Notes Line
-	14900 8500 14900 9800
+	14200 8500 14200 9800
 Wire Notes Line
-	14900 8800 12550 8800
+	14200 8800 11850 8800
 Wire Notes Line
-	12550 8500 12550 9800
-Text Notes 12850 8700 0    60   ~ 0
+	11850 8500 11850 9800
+Text Notes 12150 8700 0    60   ~ 0
 ABOUT THE POWER SUPPLY SYMBOLS
 $Comp
 L +12V #PWR07
 U 1 1 51B87547
-P 12750 9000
-F 0 "#PWR07" H 12750 8950 20  0001 C CNN
-F 1 "+12V" H 12750 9100 30  0000 C CNN
-F 2 "" H 12750 9000 60  0000 C CNN
-F 3 "" H 12750 9000 60  0000 C CNN
-	1    12750 9000
+P 12050 9000
+F 0 "#PWR07" H 12050 8950 20  0001 C CNN
+F 1 "+12V" H 12050 9100 30  0000 C CNN
+F 2 "" H 12050 9000 60  0000 C CNN
+F 3 "" H 12050 9000 60  0000 C CNN
+	1    12050 9000
 	1    0    0    -1  
 $EndComp
 $Comp
 L +5V #PWR08
 U 1 1 51B87556
-P 12750 9250
-F 0 "#PWR08" H 12750 9340 20  0001 C CNN
-F 1 "+5V" H 12750 9340 30  0000 C CNN
-F 2 "" H 12750 9250 60  0000 C CNN
-F 3 "" H 12750 9250 60  0000 C CNN
-	1    12750 9250
+P 12050 9250
+F 0 "#PWR08" H 12050 9340 20  0001 C CNN
+F 1 "+5V" H 12050 9340 30  0000 C CNN
+F 2 "" H 12050 9250 60  0000 C CNN
+F 3 "" H 12050 9250 60  0000 C CNN
+	1    12050 9250
 	1    0    0    -1  
 $EndComp
 $Comp
 L +3.3V #PWR09
 U 1 1 51B87565
-P 12750 9500
-F 0 "#PWR09" H 12750 9460 30  0001 C CNN
-F 1 "+3.3V" H 12750 9610 30  0000 C CNN
-F 2 "" H 12750 9500 60  0000 C CNN
-F 3 "" H 12750 9500 60  0000 C CNN
-	1    12750 9500
+P 12050 9500
+F 0 "#PWR09" H 12050 9460 30  0001 C CNN
+F 1 "+3.3V" H 12050 9610 30  0000 C CNN
+F 2 "" H 12050 9500 60  0000 C CNN
+F 3 "" H 12050 9500 60  0000 C CNN
+	1    12050 9500
 	1    0    0    -1  
 $EndComp
 $Comp
 L +3.3VADC #PWR010
 U 1 1 51B8772D
-P 12750 9750
-F 0 "#PWR010" H 12750 9870 20  0001 C CNN
-F 1 "+3.3VADC" H 12750 9840 30  0000 C CNN
-F 2 "" H 12750 9750 60  0000 C CNN
-F 3 "" H 12750 9750 60  0000 C CNN
-	1    12750 9750
+P 12050 9750
+F 0 "#PWR010" H 12050 9870 20  0001 C CNN
+F 1 "+3.3VADC" H 12050 9840 30  0000 C CNN
+F 2 "" H 12050 9750 60  0000 C CNN
+F 3 "" H 12050 9750 60  0000 C CNN
+	1    12050 9750
 	1    0    0    -1  
 $EndComp
-Text Notes 13000 8950 0    40   ~ 0
+Text Notes 12300 8950 0    40   ~ 0
 is the 12V filtered coming from the backplane (MAX 4A)\nset R5 according to the max current you'll have
-Text Notes 13000 9200 0    40   ~ 0
+Text Notes 12300 9200 0    40   ~ 0
 is the 5V filtered coming from the backplane (MAX 0.5A)
-Text Notes 13000 9450 0    40   ~ 0
+Text Notes 12300 9450 0    40   ~ 0
 is a 3.3V generated from this 5V by a stepdown\nused by template_core chips
-Text Notes 13000 9700 0    40   ~ 0
+Text Notes 12300 9700 0    40   ~ 0
 is a 3.3V generated from the 5V by a LDO\nused by the uC ADC
 Wire Notes Line
-	12550 9050 14900 9050
+	11850 9050 14200 9050
 Wire Notes Line
-	12550 9300 14900 9300
+	11850 9300 14200 9300
 Wire Notes Line
-	12550 9550 14900 9550
+	11850 9550 14200 9550
 Wire Notes Line
-	12550 9800 14900 9800
+	11850 9800 14200 9800
 Wire Wire Line
 	2950 9400 3100 9400
 Wire Wire Line
@@ -1227,4 +1227,15 @@ Wire Wire Line
 Connection ~ 13000 5750
 Text Notes 12200 10950 0    59   ~ 0
 Easy-phi module template - CERN OHL
+$Comp
+L LOGO #G?
+U 1 1 5261604F
+P 15200 10150
+F 0 "#G?" H 15200 9650 60  0001 C CNN
+F 1 "LOGO" H 15200 10650 60  0001 C CNN
+F 2 "" H 15200 10150 60  0000 C CNN
+F 3 "" H 15200 10150 60  0000 C CNN
+	1    15200 10150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
