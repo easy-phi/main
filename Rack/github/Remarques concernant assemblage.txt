@@ -1,0 +1,5 @@
+
+- les vis torx 2.5x9.3 sont optionnelles, elles servent à fixer les guides dans les emplacements
+- nous n'utilisons que 2 profilés avant type L-KD 28F sur les 10 commandés
+- nous n'utilisons que 4 bis Torx M4x10 sur les 100 commandées
+- il nous faut 20x m2.5x10 pour fixer le backplane et 2 pour fixer la face avant 3UH (coniques celles ci)
