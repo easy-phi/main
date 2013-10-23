@@ -13,12 +13,6 @@
   )
 
   (page A3)
-  (title_block 
-    (title "Small Rack 5 slots")
-    (rev 1.0)
-    (company "University of Geneva            www.easy-phi.ch")
-  )
-
   (layers
     (15 Dessus.Cu signal hide)
     (2 Interne2.Cu signal hide)

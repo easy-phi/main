@@ -1,4 +1,4 @@
-update=08/10/2013 15:55:17
+update=23.10.2013 09:54:02
 version=1
 last_client=eeschema
 [general]
@@ -47,7 +47,7 @@ NetFmtName=PcbnewAdvanced
 RptD_X=0
 RptD_Y=100
 RptLab=1
-LabSize=60
+LabSize=98
 [eeschema/libraries]
 LibName1=power
 LibName2=device
