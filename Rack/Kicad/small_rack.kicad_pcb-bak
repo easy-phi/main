@@ -3,7 +3,7 @@
   (general
     (links 733)
     (no_connects 0)
-    (area 147.087112 -21.324325 364.191672 241.324325)
+    (area 151.924999 46.424999 297.075001 173.575001)
     (thickness 1.6)
     (drawings 41)
     (tracks 2193)
@@ -13,6 +13,12 @@
   )
 
   (page A3)
+  (title_block 
+    (title "Small Rack 5 slots")
+    (rev 1.0)
+    (company "University of Geneva            www.easy-phi.ch")
+  )
+
   (layers
     (15 Dessus.Cu signal hide)
     (2 Interne2.Cu signal hide)
