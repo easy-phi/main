@@ -1,4 +1,9 @@
-EESchema-DOCLIB  Version 2.0  Date: 23.10.2013 17:13:30
+EESchema-DOCLIB  Version 2.0  Date: 21.11.2013 15:15:35
+#
+$CMP BFS520
+D NPN 5 GHz wideband transistor
+F transistors/bipolar/BFR92.pdf
+$ENDCMP
 #
 $CMP ERF8-025-07.0-L-DV-T
 D 0.8MM EDGE RATE SOCKET 
@@ -7,6 +12,11 @@ $ENDCMP
 #
 $CMP FDS8979
 F transistors/mos/*.*
+$ENDCMP
+#
+$CMP FILTER_ELKE333FA
+D Filtre EMI
+K EMI
 $ENDCMP
 #
 $CMP LED_RGB
@@ -37,12 +47,6 @@ K Comp
 F ns/lm193.pdf
 $ENDCMP
 #
-$CMP MAX9302AKA
-D Dual Voltage Comparator
-K Comp
-F ns/lm193.pdf
-$ENDCMP
-#
 $CMP MIC69153YML
 D Single Supply VIN, Low VIN, Low VOUT, 1.5A LDO
 K DC/DC
@@ -61,6 +65,10 @@ $CMP NB6L11M
 D 1:2 CML FanOut
 $ENDCMP
 #
+$CMP NB6L239MNG
+D 1:2 CML FanOut
+$ENDCMP
+#
 $CMP SN65LVDS20
 D LVDS REPEATER/TRANSLATOR WITH ENABLE
 F http://www.ti.com/lit/ds/symlink/sn65lvp20.pdf
@@ -69,6 +77,11 @@ $ENDCMP
 $CMP SN65LVP20
 D LVPECL REPEATER/TRANSLATOR WITH ENABLE
 F http://www.ti.com/lit/ds/symlink/sn65lvp20.pdf
+$ENDCMP
+#
+$CMP TLV1117LV12DCYR
+D TLV1117LV12DCYR, 1A Low drop-out regulator, Fixed Output 1.2V, SOT223
+K REGULATOR LDO 1.2V
 $ENDCMP
 #
 $CMP TPS542941
