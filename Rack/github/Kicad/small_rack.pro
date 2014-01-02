@@ -1,4 +1,4 @@
-update=23.10.2013 09:54:02
+update=23/10/2013 12:36:16
 version=1
 last_client=eeschema
 [general]
@@ -42,7 +42,7 @@ LibName11=valves
 LibName12=kicad_homemade_lib
 [eeschema]
 version=1
-LibDir=../../Modules/_kicad_lib
+LibDir=Y:/EasyPhi/Modules/_kicad_lib
 NetFmtName=PcbnewAdvanced
 RptD_X=0
 RptD_Y=100

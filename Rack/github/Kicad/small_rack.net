@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source Y:/EasyPhi/Rack/Kicad/small_rack.sch)
-    (date "23/10/2013 10:04:26")
+    (source P:/EasyPhi/Rack/github/Kicad/small_rack.sch)
+    (date "27/11/2013 14:26:45")
     (tool "eeschema (2013-07-07 BZR 4022)-stable"))
   (components
     (comp (ref U7)
@@ -1501,7 +1501,7 @@
     (library (logical conn)
       (uri "C:\\Program Files (x86)\\KiCad\\share\\library\\conn.lib"))
     (library (logical kicad_homemade_lib)
-      (uri ..\..\Modules\_kicad_lib\kicad_homemade_lib.lib)))
+      (uri Y:\EasyPhi\Modules\_kicad_lib\kicad_homemade_lib.lib)))
   (nets
     (net (code 1) (name /usb_hub2/USB_SL2_DP)
       (node (ref U3) (pin B4))
