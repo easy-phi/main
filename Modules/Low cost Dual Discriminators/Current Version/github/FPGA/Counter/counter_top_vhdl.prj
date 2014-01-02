@@ -1,0 +1,4 @@
+vhdl work "\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\Counter\ipcore_dir\DCM.vhd"
+vhdl work "\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\Counter\ipcore_dir\c_counter_binary_v11_0.vhd"
+vhdl work "\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\Counter\edge_detect.vhd"
+vhdl work "\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\Counter\Counter_top.vhd"

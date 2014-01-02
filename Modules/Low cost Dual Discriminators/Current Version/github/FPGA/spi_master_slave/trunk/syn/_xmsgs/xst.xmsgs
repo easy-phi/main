@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="957" delta="new" >"\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_slave.vhd" Line 361: Case choice must be a locally static expression
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="957" delta="new" >"\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_slave.vhd" Line 369: Case choice must be a locally static expression
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="957" delta="new" >"\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_slave.vhd" Line 378: Case choice must be a locally static expression
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="957" delta="new" >"\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master.vhd" Line 505: Case choice must be a locally static expression
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="957" delta="new" >"\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master.vhd" Line 513: Case choice must be a locally static expression
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="957" delta="new" >"\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master.vhd" Line 521: Case choice must be a locally static expression
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="957" delta="new" >"\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master.vhd" Line 530: Case choice must be a locally static expression
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master_atlys_top.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">sh_reg_dbg_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_spi_master_port</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master_atlys_top.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">sck_ena_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_spi_master_port</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master_atlys_top.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">sck_ena_ce_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_spi_master_port</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master_atlys_top.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">do_transfer_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_spi_master_port</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master_atlys_top.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">wren_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_spi_master_port</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master_atlys_top.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">rx_bit_reg_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_spi_master_port</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master_atlys_top.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">core_clk_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_spi_master_port</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master_atlys_top.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">core_n_clk_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_spi_master_port</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master_atlys_top.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">core_ce_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_spi_master_port</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master_atlys_top.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">core_n_ce_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_spi_master_port</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master_atlys_top.vhd</arg>&quot; line <arg fmt="%s" index="2">206</arg>: Output port &lt;<arg fmt="%s" index="3">sh_reg_dbg_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_spi_slave_port</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master_atlys_top.vhd</arg>&quot; line <arg fmt="%s" index="2">206</arg>: Output port &lt;<arg fmt="%s" index="3">do_transfer_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_spi_slave_port</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master_atlys_top.vhd</arg>&quot; line <arg fmt="%s" index="2">206</arg>: Output port &lt;<arg fmt="%s" index="3">wren_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_spi_slave_port</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master_atlys_top.vhd</arg>&quot; line <arg fmt="%s" index="2">206</arg>: Output port &lt;<arg fmt="%s" index="3">rx_bit_next_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_spi_slave_port</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master_atlys_top.vhd</arg>&quot; line <arg fmt="%s" index="2">225</arg>: Output port &lt;<arg fmt="%s" index="3">strb_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_sw_debouncer</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">\\opti-serv2\projects\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master_atlys_top.vhd</arg>&quot; line <arg fmt="%s" index="2">234</arg>: Output port &lt;<arg fmt="%s" index="3">strb_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_btn_debouncer</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="new" >State <arg fmt="%s" index="1">st_wait_spi_ack_2</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">s_wr_st_reg</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">di_reg_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Inst_spi_slave_port</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">di_reg_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Inst_spi_slave_port</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">di_reg_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Inst_spi_slave_port</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">spi_di_reg_s_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_master_atlys_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">spi_di_reg_s_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_master_atlys_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">spi_di_reg_s_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_master_atlys_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">spi_di_reg_s_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_master_atlys_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">spi_di_reg_s_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_master_atlys_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">spi_di_reg_s_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_master_atlys_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">di_reg_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">spi_slave</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;di_reg_3&gt; &lt;di_reg_5&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">di_reg_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_slave</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">spi_di_reg_s_6</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">spi_master_atlys_top</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">spi_di_reg_s_4</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">spi_master_atlys_top</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">spi_di_reg_s_0</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">spi_master_atlys_top</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">spi_di_reg_s_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">spi_master_atlys_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;spi_di_reg_s_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">spi_di_reg_s_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">spi_master_atlys_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;spi_di_reg_s_4&gt; &lt;spi_di_reg_s_6&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_sw_debouncer/strb_reg</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">spi_master_atlys_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_btn_debouncer/strb_reg</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">spi_master_atlys_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">fsm_ce</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">spi_master_atlys_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">samp_ce</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">spi_master_atlys_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">samp_ce_gen_proc.clk_cnt_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_master_atlys_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">fsm_ce_gen_proc.clk_cnt_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_master_atlys_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Inst_spi_master_port/spi_2x_ce_gen_proc.clk_cnt_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_master_atlys_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Inst_spi_master_port/spi_2x_ce</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">spi_master_atlys_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Inst_spi_slave_port/di_reg_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">spi_master_atlys_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Inst_spi_slave_port/di_reg_4&gt; &lt;Inst_spi_slave_port/di_reg_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Inst_spi_slave_port/di_reg_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">spi_master_atlys_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Inst_spi_slave_port/di_reg_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Inst_spi_master_port/core_clk</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">spi_master_atlys_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Inst_spi_master_port/core_ce&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="3203" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Inst_spi_master_port/core_clk</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">spi_master_atlys_top</arg>&gt; is the opposite to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Inst_spi_master_port/core_n_clk&gt; &lt;Inst_spi_master_port/core_n_ce&gt; </arg>
+</msg>
+
+</messages>
+

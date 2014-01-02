@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="ConstraintSystem" num="0" >The Period constraint &lt;NET &quot;clk_10MHz&quot; PERIOD = 20.0ns HIGH 50%;&gt; [counter.ucf(9)], is specified using the Net Period method which is not recommended. Please use the Timespec PERIOD method.
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="0" >The Period constraint &lt;NET &quot;clk_125MHz&quot; PERIOD = 8.0ns HIGH 50%;&gt; [counter.ucf(13)], is specified using the Net Period method which is not recommended. Please use the Timespec PERIOD method.
+</msg>
+
+</messages>
+

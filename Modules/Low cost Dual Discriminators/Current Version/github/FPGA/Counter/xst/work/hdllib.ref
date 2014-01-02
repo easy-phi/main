@@ -1,0 +1,8 @@
+AR counter_top rtl "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/Counter_top.vhd" sub00/vhpl03 1383317458
+AR dcm behavioral "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/ipcore_dir/DCM.vhd" sub00/vhpl01 1383317452
+EN dcm NULL "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/ipcore_dir/DCM.vhd" sub00/vhpl00 1383317451
+EN edge_detect NULL "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/edge_detect.vhd" sub00/vhpl06 1383317455
+AR c_counter_binary_v11_0 c_counter_binary_v11_0_a "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/ipcore_dir/c_counter_binary_v11_0.vhd" sub00/vhpl05 1383317454
+AR edge_detect behavioral "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/edge_detect.vhd" sub00/vhpl07 1383317456
+EN counter_top NULL "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/Counter_top.vhd" sub00/vhpl02 1383317457
+EN c_counter_binary_v11_0 NULL "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/ipcore_dir/c_counter_binary_v11_0.vhd" sub00/vhpl04 1383317453

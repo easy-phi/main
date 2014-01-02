@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/spi_master_slave/trunk/syn/spi_master_atlys_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/spi_master_slave/trunk/syn/spi_master_atlys_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spi_master_atlys.ucf -p xc6slx45-csg324-2 "spi_master_atlys_top.ngc" spi_master_atlys_top.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -xe n -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt 2 -detail -ir off -pr off -lc area -power off -o spi_master_atlys_top_map.ncd spi_master_atlys_top.ngd spi_master_atlys_top.pcf 
+par -w -intstyle ise -ol high -xe n -mt 4 spi_master_atlys_top_map.ncd spi_master_atlys_top.ncd spi_master_atlys_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml spi_master_atlys_top.twx spi_master_atlys_top.ncd -o spi_master_atlys_top.twr spi_master_atlys_top.pcf -ucf spi_master_atlys.ucf 
+bitgen -intstyle ise -f spi_master_atlys_top.ut spi_master_atlys_top.ncd 

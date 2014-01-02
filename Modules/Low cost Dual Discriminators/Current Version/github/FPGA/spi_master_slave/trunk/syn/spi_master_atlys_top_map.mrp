@@ -1,0 +1,328 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'spi_master_atlys_top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol
+high -xe n -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt 2
+-detail -ir off -pr off -lc area -power off -o spi_master_atlys_top_map.ncd
+spi_master_atlys_top.ngd spi_master_atlys_top.pcf 
+Target Device  : xc6slx45
+Target Package : csg324
+Target Speed   : -2
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Thu Oct 31 12:15:18 2013
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Slice Logic Utilization:
+  Number of Slice Registers:                   218 out of  54,576    1%
+    Number used as Flip Flops:                 218
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        144 out of  27,288    1%
+    Number used as logic:                      138 out of  27,288    1%
+      Number using O6 output only:              97
+      Number using O5 output only:              13
+      Number using O5 and O6:                   28
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   6,408    0%
+    Number used exclusively as route-thrus:      6
+      Number with same-slice register load:      4
+      Number with same-slice carry load:         2
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                    93 out of   6,822    1%
+  Number of MUXCYs used:                        16 out of  13,644    1%
+  Number of LUT Flip Flop pairs used:          247
+    Number with an unused Flip Flop:            46 out of     247   18%
+    Number with an unused LUT:                 103 out of     247   41%
+    Number of fully used LUT-FF pairs:          98 out of     247   39%
+    Number of unique control sets:              25
+    Number of slice register sites lost
+      to control set restrictions:              54 out of  54,576    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        64 out of     218   29%
+    Number of LOCed IOBs:                       46 out of      64   71%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of     116    0%
+  Number of RAMB8BWERs:                          0 out of     232    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       3 out of      16   18%
+    Number used as BUFGs:                        3
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       8    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     376    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     376    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     376    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     256    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      58    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       4    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                3.12
+
+Peak Memory Usage:  443 MB
+Total REAL time to MAP completion:  23 secs 
+Total CPU time to MAP completion (all processors):   21 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:Map:284 - Map is running with the multi-threading option on. Map currently
+   supports the use of up to 2 processors. Based on the the user options and
+   machine load, Map will use 2 processors during this run.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Place:834 - Only a subset of IOs are locked. Out of 64 IOs, 46 are locked
+   and 18 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) optimized away
+  14 Block(s) redundant
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+Redundant Block(s):
+TYPE 		BLOCK
+LUT1 		Inst_sw_debouncer/Mcount_cnt_reg_cy<6>_rt
+LUT1 		Inst_sw_debouncer/Mcount_cnt_reg_cy<5>_rt
+LUT1 		Inst_sw_debouncer/Mcount_cnt_reg_cy<4>_rt
+LUT1 		Inst_sw_debouncer/Mcount_cnt_reg_cy<3>_rt
+LUT1 		Inst_sw_debouncer/Mcount_cnt_reg_cy<2>_rt
+LUT1 		Inst_sw_debouncer/Mcount_cnt_reg_cy<1>_rt
+LUT1 		Inst_btn_debouncer/Mcount_cnt_reg_cy<6>_rt
+LUT1 		Inst_btn_debouncer/Mcount_cnt_reg_cy<5>_rt
+LUT1 		Inst_btn_debouncer/Mcount_cnt_reg_cy<4>_rt
+LUT1 		Inst_btn_debouncer/Mcount_cnt_reg_cy<3>_rt
+LUT1 		Inst_btn_debouncer/Mcount_cnt_reg_cy<2>_rt
+LUT1 		Inst_btn_debouncer/Mcount_cnt_reg_cy<1>_rt
+LUT1 		Inst_sw_debouncer/Mcount_cnt_reg_xor<7>_rt
+LUT1 		Inst_btn_debouncer/Mcount_cnt_reg_xor<7>_rt
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| btn_i<0>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| btn_i<1>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| btn_i<2>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| btn_i<3>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| btn_i<4>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| btn_i<5>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| dbg_o<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| dbg_o<1>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| dbg_o<2>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| dbg_o<3>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| dbg_o<4>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| dbg_o<5>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| dbg_o<6>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| dbg_o<7>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| dbg_o<8>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| dbg_o<9>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| dbg_o<10>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| dbg_o<11>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led_o<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led_o<1>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led_o<2>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led_o<3>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led_o<4>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led_o<5>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led_o<6>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led_o<7>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| m_do_o<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| m_do_o<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| m_do_o<2>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| m_do_o<3>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| m_do_o<4>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| m_do_o<5>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| m_do_o<6>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| m_do_o<7>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| m_state_o<0>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| m_state_o<1>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| m_state_o<2>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| m_state_o<3>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| pclk_i                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| s_do_o<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| s_do_o<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| s_do_o<2>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| s_do_o<3>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| s_do_o<4>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| s_do_o<5>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| s_do_o<6>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| s_do_o<7>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| s_state_o<0>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| s_state_o<1>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| s_state_o<2>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| s_state_o<3>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sclk_i                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| spi_miso_o                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| spi_mosi_o                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| spi_sck_o                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| spi_ssel_o                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sw_i<0>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw_i<1>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw_i<2>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw_i<3>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw_i<4>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw_i<5>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw_i<6>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw_i<7>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+
+Section 12 - Control Set Information
+------------------------------------
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Clock Signal                           | Reset Signal    | Set Signal | Enable Signal                                       | Slice Load Count | Bel Load Count |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Inst_spi_master_port/spi_clk_reg_BUFG  |                 |            |                                                     | 6                | 11             |
+| Inst_spi_master_port/spi_clk_reg_BUFG  |                 |            | Inst_spi_slave_port/GND_8_o_state_reg[3]_equal_13_o | 3                | 8              |
+| Inst_spi_master_port/spi_clk_reg_BUFG  | spi_ssel_o_OBUF |            |                                                     | 4                | 8              |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| pclk_i_BUFGP                           |                 |            |                                                     | 28               | 71             |
+| pclk_i_BUFGP                           |                 |            | Inst_btn_debouncer/dat_strb                         | 2                | 6              |
+| pclk_i_BUFGP                           |                 |            | Inst_sw_debouncer/dat_strb                          | 2                | 8              |
+| pclk_i_BUFGP                           |                 |            | _n0263_inv                                          | 2                | 8              |
+| pclk_i_BUFGP                           |                 |            | _n0357_inv                                          | 2                | 8              |
+| pclk_i_BUFGP                           |                 |            | _n0397_inv1_cepot                                   | 2                | 8              |
+| pclk_i_BUFGP                           |                 |            | _n0420_inv1_cepot                                   | 1                | 6              |
+| pclk_i_BUFGP                           |                 |            | _n0480_inv                                          | 1                | 2              |
+| pclk_i_BUFGP                           |                 |            | _n0496_inv                                          | 2                | 8              |
+| pclk_i_BUFGP                           |                 |            | _n0512_inv                                          | 2                | 8              |
+| pclk_i_BUFGP                           |                 |            | _n0528_inv                                          | 2                | 8              |
+| pclk_i_BUFGP                           |                 |            | spi_wren_reg_m                                      | 2                | 8              |
+| pclk_i_BUFGP                           |                 |            | spi_wren_reg_s                                      | 1                | 2              |
+| pclk_i_BUFGP                           | clear           |            |                                                     | 2                | 4              |
+| pclk_i_BUFGP                           | spi_ssel_o_OBUF |            |                                                     | 3                | 6              |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| sclk_i_BUFGP                           |                 |            |                                                     | 4                | 4              |
+| sclk_i_BUFGP                           |                 |            | Inst_spi_master_port/_n0279_inv                     | 2                | 8              |
+| sclk_i_BUFGP                           |                 |            | Inst_spi_master_port/_n0284_inv                     | 2                | 8              |
+| sclk_i_BUFGP                           |                 |            | Inst_spi_master_port/core_ce_inv                    | 4                | 4              |
+| sclk_i_BUFGP                           | spi_rst_reg     |            | Inst_spi_master_port/core_ce_inv                    | 1                | 4              |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ~Inst_spi_master_port/spi_clk_reg_BUFG |                 |            |                                                     | 1                | 1              |
+| ~Inst_spi_master_port/spi_clk_reg_BUFG | spi_ssel_o_OBUF |            |                                                     | 1                | 1              |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module                | Partition | Slices*       | Slice Reg     | LUTs          | LUTRAM        | BRAM/FIFO | DSP48A1 | BUFG  | BUFIO | BUFR  | DCM   | PLL_ADV   | Full Hierarchical Name                     |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| spi_master_atlys_top/ |           | 26/96         | 71/218        | 51/144        | 0/0           | 0/0       | 0/0     | 2/3   | 0/0   | 0/0   | 0/0   | 0/0       | spi_master_atlys_top                       |
+| +Inst_btn_debouncer   |           | 12/12         | 26/26         | 21/21         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | spi_master_atlys_top/Inst_btn_debouncer    |
+| +Inst_spi_master_port |           | 21/21         | 47/47         | 24/24         | 0/0           | 0/0       | 0/0     | 1/1   | 0/0   | 0/0   | 0/0   | 0/0       | spi_master_atlys_top/Inst_spi_master_port  |
+| +Inst_spi_slave_port  |           | 24/24         | 42/42         | 26/26         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | spi_master_atlys_top/Inst_spi_slave_port   |
+| +Inst_sw_debouncer    |           | 13/13         | 32/32         | 22/22         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | spi_master_atlys_top/Inst_sw_debouncer     |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

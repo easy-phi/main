@@ -1,0 +1,19 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Nov 01 15:51:11 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "led<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "E12" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "E11" LEVEL 1;
+COMP "led<3>" LOCATE = SITE "F11" LEVEL 1;
+COMP "led<4>" LOCATE = SITE "C11" LEVEL 1;
+COMP "led<5>" LOCATE = SITE "D11" LEVEL 1;
+COMP "led<6>" LOCATE = SITE "E9" LEVEL 1;
+COMP "led<7>" LOCATE = SITE "F9" LEVEL 1;
+COMP "clk_10MHz" LOCATE = SITE "C9" LEVEL 1;
+COMP "input1" LOCATE = SITE "A10" LEVEL 1;
+NET "clk_125MHz" PERIOD = 8 ns HIGH 50%;
+NET "DCM_clock_generator/CLKIN_IBUFG" PERIOD = 20 ns HIGH 50%;
+SCHEMATIC END;
+

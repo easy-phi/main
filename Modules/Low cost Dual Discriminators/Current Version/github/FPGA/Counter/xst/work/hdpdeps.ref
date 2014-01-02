@@ -1,0 +1,31 @@
+V3 20
+FL "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/Counter_top.vhd" 2013/11/01.15:50:26 P.20131013
+EN work/counter_top 1383317457 \
+      FL "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/Counter_top.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177
+AR work/counter_top/rtl 1383317458 \
+      FL "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/Counter_top.vhd" \
+      EN work/counter_top 1383317457 CP work/DCM CP work/c_counter_binary_v11_0 \
+      CP work/edge_detect
+FL "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/edge_detect.vhd" 2013/10/31.12:13:51 P.20131013
+EN work/edge_detect 1383317455 \
+      FL "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/edge_detect.vhd" \
+      PB ieee/std_logic_1164 1381692176 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/edge_detect/Behavioral 1383317456 \
+      FL "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/edge_detect.vhd" \
+      EN work/edge_detect 1383317455 CP IDDR2
+FL "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/ipcore_dir/c_counter_binary_v11_0.vhd" 2013/10/31.18:26:02 P.20131013
+EN work/c_counter_binary_v11_0 1383317453 \
+      FL "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/ipcore_dir/c_counter_binary_v11_0.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/c_counter_binary_v11_0/c_counter_binary_v11_0_a 1383317454 \
+      FL "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/ipcore_dir/c_counter_binary_v11_0.vhd" \
+      EN work/c_counter_binary_v11_0 1383317453
+FL "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/ipcore_dir/DCM.vhd" 2013/11/01.11:54:23 P.20131013
+EN work/DCM 1383317451 \
+      FL "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/ipcore_dir/DCM.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/DCM/BEHAVIORAL 1383317452 \
+      FL "//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/ipcore_dir/DCM.vhd" \
+      EN work/DCM 1383317451 CP BUFG CP IBUFG CP DCM_SP

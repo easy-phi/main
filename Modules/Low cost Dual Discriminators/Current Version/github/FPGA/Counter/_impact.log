@@ -1,0 +1,137 @@
+iMPACT Version: 14.7
+
+iMPACT log file Started on Thu Oct 31 17:28:43 2013
+
+Welcome to iMPACT
+iMPACT Version: 14.7
+The setting has been saved, to change the settings, please go toEdit->Preferences.// *** BATCH CMD : setPreference -pref StartupClock:AUTO_CORRECTION
+// *** BATCH CMD : setPreference -pref AutoSignature:FALSE
+// *** BATCH CMD : setPreference -pref KeepSVF:FALSE
+// *** BATCH CMD : setPreference -pref ConcurrentMode:FALSE
+// *** BATCH CMD : setPreference -pref UseHighz:FALSE
+// *** BATCH CMD : setPreference -pref svfUseTime:FALSE
+// *** BATCH CMD : setPreference -pref SpiByteSwap:AUTO_CORRECTION
+// *** BATCH CMD : setPreference -pref AutoInfer:TRUE
+// *** BATCH CMD : setPreference -pref SvfPlayDisplayComments:FALSE
+Project: P:\EasyPhi\Modules\Low cost Universal Input\CurrentVersion\github\FPGA\spi_master_slave\trunk\syn/\auto_project.ipf created.
+// *** BATCH CMD : setMode -bs
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver file xusb_emb.sys found.
+ Driver version: src=1029, dest=1029.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ Cable PID = 0008.
+ Max current requested during enumeration is 74 mA.
+Type = 0x0004.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 1029.
+File version of C:/Xilinx/14.7/ISE_DS/ISE/data/xusb_xlp.hex = 1303.
+Firmware hex file version = 1303.
+Downloading C:/Xilinx/14.7/ISE_DS/ISE/data/xusb_xlp.hex.
+Downloaded firmware version = 1303.
+PLD file version = 0012h.
+ PLD version = 0012h.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+Type = 0x0004.
+ ESN device is not available for this cable.
+Attempting to identify devices in the boundary-scan chain configuration...
+INFO:iMPACT - Current time: 31.10.2013 17:28:55
+// *** BATCH CMD : Identify -inferir 
+PROGRESS_START - Starting Operation.
+Identifying chain contents...'0': : Manufacturer's ID = Xilinx xc2c64, Version : 0
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx/14.7/ISE_DS/ISE/xbr/data/xc2c64.bsd...
+INFO:iMPACT:501 - '1': Added Device xc2c64 successfully.
+----------------------------------------------------------------------
+'1': : Manufacturer's ID = Xilinx xcf04s, Version : 15
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx/14.7/ISE_DS/ISE/xcf/data/xcf04s.bsd...
+INFO:iMPACT:501 - '1': Added Device xcf04s successfully.
+----------------------------------------------------------------------
+'2': : Manufacturer's ID = Xilinx xc3s500e, Version : 4
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx/14.7/ISE_DS/ISE/spartan3e/data/xc3s500e.bsd...
+INFO:iMPACT:501 - '1': Added Device xc3s500e successfully.
+----------------------------------------------------------------------
+done.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+// *** BATCH CMD : identifyMPM 
+// *** BATCH CMD : assignFile -p 1 -file "P:/EasyPhi/Modules/Low cost UniversalInput/Current Version/github/FPGA/Counter/counter_top.bit"
+'1': Loading file 'P:/EasyPhi/Modules/Low cost Universal Input/CurrentVersion/github/FPGA/Counter/counter_top.bit' ...
+done.
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+UserID read from the bitstream file = 0xFFFFFFFF.
+----------------------------------------------------------------------
+INFO:iMPACT:501 - '1': Added Device xc3s500e successfully.
+----------------------------------------------------------------------
+INFO:iMPACT - Current time: 31.10.2013 17:30:40
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 0001 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : saveProjectFile -file "P:\EasyPhi\Modules\Low cost UniversalInput\Current Version\github\FPGA\spi_master_slave\trunk\syn/\auto_project.ipf"
+Backup of auto project 'P:\EasyPhi\Modules\Low cost Universal Input\CurrentVersion\github\FPGA\spi_master_slave\trunk\syn/\auto_project_1.ipf' created.
+Project: 'P:\EasyPhi\Modules\Low cost Universal Input\CurrentVersion\github\FPGA\spi_master_slave\trunk\syn/\auto_project.ipf' created.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : saveProjectFile -file "P:\EasyPhi\Modules\Low cost UniversalInput\Current Version\github\FPGA\spi_master_slave\trunk\syn/\auto_project.ipf"
+// *** BATCH CMD : setMode -bs
+INFO:iMPACT - Launching WebTalk, please refer to the webtalk log at   P:\EasyPhi\Modules\Low cost Universal Input\Current   Version\github\FPGA\spi_master_slave\trunk\syn\webtalk.log for details.
+INFO:iMPACT - Running wbtc successfully.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : deleteDevice -position 1
+----------------------------------------------------------------------
+// *** BATCH CMD : deleteDevice -position 1
+----------------------------------------------------------------------
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff

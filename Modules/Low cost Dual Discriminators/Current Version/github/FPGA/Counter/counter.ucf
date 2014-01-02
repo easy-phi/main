@@ -1,0 +1,50 @@
+# Constraints for reference design 'frequency_counter'.
+#
+# Revision C of the Spartan-3E Starter Kit.
+#
+# Ken Chapman - Xilinx Ltd - 24th February 2006
+#
+# Period constraint for 50MHz operation
+#
+NET "clk_10MHz" PERIOD = 20.0ns HIGH 50%;
+#
+# Period constraint for up to 125MHz operation
+#
+NET "clk_125MHz" PERIOD = 8.0ns HIGH 50%;
+#
+#
+# soldered 50MHz Clock.
+# 
+NET "clk_10MHz" LOC = "C9" | IOSTANDARD = LVTTL;
+#
+# SMA socket.
+# 
+NET "input1" LOC = "A10" | IOSTANDARD = LVTTL;
+#
+#
+# Simple LEDs 
+# Require only 3.5mA. 
+#
+NET "led<0>" LOC = "F12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+NET "led<1>" LOC = "E12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+NET "led<2>" LOC = "E11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+NET "led<3>" LOC = "F11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+NET "led<4>" LOC = "C11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+NET "led<5>" LOC = "D11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+NET "led<6>" LOC = "E9"  | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+NET "led<7>" LOC = "F9"  | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+#
+#
+#
+# Simple switches 
+#   Pull UP resistors used to stop floating condition during switching. 
+#
+#NET "sw<0>" LOC = "L13" | IOSTANDARD = LVTTL | PULLUP;
+#NET "sw<1>" LOC = "L14" | IOSTANDARD = LVTTL | PULLUP;
+#NET "sw<2>" LOC = "H18" | IOSTANDARD = LVTTL | PULLUP;
+#NET "sw<3>" LOC = "N17" | IOSTANDARD = LVTTL | PULLUP;
+#
+#
+#
+# End of File
+#

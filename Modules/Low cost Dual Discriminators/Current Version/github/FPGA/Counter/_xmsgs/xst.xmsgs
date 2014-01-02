@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/Counter_top.vhd</arg>&quot; line <arg fmt="%d" index="2">33</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLKIN_IBUFG_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">DCM</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/Counter_top.vhd</arg>&quot; line <arg fmt="%d" index="2">33</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLK0_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">DCM</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/Counter_top.vhd</arg>&quot; line <arg fmt="%d" index="2">33</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LOCKED_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">DCM</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">//opti-serv2/projects/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/Counter_top.vhd</arg>&quot; line <arg fmt="%d" index="2">44</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">c_counter_binary_v11_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">div</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="79" delta="old" >Model &apos;<arg fmt="%s" index="1">DCM</arg>&apos; has different characteristics in destination library
+</msg>
+
+<msg type="warning" file="Xst" num="80" delta="old" >Model name has been changed to &apos;<arg fmt="%s" index="1">DCM1</arg>&apos;
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">raw_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_edge_detect</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cooked_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">raw_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">edge_detect</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cooked_0&gt; </arg>
+</msg>
+
+</messages>
+

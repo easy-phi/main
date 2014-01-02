@@ -1,0 +1,61 @@
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50an-tqg144-5 "counter_top.ngc" counter_top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o counter_top_map.ncd counter_top.ngd counter_top.pcf 
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50an-tqg144-5 "counter_top.ngc" counter_top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o counter_top_map.ncd counter_top.ngd counter_top.pcf 
+par -w -intstyle ise -ol high -t 1 counter_top_map.ncd counter_top.ncd counter_top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml counter_top.twx counter_top.ncd -o counter_top.twr counter_top.pcf 
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc3s50an-tqg144-5 "counter_top.ngc" counter_top.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc3s50an-tqg144-5 "counter_top.ngc" counter_top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o counter_top_map.ncd counter_top.ngd counter_top.pcf 
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc3s500e-fg320-4 "counter_top.ngc" counter_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o counter_top_map.ncd counter_top.ngd counter_top.pcf 
+par -w -intstyle ise -ol high -t 1 counter_top_map.ncd counter_top.ncd counter_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter_top.twx counter_top.ncd -o counter_top.twr counter_top.pcf -ucf counter.ucf 
+bitgen -intstyle ise -f counter_top.ut counter_top.ncd 
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc3s500e-fg320-4 "counter_top.ngc" counter_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o counter_top_map.ncd counter_top.ngd counter_top.pcf 
+par -w -intstyle ise -ol high -t 1 counter_top_map.ncd counter_top.ncd counter_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter_top.twx counter_top.ncd -o counter_top.twr counter_top.pcf -ucf counter.ucf 
+bitgen -intstyle ise -f counter_top.ut counter_top.ncd 
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc3s500e-fg320-4 "counter_top.ngc" counter_top.ngd  
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc3s500e-fg320-4 "counter_top.ngc" counter_top.ngd  
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc3s500e-fg320-4 "counter_top.ngc" counter_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o counter_top_map.ncd counter_top.ngd counter_top.pcf 
+par -w -intstyle ise -ol high -t 1 counter_top_map.ncd counter_top.ncd counter_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter_top.twx counter_top.ncd -o counter_top.twr counter_top.pcf -ucf counter.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc3s500e-fg320-4 "counter_top.ngc" counter_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o counter_top_map.ncd counter_top.ngd counter_top.pcf 
+par -w -intstyle ise -ol high -t 1 counter_top_map.ncd counter_top.ncd counter_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter_top.twx counter_top.ncd -o counter_top.twr counter_top.pcf -ucf counter.ucf 
+bitgen -intstyle ise -f counter_top.ut counter_top.ncd 
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc3s500e-fg320-4 "counter_top.ngc" counter_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o counter_top_map.ncd counter_top.ngd counter_top.pcf 
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc3s500e-fg320-4 "counter_top.ngc" counter_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o counter_top_map.ncd counter_top.ngd counter_top.pcf 
+par -w -intstyle ise -ol high -t 1 counter_top_map.ncd counter_top.ncd counter_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter_top.twx counter_top.ncd -o counter_top.twr counter_top.pcf -ucf counter.ucf 
+bitgen -intstyle ise -f counter_top.ut counter_top.ncd 
+xst -intstyle ise -ifn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.xst" -ofn "P:/EasyPhi/Modules/Low cost Universal Input/Current Version/github/FPGA/Counter/counter_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc3s500e-fg320-4 "counter_top.ngc" counter_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o counter_top_map.ncd counter_top.ngd counter_top.pcf 
+par -w -intstyle ise -ol high -t 1 counter_top_map.ncd counter_top.ncd counter_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter_top.twx counter_top.ncd -o counter_top.twr counter_top.pcf -ucf counter.ucf 
+bitgen -intstyle ise -f counter_top.ut counter_top.ncd 

@@ -1,0 +1,886 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml counter_top.twx counter_top.ncd -o counter_top.twr
+counter_top.pcf -ucf counter.ucf
+
+Design file:              counter_top.ncd
+Physical constraint file: counter_top.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "clk_125MHz" PERIOD = 8 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1084 paths analyzed, 97 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.885ns.
+--------------------------------------------------------------------------------
+
+Paths for end point clock_divisor/blk00000001/blk0000004e (SLICE_X34Y79.CIN), 294 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     1.115ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clock_divisor/blk00000001/blk00000035 (FF)
+  Destination:          clock_divisor/blk00000001/blk0000004e (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      6.883ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.002ns (0.042 - 0.044)
+  Source Clock:         clk_125MHz rising at 0.000ns
+  Destination Clock:    clk_125MHz rising at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: clock_divisor/blk00000001/blk00000035 to clock_divisor/blk00000001/blk0000004e
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y71.XQ      Tcko                  0.591   clock_divisor/q<0>
+                                                       clock_divisor/blk00000001/blk00000035
+    SLICE_X35Y71.F1      net (fanout=2)        0.549   clock_divisor/q<0>
+    SLICE_X35Y71.COUT    Topcyf                1.162   clock_divisor/q<0>
+                                                       clock_divisor/blk00000001/blk0000007f
+                                                       clock_divisor/blk00000001/blk00000004
+                                                       clock_divisor/blk00000001/blk00000007
+    SLICE_X35Y72.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000033
+    SLICE_X35Y72.COUT    Tbyp                  0.118   clock_divisor/q<2>
+                                                       clock_divisor/blk00000001/blk00000009
+                                                       clock_divisor/blk00000001/blk0000000b
+    SLICE_X35Y73.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000039
+    SLICE_X35Y73.COUT    Tbyp                  0.118   clock_divisor/q<4>
+                                                       clock_divisor/blk00000001/blk0000000d
+                                                       clock_divisor/blk00000001/blk0000000f
+    SLICE_X35Y74.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000003b
+    SLICE_X35Y74.COUT    Tbyp                  0.118   clock_divisor/q<6>
+                                                       clock_divisor/blk00000001/blk00000011
+                                                       clock_divisor/blk00000001/blk00000013
+    SLICE_X35Y75.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000003d
+    SLICE_X35Y75.COUT    Tbyp                  0.118   clock_divisor/q<8>
+                                                       clock_divisor/blk00000001/blk00000015
+                                                       clock_divisor/blk00000001/blk00000017
+    SLICE_X35Y76.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000003f
+    SLICE_X35Y76.COUT    Tbyp                  0.118   clock_divisor/q<10>
+                                                       clock_divisor/blk00000001/blk00000019
+                                                       clock_divisor/blk00000001/blk0000001b
+    SLICE_X35Y77.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000002a
+    SLICE_X35Y77.COUT    Tbyp                  0.118   clock_divisor/q<12>
+                                                       clock_divisor/blk00000001/blk0000001d
+                                                       clock_divisor/blk00000001/blk0000001f
+    SLICE_X35Y78.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000002c
+    SLICE_X35Y78.COUT    Tbyp                  0.118   clock_divisor/q<14>
+                                                       clock_divisor/blk00000001/blk00000021
+                                                       clock_divisor/blk00000001/blk00000023
+    SLICE_X35Y79.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000002e
+    SLICE_X35Y79.COUT    Tbyp                  0.118   clock_divisor/q<16>
+                                                       clock_divisor/blk00000001/blk00000025
+                                                       clock_divisor/blk00000001/blk00000027
+    SLICE_X35Y80.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000030
+    SLICE_X35Y80.COUT    Tbyp                  0.118   clock_divisor/q<18>
+                                                       clock_divisor/blk00000001/blk00000029
+                                                       clock_divisor/blk00000001/blk0000002b
+    SLICE_X35Y81.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000032
+    SLICE_X35Y81.Y       Tciny                 0.869   clock_divisor/q<20>
+                                                       clock_divisor/blk00000001/blk0000002d
+                                                       clock_divisor/blk00000001/blk00000030
+    SLICE_X34Y77.G1      net (fanout=1)        0.373   clock_divisor/blk00000001/sig0000001b
+    SLICE_X34Y77.COUT    Topcyg                1.131   clock_divisor/blk00000001/sig00000077
+                                                       clock_divisor/blk00000001/blk0000005d
+                                                       clock_divisor/blk00000001/blk0000005e
+    SLICE_X34Y78.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000077
+    SLICE_X34Y78.COUT    Tbyp                  0.130   clock_divisor/blk00000001/sig00000079
+                                                       clock_divisor/blk00000001/blk00000060
+                                                       clock_divisor/blk00000001/blk00000062
+    SLICE_X34Y79.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000079
+    SLICE_X34Y79.CLK     Tcinck                1.016   int_5Hz
+                                                       clock_divisor/blk00000001/blk00000064
+                                                       clock_divisor/blk00000001/sig00000072_rt
+                                                       clock_divisor/blk00000001/blk0000004e
+    -------------------------------------------------  ---------------------------
+    Total                                      6.883ns (5.961ns logic, 0.922ns route)
+                                                       (86.6% logic, 13.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.180ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clock_divisor/blk00000001/blk00000035 (FF)
+  Destination:          clock_divisor/blk00000001/blk0000004e (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      6.818ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.002ns (0.042 - 0.044)
+  Source Clock:         clk_125MHz rising at 0.000ns
+  Destination Clock:    clk_125MHz rising at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: clock_divisor/blk00000001/blk00000035 to clock_divisor/blk00000001/blk0000004e
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y71.XQ      Tcko                  0.591   clock_divisor/q<0>
+                                                       clock_divisor/blk00000001/blk00000035
+    SLICE_X35Y71.F1      net (fanout=2)        0.549   clock_divisor/q<0>
+    SLICE_X35Y71.COUT    Topcyf                1.162   clock_divisor/q<0>
+                                                       clock_divisor/blk00000001/blk0000007f
+                                                       clock_divisor/blk00000001/blk00000004
+                                                       clock_divisor/blk00000001/blk00000007
+    SLICE_X35Y72.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000033
+    SLICE_X35Y72.COUT    Tbyp                  0.118   clock_divisor/q<2>
+                                                       clock_divisor/blk00000001/blk00000009
+                                                       clock_divisor/blk00000001/blk0000000b
+    SLICE_X35Y73.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000039
+    SLICE_X35Y73.COUT    Tbyp                  0.118   clock_divisor/q<4>
+                                                       clock_divisor/blk00000001/blk0000000d
+                                                       clock_divisor/blk00000001/blk0000000f
+    SLICE_X35Y74.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000003b
+    SLICE_X35Y74.COUT    Tbyp                  0.118   clock_divisor/q<6>
+                                                       clock_divisor/blk00000001/blk00000011
+                                                       clock_divisor/blk00000001/blk00000013
+    SLICE_X35Y75.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000003d
+    SLICE_X35Y75.COUT    Tbyp                  0.118   clock_divisor/q<8>
+                                                       clock_divisor/blk00000001/blk00000015
+                                                       clock_divisor/blk00000001/blk00000017
+    SLICE_X35Y76.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000003f
+    SLICE_X35Y76.COUT    Tbyp                  0.118   clock_divisor/q<10>
+                                                       clock_divisor/blk00000001/blk00000019
+                                                       clock_divisor/blk00000001/blk0000001b
+    SLICE_X35Y77.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000002a
+    SLICE_X35Y77.X       Tcinx                 0.462   clock_divisor/q<12>
+                                                       clock_divisor/blk00000001/blk0000001e
+    SLICE_X34Y77.F3      net (fanout=1)        1.156   clock_divisor/blk00000001/sig00000011
+    SLICE_X34Y77.COUT    Topcyf                1.162   clock_divisor/blk00000001/sig00000077
+                                                       clock_divisor/blk00000001/blk0000005b
+                                                       clock_divisor/blk00000001/blk0000005c
+                                                       clock_divisor/blk00000001/blk0000005e
+    SLICE_X34Y78.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000077
+    SLICE_X34Y78.COUT    Tbyp                  0.130   clock_divisor/blk00000001/sig00000079
+                                                       clock_divisor/blk00000001/blk00000060
+                                                       clock_divisor/blk00000001/blk00000062
+    SLICE_X34Y79.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000079
+    SLICE_X34Y79.CLK     Tcinck                1.016   int_5Hz
+                                                       clock_divisor/blk00000001/blk00000064
+                                                       clock_divisor/blk00000001/sig00000072_rt
+                                                       clock_divisor/blk00000001/blk0000004e
+    -------------------------------------------------  ---------------------------
+    Total                                      6.818ns (5.113ns logic, 1.705ns route)
+                                                       (75.0% logic, 25.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.204ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clock_divisor/blk00000001/blk00000035 (FF)
+  Destination:          clock_divisor/blk00000001/blk0000004e (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      6.794ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.002ns (0.042 - 0.044)
+  Source Clock:         clk_125MHz rising at 0.000ns
+  Destination Clock:    clk_125MHz rising at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: clock_divisor/blk00000001/blk00000035 to clock_divisor/blk00000001/blk0000004e
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y71.XQ      Tcko                  0.591   clock_divisor/q<0>
+                                                       clock_divisor/blk00000001/blk00000035
+    SLICE_X35Y71.F1      net (fanout=2)        0.549   clock_divisor/q<0>
+    SLICE_X35Y71.COUT    Topcyf                1.162   clock_divisor/q<0>
+                                                       clock_divisor/blk00000001/blk0000007f
+                                                       clock_divisor/blk00000001/blk00000004
+                                                       clock_divisor/blk00000001/blk00000007
+    SLICE_X35Y72.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000033
+    SLICE_X35Y72.COUT    Tbyp                  0.118   clock_divisor/q<2>
+                                                       clock_divisor/blk00000001/blk00000009
+                                                       clock_divisor/blk00000001/blk0000000b
+    SLICE_X35Y73.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000039
+    SLICE_X35Y73.COUT    Tbyp                  0.118   clock_divisor/q<4>
+                                                       clock_divisor/blk00000001/blk0000000d
+                                                       clock_divisor/blk00000001/blk0000000f
+    SLICE_X35Y74.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000003b
+    SLICE_X35Y74.COUT    Tbyp                  0.118   clock_divisor/q<6>
+                                                       clock_divisor/blk00000001/blk00000011
+                                                       clock_divisor/blk00000001/blk00000013
+    SLICE_X35Y75.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000003d
+    SLICE_X35Y75.COUT    Tbyp                  0.118   clock_divisor/q<8>
+                                                       clock_divisor/blk00000001/blk00000015
+                                                       clock_divisor/blk00000001/blk00000017
+    SLICE_X35Y76.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000003f
+    SLICE_X35Y76.COUT    Tbyp                  0.118   clock_divisor/q<10>
+                                                       clock_divisor/blk00000001/blk00000019
+                                                       clock_divisor/blk00000001/blk0000001b
+    SLICE_X35Y77.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000002a
+    SLICE_X35Y77.COUT    Tbyp                  0.118   clock_divisor/q<12>
+                                                       clock_divisor/blk00000001/blk0000001d
+                                                       clock_divisor/blk00000001/blk0000001f
+    SLICE_X35Y78.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000002c
+    SLICE_X35Y78.COUT    Tbyp                  0.118   clock_divisor/q<14>
+                                                       clock_divisor/blk00000001/blk00000021
+                                                       clock_divisor/blk00000001/blk00000023
+    SLICE_X35Y79.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000002e
+    SLICE_X35Y79.COUT    Tbyp                  0.118   clock_divisor/q<16>
+                                                       clock_divisor/blk00000001/blk00000025
+                                                       clock_divisor/blk00000001/blk00000027
+    SLICE_X35Y80.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000030
+    SLICE_X35Y80.Y       Tciny                 0.869   clock_divisor/q<18>
+                                                       clock_divisor/blk00000001/blk00000029
+                                                       clock_divisor/blk00000001/blk0000002c
+    SLICE_X34Y76.G3      net (fanout=1)        0.272   clock_divisor/blk00000001/sig00000018
+    SLICE_X34Y76.COUT    Topcyg                1.131   clock_divisor/blk00000001/sig00000075
+                                                       clock_divisor/blk00000001/blk00000059
+                                                       clock_divisor/blk00000001/blk0000005a
+    SLICE_X34Y77.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000075
+    SLICE_X34Y77.COUT    Tbyp                  0.130   clock_divisor/blk00000001/sig00000077
+                                                       clock_divisor/blk00000001/blk0000005c
+                                                       clock_divisor/blk00000001/blk0000005e
+    SLICE_X34Y78.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000077
+    SLICE_X34Y78.COUT    Tbyp                  0.130   clock_divisor/blk00000001/sig00000079
+                                                       clock_divisor/blk00000001/blk00000060
+                                                       clock_divisor/blk00000001/blk00000062
+    SLICE_X34Y79.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000079
+    SLICE_X34Y79.CLK     Tcinck                1.016   int_5Hz
+                                                       clock_divisor/blk00000001/blk00000064
+                                                       clock_divisor/blk00000001/sig00000072_rt
+                                                       clock_divisor/blk00000001/blk0000004e
+    -------------------------------------------------  ---------------------------
+    Total                                      6.794ns (5.973ns logic, 0.821ns route)
+                                                       (87.9% logic, 12.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point clock_divisor/blk00000001/blk0000004e (SLICE_X34Y79.F4), 25 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     1.796ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clock_divisor/blk00000001/blk00000035 (FF)
+  Destination:          clock_divisor/blk00000001/blk0000004e (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      6.202ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.002ns (0.042 - 0.044)
+  Source Clock:         clk_125MHz rising at 0.000ns
+  Destination Clock:    clk_125MHz rising at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: clock_divisor/blk00000001/blk00000035 to clock_divisor/blk00000001/blk0000004e
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y71.XQ      Tcko                  0.591   clock_divisor/q<0>
+                                                       clock_divisor/blk00000001/blk00000035
+    SLICE_X35Y71.F1      net (fanout=2)        0.549   clock_divisor/q<0>
+    SLICE_X35Y71.COUT    Topcyf                1.162   clock_divisor/q<0>
+                                                       clock_divisor/blk00000001/blk0000007f
+                                                       clock_divisor/blk00000001/blk00000004
+                                                       clock_divisor/blk00000001/blk00000007
+    SLICE_X35Y72.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000033
+    SLICE_X35Y72.COUT    Tbyp                  0.118   clock_divisor/q<2>
+                                                       clock_divisor/blk00000001/blk00000009
+                                                       clock_divisor/blk00000001/blk0000000b
+    SLICE_X35Y73.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000039
+    SLICE_X35Y73.COUT    Tbyp                  0.118   clock_divisor/q<4>
+                                                       clock_divisor/blk00000001/blk0000000d
+                                                       clock_divisor/blk00000001/blk0000000f
+    SLICE_X35Y74.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000003b
+    SLICE_X35Y74.COUT    Tbyp                  0.118   clock_divisor/q<6>
+                                                       clock_divisor/blk00000001/blk00000011
+                                                       clock_divisor/blk00000001/blk00000013
+    SLICE_X35Y75.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000003d
+    SLICE_X35Y75.COUT    Tbyp                  0.118   clock_divisor/q<8>
+                                                       clock_divisor/blk00000001/blk00000015
+                                                       clock_divisor/blk00000001/blk00000017
+    SLICE_X35Y76.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000003f
+    SLICE_X35Y76.COUT    Tbyp                  0.118   clock_divisor/q<10>
+                                                       clock_divisor/blk00000001/blk00000019
+                                                       clock_divisor/blk00000001/blk0000001b
+    SLICE_X35Y77.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000002a
+    SLICE_X35Y77.COUT    Tbyp                  0.118   clock_divisor/q<12>
+                                                       clock_divisor/blk00000001/blk0000001d
+                                                       clock_divisor/blk00000001/blk0000001f
+    SLICE_X35Y78.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000002c
+    SLICE_X35Y78.COUT    Tbyp                  0.118   clock_divisor/q<14>
+                                                       clock_divisor/blk00000001/blk00000021
+                                                       clock_divisor/blk00000001/blk00000023
+    SLICE_X35Y79.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000002e
+    SLICE_X35Y79.COUT    Tbyp                  0.118   clock_divisor/q<16>
+                                                       clock_divisor/blk00000001/blk00000025
+                                                       clock_divisor/blk00000001/blk00000027
+    SLICE_X35Y80.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000030
+    SLICE_X35Y80.COUT    Tbyp                  0.118   clock_divisor/q<18>
+                                                       clock_divisor/blk00000001/blk00000029
+                                                       clock_divisor/blk00000001/blk0000002b
+    SLICE_X35Y81.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000032
+    SLICE_X35Y81.COUT    Tbyp                  0.118   clock_divisor/q<20>
+                                                       clock_divisor/blk00000001/blk0000002d
+                                                       clock_divisor/blk00000001/blk0000002f
+    SLICE_X35Y82.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000035
+    SLICE_X35Y82.COUT    Tbyp                  0.118   clock_divisor/q<22>
+                                                       clock_divisor/blk00000001/blk00000031
+                                                       clock_divisor/blk00000001/blk00000033
+    SLICE_X35Y83.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000037
+    SLICE_X35Y83.X       Tcinx                 0.462   clock_divisor/q<24>
+                                                       clock_divisor/blk00000001/blk00000006
+    SLICE_X34Y79.F4      net (fanout=1)        0.275   clock_divisor/blk00000001/sig0000001e
+    SLICE_X34Y79.CLK     Tfck                  1.865   int_5Hz
+                                                       clock_divisor/blk00000001/blk00000063
+                                                       clock_divisor/blk00000001/blk00000064
+                                                       clock_divisor/blk00000001/sig00000072_rt
+                                                       clock_divisor/blk00000001/blk0000004e
+    -------------------------------------------------  ---------------------------
+    Total                                      6.202ns (5.378ns logic, 0.824ns route)
+                                                       (86.7% logic, 13.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.915ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clock_divisor/blk00000001/blk00000037 (FF)
+  Destination:          clock_divisor/blk00000001/blk0000004e (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      6.084ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.001ns (0.042 - 0.043)
+  Source Clock:         clk_125MHz rising at 0.000ns
+  Destination Clock:    clk_125MHz rising at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: clock_divisor/blk00000001/blk00000037 to clock_divisor/blk00000001/blk0000004e
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y72.XQ      Tcko                  0.591   clock_divisor/q<2>
+                                                       clock_divisor/blk00000001/blk00000037
+    SLICE_X35Y72.F1      net (fanout=2)        0.549   clock_divisor/q<2>
+    SLICE_X35Y72.COUT    Topcyf                1.162   clock_divisor/q<2>
+                                                       clock_divisor/q<2>_rt
+                                                       clock_divisor/blk00000001/blk00000009
+                                                       clock_divisor/blk00000001/blk0000000b
+    SLICE_X35Y73.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000039
+    SLICE_X35Y73.COUT    Tbyp                  0.118   clock_divisor/q<4>
+                                                       clock_divisor/blk00000001/blk0000000d
+                                                       clock_divisor/blk00000001/blk0000000f
+    SLICE_X35Y74.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000003b
+    SLICE_X35Y74.COUT    Tbyp                  0.118   clock_divisor/q<6>
+                                                       clock_divisor/blk00000001/blk00000011
+                                                       clock_divisor/blk00000001/blk00000013
+    SLICE_X35Y75.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000003d
+    SLICE_X35Y75.COUT    Tbyp                  0.118   clock_divisor/q<8>
+                                                       clock_divisor/blk00000001/blk00000015
+                                                       clock_divisor/blk00000001/blk00000017
+    SLICE_X35Y76.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000003f
+    SLICE_X35Y76.COUT    Tbyp                  0.118   clock_divisor/q<10>
+                                                       clock_divisor/blk00000001/blk00000019
+                                                       clock_divisor/blk00000001/blk0000001b
+    SLICE_X35Y77.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000002a
+    SLICE_X35Y77.COUT    Tbyp                  0.118   clock_divisor/q<12>
+                                                       clock_divisor/blk00000001/blk0000001d
+                                                       clock_divisor/blk00000001/blk0000001f
+    SLICE_X35Y78.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000002c
+    SLICE_X35Y78.COUT    Tbyp                  0.118   clock_divisor/q<14>
+                                                       clock_divisor/blk00000001/blk00000021
+                                                       clock_divisor/blk00000001/blk00000023
+    SLICE_X35Y79.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000002e
+    SLICE_X35Y79.COUT    Tbyp                  0.118   clock_divisor/q<16>
+                                                       clock_divisor/blk00000001/blk00000025
+                                                       clock_divisor/blk00000001/blk00000027
+    SLICE_X35Y80.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000030
+    SLICE_X35Y80.COUT    Tbyp                  0.118   clock_divisor/q<18>
+                                                       clock_divisor/blk00000001/blk00000029
+                                                       clock_divisor/blk00000001/blk0000002b
+    SLICE_X35Y81.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000032
+    SLICE_X35Y81.COUT    Tbyp                  0.118   clock_divisor/q<20>
+                                                       clock_divisor/blk00000001/blk0000002d
+                                                       clock_divisor/blk00000001/blk0000002f
+    SLICE_X35Y82.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000035
+    SLICE_X35Y82.COUT    Tbyp                  0.118   clock_divisor/q<22>
+                                                       clock_divisor/blk00000001/blk00000031
+                                                       clock_divisor/blk00000001/blk00000033
+    SLICE_X35Y83.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000037
+    SLICE_X35Y83.X       Tcinx                 0.462   clock_divisor/q<24>
+                                                       clock_divisor/blk00000001/blk00000006
+    SLICE_X34Y79.F4      net (fanout=1)        0.275   clock_divisor/blk00000001/sig0000001e
+    SLICE_X34Y79.CLK     Tfck                  1.865   int_5Hz
+                                                       clock_divisor/blk00000001/blk00000063
+                                                       clock_divisor/blk00000001/blk00000064
+                                                       clock_divisor/blk00000001/sig00000072_rt
+                                                       clock_divisor/blk00000001/blk0000004e
+    -------------------------------------------------  ---------------------------
+    Total                                      6.084ns (5.260ns logic, 0.824ns route)
+                                                       (86.5% logic, 13.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.031ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clock_divisor/blk00000001/blk00000036 (FF)
+  Destination:          clock_divisor/blk00000001/blk0000004e (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      5.967ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.002ns (0.042 - 0.044)
+  Source Clock:         clk_125MHz rising at 0.000ns
+  Destination Clock:    clk_125MHz rising at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: clock_divisor/blk00000001/blk00000036 to clock_divisor/blk00000001/blk0000004e
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y71.YQ      Tcko                  0.587   clock_divisor/q<0>
+                                                       clock_divisor/blk00000001/blk00000036
+    SLICE_X35Y71.G2      net (fanout=2)        0.479   clock_divisor/q<1>
+    SLICE_X35Y71.COUT    Topcyg                1.001   clock_divisor/q<0>
+                                                       clock_divisor/q<1>_rt
+                                                       clock_divisor/blk00000001/blk00000007
+    SLICE_X35Y72.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000033
+    SLICE_X35Y72.COUT    Tbyp                  0.118   clock_divisor/q<2>
+                                                       clock_divisor/blk00000001/blk00000009
+                                                       clock_divisor/blk00000001/blk0000000b
+    SLICE_X35Y73.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000039
+    SLICE_X35Y73.COUT    Tbyp                  0.118   clock_divisor/q<4>
+                                                       clock_divisor/blk00000001/blk0000000d
+                                                       clock_divisor/blk00000001/blk0000000f
+    SLICE_X35Y74.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000003b
+    SLICE_X35Y74.COUT    Tbyp                  0.118   clock_divisor/q<6>
+                                                       clock_divisor/blk00000001/blk00000011
+                                                       clock_divisor/blk00000001/blk00000013
+    SLICE_X35Y75.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000003d
+    SLICE_X35Y75.COUT    Tbyp                  0.118   clock_divisor/q<8>
+                                                       clock_divisor/blk00000001/blk00000015
+                                                       clock_divisor/blk00000001/blk00000017
+    SLICE_X35Y76.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000003f
+    SLICE_X35Y76.COUT    Tbyp                  0.118   clock_divisor/q<10>
+                                                       clock_divisor/blk00000001/blk00000019
+                                                       clock_divisor/blk00000001/blk0000001b
+    SLICE_X35Y77.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000002a
+    SLICE_X35Y77.COUT    Tbyp                  0.118   clock_divisor/q<12>
+                                                       clock_divisor/blk00000001/blk0000001d
+                                                       clock_divisor/blk00000001/blk0000001f
+    SLICE_X35Y78.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000002c
+    SLICE_X35Y78.COUT    Tbyp                  0.118   clock_divisor/q<14>
+                                                       clock_divisor/blk00000001/blk00000021
+                                                       clock_divisor/blk00000001/blk00000023
+    SLICE_X35Y79.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig0000002e
+    SLICE_X35Y79.COUT    Tbyp                  0.118   clock_divisor/q<16>
+                                                       clock_divisor/blk00000001/blk00000025
+                                                       clock_divisor/blk00000001/blk00000027
+    SLICE_X35Y80.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000030
+    SLICE_X35Y80.COUT    Tbyp                  0.118   clock_divisor/q<18>
+                                                       clock_divisor/blk00000001/blk00000029
+                                                       clock_divisor/blk00000001/blk0000002b
+    SLICE_X35Y81.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000032
+    SLICE_X35Y81.COUT    Tbyp                  0.118   clock_divisor/q<20>
+                                                       clock_divisor/blk00000001/blk0000002d
+                                                       clock_divisor/blk00000001/blk0000002f
+    SLICE_X35Y82.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000035
+    SLICE_X35Y82.COUT    Tbyp                  0.118   clock_divisor/q<22>
+                                                       clock_divisor/blk00000001/blk00000031
+                                                       clock_divisor/blk00000001/blk00000033
+    SLICE_X35Y83.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000037
+    SLICE_X35Y83.X       Tcinx                 0.462   clock_divisor/q<24>
+                                                       clock_divisor/blk00000001/blk00000006
+    SLICE_X34Y79.F4      net (fanout=1)        0.275   clock_divisor/blk00000001/sig0000001e
+    SLICE_X34Y79.CLK     Tfck                  1.865   int_5Hz
+                                                       clock_divisor/blk00000001/blk00000063
+                                                       clock_divisor/blk00000001/blk00000064
+                                                       clock_divisor/blk00000001/sig00000072_rt
+                                                       clock_divisor/blk00000001/blk0000004e
+    -------------------------------------------------  ---------------------------
+    Total                                      5.967ns (5.213ns logic, 0.754ns route)
+                                                       (87.4% logic, 12.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point clock_divisor/blk00000001/blk0000003b (SLICE_X35Y74.SR), 17 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.060ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clock_divisor/blk00000001/blk0000004d (FF)
+  Destination:          clock_divisor/blk00000001/blk0000003b (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      5.934ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.006ns (0.042 - 0.048)
+  Source Clock:         clk_125MHz rising at 0.000ns
+  Destination Clock:    clk_125MHz rising at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: clock_divisor/blk00000001/blk0000004d to clock_divisor/blk00000001/blk0000003b
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y83.XQ      Tcko                  0.591   clock_divisor/q<24>
+                                                       clock_divisor/blk00000001/blk0000004d
+    SLICE_X33Y77.G1      net (fanout=2)        1.386   clock_divisor/q<24>
+    SLICE_X33Y77.COUT    Topcyg                1.001   clock_divisor/blk00000001/sig00000009
+                                                       clock_divisor/blk00000001/blk00000054
+                                                       clock_divisor/blk00000001/blk00000055
+    SLICE_X33Y78.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000009
+    SLICE_X33Y78.XB      Tcinxb                0.404   clock_divisor/blk00000001/sig00000004
+                                                       clock_divisor/blk00000001/blk00000057
+    SLICE_X35Y74.SR      net (fanout=13)       1.642   clock_divisor/blk00000001/sig00000004
+    SLICE_X35Y74.CLK     Tsrck                 0.910   clock_divisor/q<6>
+                                                       clock_divisor/blk00000001/blk0000003b
+    -------------------------------------------------  ---------------------------
+    Total                                      5.934ns (2.906ns logic, 3.028ns route)
+                                                       (49.0% logic, 51.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.228ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clock_divisor/blk00000001/blk00000047 (FF)
+  Destination:          clock_divisor/blk00000001/blk0000003b (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      5.770ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.002ns (0.042 - 0.044)
+  Source Clock:         clk_125MHz rising at 0.000ns
+  Destination Clock:    clk_125MHz rising at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: clock_divisor/blk00000001/blk00000047 to clock_divisor/blk00000001/blk0000003b
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y80.XQ      Tcko                  0.591   clock_divisor/q<18>
+                                                       clock_divisor/blk00000001/blk00000047
+    SLICE_X33Y76.G1      net (fanout=2)        1.104   clock_divisor/q<18>
+    SLICE_X33Y76.COUT    Topcyg                1.001   clock_divisor/blk00000001/sig00000007
+                                                       clock_divisor/blk00000001/blk00000050
+                                                       clock_divisor/blk00000001/blk00000051
+    SLICE_X33Y77.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000007
+    SLICE_X33Y77.COUT    Tbyp                  0.118   clock_divisor/blk00000001/sig00000009
+                                                       clock_divisor/blk00000001/blk00000053
+                                                       clock_divisor/blk00000001/blk00000055
+    SLICE_X33Y78.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000009
+    SLICE_X33Y78.XB      Tcinxb                0.404   clock_divisor/blk00000001/sig00000004
+                                                       clock_divisor/blk00000001/blk00000057
+    SLICE_X35Y74.SR      net (fanout=13)       1.642   clock_divisor/blk00000001/sig00000004
+    SLICE_X35Y74.CLK     Tsrck                 0.910   clock_divisor/q<6>
+                                                       clock_divisor/blk00000001/blk0000003b
+    -------------------------------------------------  ---------------------------
+    Total                                      5.770ns (3.024ns logic, 2.746ns route)
+                                                       (52.4% logic, 47.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.456ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clock_divisor/blk00000001/blk00000039 (FF)
+  Destination:          clock_divisor/blk00000001/blk0000003b (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      5.543ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.001ns (0.004 - 0.005)
+  Source Clock:         clk_125MHz rising at 0.000ns
+  Destination Clock:    clk_125MHz rising at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: clock_divisor/blk00000001/blk00000039 to clock_divisor/blk00000001/blk0000003b
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y73.XQ      Tcko                  0.591   clock_divisor/q<4>
+                                                       clock_divisor/blk00000001/blk00000039
+    SLICE_X33Y77.G2      net (fanout=2)        0.995   clock_divisor/q<4>
+    SLICE_X33Y77.COUT    Topcyg                1.001   clock_divisor/blk00000001/sig00000009
+                                                       clock_divisor/blk00000001/blk00000054
+                                                       clock_divisor/blk00000001/blk00000055
+    SLICE_X33Y78.CIN     net (fanout=1)        0.000   clock_divisor/blk00000001/sig00000009
+    SLICE_X33Y78.XB      Tcinxb                0.404   clock_divisor/blk00000001/sig00000004
+                                                       clock_divisor/blk00000001/blk00000057
+    SLICE_X35Y74.SR      net (fanout=13)       1.642   clock_divisor/blk00000001/sig00000004
+    SLICE_X35Y74.CLK     Tsrck                 0.910   clock_divisor/q<6>
+                                                       clock_divisor/blk00000001/blk0000003b
+    -------------------------------------------------  ---------------------------
+    Total                                      5.543ns (2.906ns logic, 2.637ns route)
+                                                       (52.4% logic, 47.6% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "clk_125MHz" PERIOD = 8 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point toogle2 (SLICE_X44Y91.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.032ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               inst_edge_detect/rising_edge_found (FF)
+  Destination:          toogle2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.025ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.007ns (0.035 - 0.042)
+  Source Clock:         clk_125MHz rising at 8.000ns
+  Destination Clock:    clk_125MHz rising at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: inst_edge_detect/rising_edge_found to toogle2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y91.YQ      Tcko                  0.470   inst_edge_detect/rising_edge_found
+                                                       inst_edge_detect/rising_edge_found
+    SLICE_X44Y91.CE      net (fanout=1)        0.486   inst_edge_detect/rising_edge_found
+    SLICE_X44Y91.CLK     Tckce       (-Th)    -0.069   toogle2
+                                                       toogle2
+    -------------------------------------------------  ---------------------------
+    Total                                      1.025ns (0.539ns logic, 0.486ns route)
+                                                       (52.6% logic, 47.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point toogle2 (SLICE_X44Y91.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.094ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               toogle2 (FF)
+  Destination:          toogle2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.094ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_125MHz rising at 8.000ns
+  Destination Clock:    clk_125MHz rising at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: toogle2 to toogle2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y91.YQ      Tcko                  0.522   toogle2
+                                                       toogle2
+    SLICE_X44Y91.BY      net (fanout=2)        0.420   toogle2
+    SLICE_X44Y91.CLK     Tckdi       (-Th)    -0.152   toogle2
+                                                       toogle2
+    -------------------------------------------------  ---------------------------
+    Total                                      1.094ns (0.674ns logic, 0.420ns route)
+                                                       (61.6% logic, 38.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point inst_edge_detect/cooked_1 (SLICE_X42Y91.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.299ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               inst_edge_detect/IDDR2_inst/FF1 (FF)
+  Destination:          inst_edge_detect/cooked_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.284ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.015ns (0.042 - 0.057)
+  Source Clock:         clk_125MHz rising at 8.000ns
+  Destination Clock:    clk_125MHz rising at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: inst_edge_detect/IDDR2_inst/FF1 to inst_edge_detect/cooked_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    A10.IQ2              Tiockiq               0.406   input1
+                                                       inst_edge_detect/IDDR2_inst/FF1
+    SLICE_X42Y91.BY      net (fanout=1)        0.726   inst_edge_detect/raw<1>
+    SLICE_X42Y91.CLK     Tckdi       (-Th)    -0.152   inst_edge_detect/cooked<2>
+                                                       inst_edge_detect/cooked_1
+    -------------------------------------------------  ---------------------------
+    Total                                      1.284ns (0.558ns logic, 0.726ns route)
+                                                       (43.5% logic, 56.5% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "clk_125MHz" PERIOD = 8 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.348ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 8.000ns
+  Low pulse: 4.000ns
+  Low pulse limit: 0.826ns (Tcl)
+  Physical resource: int_5Hz/CLK
+  Logical resource: clock_divisor/blk00000001/blk0000004e/CK
+  Location pin: SLICE_X34Y79.CLK
+  Clock network: clk_125MHz
+--------------------------------------------------------------------------------
+Slack: 6.348ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 8.000ns
+  High pulse: 4.000ns
+  High pulse limit: 0.826ns (Tch)
+  Physical resource: int_5Hz/CLK
+  Logical resource: clock_divisor/blk00000001/blk0000004e/CK
+  Location pin: SLICE_X34Y79.CLK
+  Clock network: clk_125MHz
+--------------------------------------------------------------------------------
+Slack: 6.348ns (period - min period limit)
+  Period: 8.000ns
+  Min period limit: 1.652ns (605.327MHz) (Tcp)
+  Physical resource: int_5Hz/CLK
+  Logical resource: clock_divisor/blk00000001/blk0000004e/CK
+  Location pin: SLICE_X34Y79.CLK
+  Clock network: clk_125MHz
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "DCM_clock_generator/CLKIN_IBUFG" PERIOD = 20 ns HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   6.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "DCM_clock_generator/CLKIN_IBUFG" PERIOD = 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 14.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 3.000ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: DCM_clock_generator/DCM_SP_INST/CLKIN
+  Logical resource: DCM_clock_generator/DCM_SP_INST/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: DCM_clock_generator/CLKIN_IBUFG
+--------------------------------------------------------------------------------
+Slack: 14.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 3.000ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: DCM_clock_generator/DCM_SP_INST/CLKIN
+  Logical resource: DCM_clock_generator/DCM_SP_INST/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: DCM_clock_generator/CLKIN_IBUFG
+--------------------------------------------------------------------------------
+Slack: 15.834ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 4.166ns (240.038MHz) (Tdcmpc)
+  Physical resource: DCM_clock_generator/DCM_SP_INST/CLKIN
+  Logical resource: DCM_clock_generator/DCM_SP_INST/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: DCM_clock_generator/CLKIN_IBUFG
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PERIOD analysis for net "DCM_clock_generator/CLKFX_BUF" 
+derived from  NET "DCM_clock_generator/CLKIN_IBUFG" PERIOD = 20 ns HIGH 50%;  
+divided by 2.50 to 8 nS and duty cycle corrected to HIGH 4 nS  
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   3.067ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: PERIOD analysis for net "DCM_clock_generator/CLKFX_BUF" derived from
+ NET "DCM_clock_generator/CLKIN_IBUFG" PERIOD = 20 ns HIGH 50%;
+ divided by 2.50 to 8 nS and duty cycle corrected to HIGH 4 nS 
+
+--------------------------------------------------------------------------------
+Slack: 4.933ns (period - min period limit)
+  Period: 8.000ns
+  Min period limit: 3.067ns (326.052MHz) (Tdcmpfx)
+  Physical resource: DCM_clock_generator/DCM_SP_INST/CLKFX
+  Logical resource: DCM_clock_generator/DCM_SP_INST/CLKFX
+  Location pin: DCM_X0Y1.CLKFX
+  Clock network: DCM_clock_generator/CLKFX_BUF
+--------------------------------------------------------------------------------
+Slack: 192.000ns (max period limit - period)
+  Period: 8.000ns
+  Max period limit: 200.000ns (5.000MHz) (Tdcmpfx)
+  Physical resource: DCM_clock_generator/DCM_SP_INST/CLKFX
+  Logical resource: DCM_clock_generator/DCM_SP_INST/CLKFX
+  Location pin: DCM_X0Y1.CLKFX
+  Clock network: DCM_clock_generator/CLKFX_BUF
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PERIOD analysis for net "DCM_clock_generator/CLKFX180_BUF" 
+derived from  NET "DCM_clock_generator/CLKIN_IBUFG" PERIOD = 20 ns HIGH 50%;  
+divided by 2.50 to 8 nS and duty cycle corrected to HIGH 4 nS  
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   3.067ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: PERIOD analysis for net "DCM_clock_generator/CLKFX180_BUF" derived from
+ NET "DCM_clock_generator/CLKIN_IBUFG" PERIOD = 20 ns HIGH 50%;
+ divided by 2.50 to 8 nS and duty cycle corrected to HIGH 4 nS 
+
+--------------------------------------------------------------------------------
+Slack: 4.933ns (period - min period limit)
+  Period: 8.000ns
+  Min period limit: 3.067ns (326.052MHz) (Tdcmpfx)
+  Physical resource: DCM_clock_generator/DCM_SP_INST/CLKFX180
+  Logical resource: DCM_clock_generator/DCM_SP_INST/CLKFX180
+  Location pin: DCM_X0Y1.CLKFX180
+  Clock network: DCM_clock_generator/CLKFX180_BUF
+--------------------------------------------------------------------------------
+Slack: 6.404ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 8.000ns
+  Low pulse: 4.000ns
+  Low pulse limit: 0.798ns (Tcl)
+  Physical resource: input1/ICLK1
+  Logical resource: inst_edge_detect/IDDR2_inst/FF0/CK
+  Location pin: A10.ICLK1
+  Clock network: clkn_125MHz
+--------------------------------------------------------------------------------
+Slack: 6.404ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 8.000ns
+  High pulse: 4.000ns
+  High pulse limit: 0.798ns (Tch)
+  Physical resource: input1/ICLK1
+  Logical resource: inst_edge_detect/IDDR2_inst/FF0/CK
+  Location pin: A10.ICLK1
+  Clock network: clkn_125MHz
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for DCM_clock_generator/CLKIN_IBUFG
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|DCM_clock_generator/CLKIN_IBUFG|     20.000ns|      6.000ns|      7.668ns|            0|            0|            0|            0|
+| DCM_clock_generator/CLKFX_BUF |      8.000ns|      3.067ns|          N/A|            0|            0|            0|            0|
+| DCM_clock_generator/CLKFX180_B|      8.000ns|      3.067ns|          N/A|            0|            0|            0|            0|
+| UF                            |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk_10MHz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_10MHz      |    6.885|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 1084 paths, 0 nets, and 131 connections
+
+Design statistics:
+   Minimum period:   6.885ns{1}   (Maximum frequency: 145.243MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Nov 01 15:51:38 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 168 MB
+
+
+
