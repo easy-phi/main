@@ -5,7 +5,7 @@
     (no_connects 0)
     (area 32.170219 -28.39629 217.780501 228.39629)
     (thickness 1.6002)
-    (drawings 22)
+    (drawings 23)
     (tracks 3540)
     (zones 0)
     (modules 393)
@@ -40,7 +40,7 @@
   )
 
   (setup
-    (last_trace_width 0.4)
+    (last_trace_width 0.2)
     (user_trace_width 0.25)
     (user_trace_width 0.3)
     (user_trace_width 0.355)
@@ -74,10 +74,10 @@
     (pad_to_mask_clearance 0.13)
     (solder_mask_min_width 0.25)
     (aux_axis_origin 0 0)
-    (visible_elements 7FFF3EFF)
+    (visible_elements 7FFF3FFF)
     (pcbplotparams
-      (layerselection 2097152)
-      (usegerberextensions true)
+      (layerselection 270532608)
+      (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.150000)
       (plotframeref false)
@@ -96,7 +96,7 @@
       (plotinvisibletext false)
       (padsonsilk false)
       (subtractmaskfromsilk false)
-      (outputformat 1)
+      (outputformat 5)
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
@@ -14532,6 +14532,7 @@
     )
   )
 
+  (gr_circle (center 194.3 111.25) (end 194.65 111.1) (layer Dessus.SilkS) (width 0.3))
   (gr_circle (center 167.2 75.25) (end 167.5 75.45) (layer Dessus.SilkS) (width 0.3))
   (gr_circle (center 167.2 65.3) (end 167.35 65.55) (layer Dessus.SilkS) (width 0.3))
   (gr_circle (center 199.25 56.75) (end 199.45 57) (layer Dessus.SilkS) (width 0.3))

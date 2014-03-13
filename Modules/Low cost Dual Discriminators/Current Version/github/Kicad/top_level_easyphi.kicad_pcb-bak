@@ -3,9 +3,9 @@
   (general
     (links 978)
     (no_connects 0)
-    (area 49.809499 49.809499 210.190501 150.190501)
+    (area 32.170219 -28.39629 217.780501 228.39629)
     (thickness 1.6002)
-    (drawings 22)
+    (drawings 23)
     (tracks 3540)
     (zones 0)
     (modules 393)
@@ -40,7 +40,7 @@
   )
 
   (setup
-    (last_trace_width 0.4)
+    (last_trace_width 0.2)
     (user_trace_width 0.25)
     (user_trace_width 0.3)
     (user_trace_width 0.355)
@@ -76,7 +76,7 @@
     (aux_axis_origin 0 0)
     (visible_elements 7FFF3FFF)
     (pcbplotparams
-      (layerselection 297828359)
+      (layerselection 2097152)
       (usegerberextensions true)
       (excludeedgelayer true)
       (linewidth 0.150000)
@@ -90,7 +90,7 @@
       (hpglpenoverlay 0)
       (psnegative false)
       (psa4output false)
-      (plotreference false)
+      (plotreference true)
       (plotvalue false)
       (plotothertext false)
       (plotinvisibletext false)
@@ -12950,10 +12950,10 @@
     )
   )
 
-  (module IND_NR6028 (layer Dessus) (tedit 5231CD86) (tstamp 52784A0E)
+  (module IND_NR6028 (layer Dessus) (tedit 52B45699) (tstamp 52784A0E)
     (at 149.55 57.8 90)
     (path /526C7508/526FEA93)
-    (fp_text reference L3 (at -15.91 -9.6 90) (layer Dessus.SilkS)
+    (fp_text reference L3 (at 0.1 0 180) (layer Dessus.SilkS)
       (effects (font (size 0.5 0.5) (thickness 0.1)))
     )
     (fp_text value 2.2uH (at -12.45 -6.44 90) (layer Dessus.SilkS)
@@ -14532,6 +14532,7 @@
     )
   )
 
+  (gr_circle (center 194.3 111.25) (end 194.65 111.1) (layer Dessus.SilkS) (width 0.3))
   (gr_circle (center 167.2 75.25) (end 167.5 75.45) (layer Dessus.SilkS) (width 0.3))
   (gr_circle (center 167.2 65.3) (end 167.35 65.55) (layer Dessus.SilkS) (width 0.3))
   (gr_circle (center 199.25 56.75) (end 199.45 57) (layer Dessus.SilkS) (width 0.3))

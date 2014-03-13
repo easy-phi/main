@@ -64,6 +64,10 @@ uint16_t ch1_integration_time_counter = 0;
 /* Goal for our integration time */
 uint16_t ch0_integration_time_goal = 1;
 uint16_t ch1_integration_time_goal = 1;
+/* Bool for test mode */
+uint16_t test_blinking_bool = FALSE;
+uint16_t test_blinking_state = FALSE;
+uint16_t test_mode = FALSE;
 
 
 /* Set Counter A integration time */
@@ -192,6 +196,63 @@ void main_cdc_disable(uint8_t port)
 	main_b_cdc_enable = false;
 }
 
+void enable_test_routine(void)
+{
+	uint32_t measured_counter1;
+	uint32_t measured_counter2;
+	uint32_t i,j;
+	
+	// Set boolean
+	test_mode = TRUE;
+	
+	// Let everything settle
+	for(j = 0; j < 48000000; j++)asm("NOP");
+	
+	// Enable offset relays
+	set_channel1_offset_relay(TRUE);
+	set_channel2_offset_relay(TRUE);
+	
+	// Set offset to 0
+	set_offset_channel1(2048);
+	set_offset_channel2(2048);
+	
+	// Set thresholds at 1.25V
+	set_threshold_channel1(2662);
+	set_threshold_channel2(2662);
+	
+	// Wait for flag and clear it
+	while(get_fpga_read_available_flag() != RETURN_OK);
+	read_counters(&measured_counter1, &measured_counter2);
+	while(get_fpga_read_available_flag() != RETURN_OK);
+	read_counters(&measured_counter1, &measured_counter2);
+	
+	// Generate a signal using the offset command
+	for(i = 0; i < 10; i++)
+	{
+		for(j = 0; j < 100000; j++)asm("NOP");
+		set_offset_channel1(4095);
+		set_offset_channel2(4095);
+		for(j = 0; j < 100000; j++)asm("NOP");
+		set_offset_channel1(2048);
+		set_offset_channel2(2048);		
+	}
+	
+	// Wait for flag
+	while(get_fpga_read_available_flag() != RETURN_OK);
+	
+	// Clear flag
+	read_counters(&measured_counter1, &measured_counter2);
+	
+	if((measured_counter1 == 10) && (measured_counter2 == 10))
+		test_blinking_bool = TRUE;
+	else
+		test_blinking_bool = FALSE;
+			
+	/* Send FPGA test mode command */
+	fpga_send_spi_16bits(261);
+	fpga_send_spi_16bits(1);
+}
+
 /*! \brief Main function. Execution starts here.
  */
 int main(void)
@@ -227,6 +288,7 @@ int main(void)
 	
 	enable_12v();
 	init_module_peripherals_ap();
+	//enable_test_routine();
 	while (true) 
 	{
 		console_process();
@@ -251,6 +313,20 @@ int main(void)
 				ch1_integration_time_counter = 0;
 				add_new_counterb_measurement_to_queue(ch1_counter_integrated);
 				ch1_counter_integrated = 0;
+			}
+			
+			if(test_blinking_bool == TRUE)
+			{
+				if(test_blinking_state == FALSE)
+				{
+					set_user_led_colour(1024, 1024, 1024);
+					test_blinking_state = TRUE;
+				} 
+				else
+				{
+					set_user_led_colour(0, 0, 0);
+					test_blinking_state = FALSE;
+				}
 			}
 		}
 		

@@ -46,11 +46,12 @@ uint32_t last_counter2_meas = 0;
 uint16_t fpga_send_spi_16bits(uint16_t data)
 {
 	uint16_t return_val;
+	uint16_t pcs;
 	
 	spi_write(SPI0, data, FPGA_CHIP_SEL, 0);
 	/* Wait to receive data */
 	while((spi_read_status(SPI0) & SPI_SR_RDRF) == 0);;
-	spi_read(SPI0, &return_val, FPGA_CHIP_SEL);
+	spi_read(SPI0, &return_val, &pcs);
 	
 	return return_val;
 }
