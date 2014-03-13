@@ -1,0 +1,2 @@
+LICENCE_CERN;4;"B1 B3 B5 B7";~
+LOGO;4;"U6 U2";~
