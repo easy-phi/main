@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 18.11.2013 16:37:35
+EESchema-DOCLIB  Version 2.0  Date: 03.03.2014 17:55:38
 #
 $CMP BFS520
 D NPN 5 GHz wideband transistor
@@ -41,10 +41,18 @@ K Comp
 F ns/lm193.pdf
 $ENDCMP
 #
+$CMP MAX3941ETG
+D 10Gbps EAM Driver
+$ENDCMP
+#
 $CMP MAX9032AKA
 D Dual Voltage Comparator
 K Comp
 F ns/lm193.pdf
+$ENDCMP
+#
+$CMP MC100EP196BMNR4G
+D 3.3 V ECL Programmable Delay Chip With FTUNE
 $ENDCMP
 #
 $CMP MIC69153YML
@@ -55,6 +63,10 @@ $ENDCMP
 #
 $CMP MOSFET_N
 F transistors/mos/*.*
+$ENDCMP
+#
+$CMP NB100LVEP91MNG
+D 2.5 V/3.3 V Any Level Positive to -2.5V/-3.3V Output Translator
 $ENDCMP
 #
 $CMP NB4L52
@@ -69,6 +81,10 @@ $CMP NB6L239MNG
 D 1:2 CML FanOut
 $ENDCMP
 #
+$CMP NB6L295MNG
+D Dual Channel Programmable Delay with Differential LVPECL Outputs
+$ENDCMP
+#
 $CMP SN65LVDS20
 D LVDS REPEATER/TRANSLATOR WITH ENABLE
 F http://www.ti.com/lit/ds/symlink/sn65lvp20.pdf
@@ -77,6 +93,10 @@ $ENDCMP
 $CMP SN65LVP20
 D LVPECL REPEATER/TRANSLATOR WITH ENABLE
 F http://www.ti.com/lit/ds/symlink/sn65lvp20.pdf
+$ENDCMP
+#
+$CMP SN74AVC8T245
+D 8-Bit Dual-Supply Bus Transceiver
 $ENDCMP
 #
 $CMP TLV1117LV12DCYR
