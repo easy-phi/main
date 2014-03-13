@@ -94,6 +94,6 @@ scpi_result_t SCPI_GetEnableChannelA(scpi_t* context)
 
 scpi_result_t SCPI_GetEnableChannelB(scpi_t* context)
 {
-	printf("%u\x0D", is_channel1_delay_enabled());
+	printf("%u\x0D", is_channel2_delay_enabled());
 	return SCPI_RES_OK;
 }

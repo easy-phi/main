@@ -1,5 +1,5 @@
-update=03.11.2013 01:07:45
-last_client=kicad
+update=12/03/2014 15:45:17
+last_client=eeschema
 [cvpcb]
 version=1
 NetIExt=net
@@ -38,6 +38,8 @@ LibName9=dip_sockets
 LibName10=pga_sockets
 LibName11=valves
 LibName12=kicad_homemade_lib
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=P:/EasyPhi/Modules/_kicad_lib
@@ -78,5 +80,3 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=kicad_homemade_lib
-[general]
-version=1

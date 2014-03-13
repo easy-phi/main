@@ -1,4 +1,46 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 25/09/2013 10:55:37
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 12/03/2014 15:58:38
+
+BeginCmp
+TimeStamp = /51B7C98E/52681D61;
+Reference = B1;
+ValeurCmp = LICENCE_CERN;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /51B7C98E/52681D70;
+Reference = B2;
+ValeurCmp = LOGO;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /5225B17A/52681A67;
+Reference = B3;
+ValeurCmp = LICENCE_CERN;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /5225B17A/52681A58;
+Reference = B4;
+ValeurCmp = LOGO;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /5266883B;
+Reference = B1000;
+ValeurCmp = LICENCE_CERN;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /52669FDC;
+Reference = B1001;
+ValeurCmp = LOGO;
+IdModule  = ;
+EndCmp
 
 BeginCmp
 TimeStamp = /51B7C98E/500E5EA7;
@@ -101,14 +143,14 @@ EndCmp
 BeginCmp
 TimeStamp = /5225B17A/522BB08B;
 Reference = C15;
-ValeurCmp = C;
+ValeurCmp = 10nF;
 IdModule  = SM0603_Capa;
 EndCmp
 
 BeginCmp
 TimeStamp = /5225B17A/522B82A5;
 Reference = C16;
-ValeurCmp = C;
+ValeurCmp = 10nF;
 IdModule  = SM0603_Capa;
 EndCmp
 
@@ -444,7 +486,7 @@ EndCmp
 BeginCmp
 TimeStamp = /5225B17A/522B8719;
 Reference = C64;
-ValeurCmp = C;
+ValeurCmp = 10nF;
 IdModule  = SM0603_Capa;
 EndCmp
 
@@ -528,7 +570,7 @@ EndCmp
 BeginCmp
 TimeStamp = /5225B17A/522BBCE8;
 Reference = C76;
-ValeurCmp = C;
+ValeurCmp = 10nF;
 IdModule  = SM0603_Capa;
 EndCmp
 
@@ -584,14 +626,14 @@ EndCmp
 BeginCmp
 TimeStamp = /5225B17A/522BBD02;
 Reference = C84;
-ValeurCmp = C;
+ValeurCmp = 10nF;
 IdModule  = SM0603_Capa;
 EndCmp
 
 BeginCmp
 TimeStamp = /5225B17A/522BBDBE;
 Reference = C85;
-ValeurCmp = C;
+ValeurCmp = 10nF;
 IdModule  = SM0603_Capa;
 EndCmp
 
@@ -871,7 +913,7 @@ EndCmp
 BeginCmp
 TimeStamp = /51B87E4A;
 Reference = R5;
-ValeurCmp = XXXXXX;
+ValeurCmp = 1k;
 IdModule  = SM0603_Resistor;
 EndCmp
 
@@ -1305,14 +1347,14 @@ EndCmp
 BeginCmp
 TimeStamp = /5225B17A/522BA67D;
 Reference = R67;
-ValeurCmp = R;
+ValeurCmp = 1k;
 IdModule  = SM0603_Resistor;
 EndCmp
 
 BeginCmp
 TimeStamp = /5225B17A/522BA68C;
 Reference = R68;
-ValeurCmp = R;
+ValeurCmp = 1k;
 IdModule  = SM0603_Resistor;
 EndCmp
 
@@ -1508,14 +1550,14 @@ EndCmp
 BeginCmp
 TimeStamp = /5225B17A/522BBD90;
 Reference = R96;
-ValeurCmp = R;
+ValeurCmp = 1k;
 IdModule  = SM0603_Resistor;
 EndCmp
 
 BeginCmp
 TimeStamp = /5225B17A/522BBD96;
 Reference = R97;
-ValeurCmp = R;
+ValeurCmp = 1k;
 IdModule  = SM0603_Resistor;
 EndCmp
 
@@ -1543,14 +1585,14 @@ EndCmp
 BeginCmp
 TimeStamp = /5225B17A/52444CFF;
 Reference = R101;
-ValeurCmp = xxxx;
+ValeurCmp = 49.9k;
 IdModule  = SM0603_Resistor;
 EndCmp
 
 BeginCmp
 TimeStamp = /5225B17A/52444D05;
 Reference = R102;
-ValeurCmp = xxxx;
+ValeurCmp = 23.4k;
 IdModule  = SM0603_Resistor;
 EndCmp
 
@@ -1639,9 +1681,9 @@ IdModule  = TE-5650478-5;
 EndCmp
 
 BeginCmp
-TimeStamp = /5225B17A/522BA63F;
+TimeStamp = /5225B17A/5275ADFF;
 Reference = U13;
-ValeurCmp = MAX9302AKA;
+ValeurCmp = MAX9032AKA;
 IdModule  = SOT23_8;
 EndCmp
 
@@ -1649,7 +1691,7 @@ BeginCmp
 TimeStamp = /5225B17A/522B7D17;
 Reference = U14;
 ValeurCmp = NB4L52;
-IdModule  = qfn16;
+IdModule  = QFN_16;
 EndCmp
 
 BeginCmp
@@ -1754,14 +1796,14 @@ BeginCmp
 TimeStamp = /5225B17A/522B7641;
 Reference = U29;
 ValeurCmp = NB6L11M;
-IdModule  = qfn16;
+IdModule  = QFN_16;
 EndCmp
 
 BeginCmp
 TimeStamp = /5225B17A/52260754;
 Reference = U30;
 ValeurCmp = SY89851U;
-IdModule  = qfn16;
+IdModule  = QFN_16;
 EndCmp
 
 BeginCmp
@@ -1772,9 +1814,9 @@ IdModule  = qfn_24;
 EndCmp
 
 BeginCmp
-TimeStamp = /5225B17A/522BBD84;
+TimeStamp = /5225B17A/5275BB02;
 Reference = U32;
-ValeurCmp = MAX9302AKA;
+ValeurCmp = MAX9032AKA;
 IdModule  = SOT23_8;
 EndCmp
 
@@ -1782,21 +1824,21 @@ BeginCmp
 TimeStamp = /5225B17A/522BBCDA;
 Reference = U33;
 ValeurCmp = NB4L52;
-IdModule  = qfn16;
+IdModule  = QFN_16;
 EndCmp
 
 BeginCmp
 TimeStamp = /5225B17A/5226215F;
 Reference = U34;
 ValeurCmp = SY89851U;
-IdModule  = qfn16;
+IdModule  = QFN_16;
 EndCmp
 
 BeginCmp
 TimeStamp = /5225B17A/522BC69A;
 Reference = U35;
 ValeurCmp = NB6L11M;
-IdModule  = qfn16;
+IdModule  = QFN_16;
 EndCmp
 
 BeginCmp

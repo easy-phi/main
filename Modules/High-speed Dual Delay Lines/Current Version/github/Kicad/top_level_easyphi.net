@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "P:/EasyPhi/Modules/High-speed Dual Delay Lines/Current Version/github/Kicad/top_level_easyphi.sch")
-    (date "03.11.2013 00:57:23")
+    (date "12/03/2014 15:58:44")
     (tool "eeschema (2013-07-07 BZR 4022)-stable"))
   (components
     (comp (ref U22)
@@ -2066,15 +2066,15 @@
         (field (name Footprint) ~)
         (field (name Datasheet) ~))
       (pins
-        (pin (num 1) (name OUT) (type unspc))
-        (pin (num 2) (name FB) (type unspc))
-        (pin (num 3) (name NC) (type unspc))
-        (pin (num 4) (name GND) (type unspc))
-        (pin (num 5) (name EN) (type unspc))
-        (pin (num 6) (name NR/SS) (type unspc))
-        (pin (num 7) (name DNC) (type unspc))
-        (pin (num 8) (name IN) (type unspc))
-        (pin (num 9) (name EP) (type unspc))))
+        (pin (num 1) (name OUT) (type output))
+        (pin (num 2) (name FB) (type input))
+        (pin (num 3) (name NC) (type passive))
+        (pin (num 4) (name GND) (type power_in))
+        (pin (num 5) (name EN) (type input))
+        (pin (num 6) (name NR/SS) (type passive))
+        (pin (num 7) (name DNC) (type NotConnected))
+        (pin (num 8) (name IN) (type power_in))
+        (pin (num 9) (name EP) (type power_in))))
     (libpart (lib kicad_homemade_lib) (part TROU_FIX)
       (fields
         (field (name Reference) U)
@@ -2113,9 +2113,9 @@
         (pin (num 6) (name I/O1) (type unspc)))))
   (libraries
     (library (logical device)
-      (uri "C:\\Program Files\\KiCad\\share\\library\\device.lib"))
+      (uri "C:\\Program Files (x86)\\KiCad\\share\\library\\device.lib"))
     (library (logical conn)
-      (uri "C:\\Program Files\\KiCad\\share\\library\\conn.lib"))
+      (uri "C:\\Program Files (x86)\\KiCad\\share\\library\\conn.lib"))
     (library (logical kicad_homemade_lib)
       (uri P:\EasyPhi\Modules\_kicad_lib\kicad_homemade_lib.lib)))
   (nets
