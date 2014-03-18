@@ -1,0 +1,297 @@
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 08.08.2012 17:25:08
+
+BeginCmp
+TimeStamp = /501FF13F;
+Reference = C1;
+ValeurCmp = 10nF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /502114F1;
+Reference = C2;
+ValeurCmp = 100nF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /50210ADC;
+Reference = C3;
+ValeurCmp = 1uF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /50210AD5;
+Reference = C4;
+ValeurCmp = 10nF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /50210B69;
+Reference = C5;
+ValeurCmp = 2.2uF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /50212580;
+Reference = C6;
+ValeurCmp = 100nF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /5022653D;
+Reference = C7;
+ValeurCmp = 22uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50226B50;
+Reference = C8;
+ValeurCmp = 22uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50227963;
+Reference = C9;
+ValeurCmp = 100nF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /50227950;
+Reference = C10;
+ValeurCmp = 100nF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /502276FF;
+Reference = C11;
+ValeurCmp = 100nF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /5022637F;
+Reference = D1;
+ValeurCmp = MBRS340T3G;
+IdModule  = SCHOTTKY_MBRS340;
+EndCmp
+
+BeginCmp
+TimeStamp = /50212302;
+Reference = D3;
+ValeurCmp = TVS_12V;
+IdModule  = TVS_SMAJ;
+EndCmp
+
+BeginCmp
+TimeStamp = /5022222A;
+Reference = D4;
+ValeurCmp = TVS_BIDIR;
+IdModule  = TVS_SMAJ;
+EndCmp
+
+BeginCmp
+TimeStamp = /501FF05E;
+Reference = FB1;
+ValeurCmp = FILTER;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50226337;
+Reference = L1;
+ValeurCmp = 68uH;
+IdModule  = CHOKE_DR1050;
+EndCmp
+
+BeginCmp
+TimeStamp = /5020EC44;
+Reference = Q1;
+ValeurCmp = FDS8979;
+IdModule  = SO8E;
+EndCmp
+
+BeginCmp
+TimeStamp = /5020E635;
+Reference = R1;
+ValeurCmp = 750k;
+IdModule  = SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /5020E62F;
+Reference = R2;
+ValeurCmp = 510k;
+IdModule  = SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /5020E3EC;
+Reference = R3;
+ValeurCmp = 91k;
+IdModule  = SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /5020E6A0;
+Reference = R4;
+ValeurCmp = 33k;
+IdModule  = SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /502110CF;
+Reference = R5;
+ValeurCmp = 10k;
+IdModule  = SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /502110C9;
+Reference = R6;
+ValeurCmp = 10k;
+IdModule  = SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /5021109C;
+Reference = R7;
+ValeurCmp = 10k;
+IdModule  = SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /5022776F;
+Reference = R8;
+ValeurCmp = 100k;
+IdModule  = SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /50227742;
+Reference = R9;
+ValeurCmp = 430;
+IdModule  = SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /5020DFCC;
+Reference = U1;
+ValeurCmp = PJ-002AH;
+IdModule  = PJ-002AH;
+EndCmp
+
+BeginCmp
+TimeStamp = /501FEA1D;
+Reference = U2;
+ValeurCmp = USB_CONNEC;
+IdModule  = AU-Y1007-R;
+EndCmp
+
+BeginCmp
+TimeStamp = /501FE780;
+Reference = U3;
+ValeurCmp = TE-5650478-5;
+IdModule  = TE-5650478-5;
+EndCmp
+
+BeginCmp
+TimeStamp = /5020E5CF;
+Reference = U4;
+ValeurCmp = LTC4365CTS8#TRMPBF;
+IdModule  = TSOT-23;
+EndCmp
+
+BeginCmp
+TimeStamp = /5020EE29;
+Reference = U5;
+ValeurCmp = 2-1825027-0;
+IdModule  = 2-1825027-0;
+EndCmp
+
+BeginCmp
+TimeStamp = /5020EE3B;
+Reference = U6;
+ValeurCmp = 2-1825027-0;
+IdModule  = 2-1825027-0;
+EndCmp
+
+BeginCmp
+TimeStamp = /5020EE3E;
+Reference = U7;
+ValeurCmp = 2-1825027-0;
+IdModule  = 2-1825027-0;
+EndCmp
+
+BeginCmp
+TimeStamp = /502114AD;
+Reference = U8;
+ValeurCmp = SN65LVDS1DBVR;
+IdModule  = SOT23-5-SN;
+EndCmp
+
+BeginCmp
+TimeStamp = /50210AC8;
+Reference = U9;
+ValeurCmp = LP2985A-33DBVR;
+IdModule  = SOT23-5-SN;
+EndCmp
+
+BeginCmp
+TimeStamp = /50212540;
+Reference = U10;
+ValeurCmp = FOX924B;
+IdModule  = FOX924B;
+EndCmp
+
+BeginCmp
+TimeStamp = /50223482;
+Reference = U11;
+ValeurCmp = TROU_FIX;
+IdModule  = TROU_FIX_GAP;
+EndCmp
+
+BeginCmp
+TimeStamp = /5022348A;
+Reference = U12;
+ValeurCmp = TROU_FIX;
+IdModule  = TROU_FIX_GAP;
+EndCmp
+
+BeginCmp
+TimeStamp = /50223494;
+Reference = U13;
+ValeurCmp = TROU_FIX;
+IdModule  = TROU_FIX_GAP;
+EndCmp
+
+BeginCmp
+TimeStamp = /50223497;
+Reference = U14;
+ValeurCmp = TROU_FIX;
+IdModule  = TROU_FIX_GAP;
+EndCmp
+
+BeginCmp
+TimeStamp = /50226224;
+Reference = U15;
+ValeurCmp = MIC4680-5.0YM;
+IdModule  = SO8E;
+EndCmp
+
+BeginCmp
+TimeStamp = /50227650;
+Reference = U16;
+ValeurCmp = TPS2111APWR;
+IdModule  = TSSOP-8;
+EndCmp
+
+EndListe

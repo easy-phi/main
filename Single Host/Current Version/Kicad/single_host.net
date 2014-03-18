@@ -1,0 +1,394 @@
+# EESchema Netlist Version 1.1 created  08.08.2012 17:25:08
+(
+ ( /501FF13F SM0603_Capa C1 10nF
+  ( 1 N-000002 )
+  ( 2 GND )
+ )
+ ( /502114F1 SM0603_Capa C2 100nF
+  ( 1 +3.3V )
+  ( 2 GND )
+ )
+ ( /50210ADC SM0603_Capa C3 1uF
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /50210AD5 SM0603_Capa C4 10nF
+  ( 1 N-000013 )
+  ( 2 GND )
+ )
+ ( /50210B69 SM0603_Capa C5 2.2uF
+  ( 1 +3.3V )
+  ( 2 GND )
+ )
+ ( /50212580 SM0603_Capa C6 100nF
+  ( 1 +3.3V )
+  ( 2 GND )
+ )
+ ( /5022653D SM0805 C7 22uF
+  ( 1 /5V_STEPDN )
+  ( 2 GND )
+ )
+ ( /50226B50 SM0805 C8 22uF
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /50227963 SM0603_Capa C9 100nF
+  ( 1 /5V_STEPDN )
+  ( 2 GND )
+ )
+ ( /50227950 SM0603_Capa C10 100nF
+  ( 1 /Vusb )
+  ( 2 GND )
+ )
+ ( /502276FF SM0603_Capa C11 100nF
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /5022637F SCHOTTKY_MBRS340 D1 MBRS340T3G
+  ( 1 GND )
+  ( 2 N-000025 )
+ )
+ ( /50212302 TVS_SMAJ D3 TVS_12V
+  ( 1 GND )
+  ( 2 N-000002 )
+ )
+ ( /5022222A TVS_SMAJ D4 TVS_BIDIR
+  ( 1 GND )
+  ( 2 N-000003 )
+ )
+ ( /501FF05E SM0805 FB1 FILTER
+  ( 1 N-000002 )
+  ( 2 /Vusb )
+ )
+ ( /50226337 CHOKE_DR1050 L1 68uH
+  ( 1 N-000025 )
+  ( 2 /5V_STEPDN )
+ )
+ ( /5020EC44 SO8E Q1 FDS8979
+  ( 1 N-000018 )
+  ( 2 N-000024 )
+  ( 3 N-000018 )
+  ( 4 N-000024 )
+  ( 5 VDD )
+  ( 6 VDD )
+  ( 7 N-000003 )
+  ( 8 N-000003 )
+ )
+ ( /5020E635 SM0603_Resistor R1 750k
+  ( 1 N-000003 )
+  ( 2 N-000021 )
+ )
+ ( /5020E62F SM0603_Resistor R2 510k
+  ( 1 N-000003 )
+  ( 2 N-000023 )
+ )
+ ( /5020E3EC SM0603_Resistor R3 91k
+  ( 1 N-000021 )
+  ( 2 N-000022 )
+ )
+ ( /5020E6A0 SM0603_Resistor R4 33k
+  ( 1 N-000022 )
+  ( 2 GND )
+ )
+ ( /502110CF SM0603_Resistor R5 10k
+  ( 1 +3.3V )
+  ( 2 /EXT_SYNC_CON3 )
+ )
+ ( /502110C9 SM0603_Resistor R6 10k
+  ( 1 +3.3V )
+  ( 2 /EXT_SYNC_CON2 )
+ )
+ ( /5021109C SM0603_Resistor R7 10k
+  ( 1 +3.3V )
+  ( 2 /EXT_SYNC_CON )
+ )
+ ( /5022776F SM0603_Resistor R8 100k
+  ( 1 GND )
+  ( 2 /5V_STEPDN )
+ )
+ ( /50227742 SM0603_Resistor R9 430
+  ( 1 GND )
+  ( 2 N-000015 )
+ )
+ ( /5020DFCC PJ-002AH U1 PJ-002AH
+  ( 1 N-000003 )
+  ( 2 GND )
+  ( 3 GND )
+ )
+ ( /501FEA1D AU-Y1007-R U2 USB_CONNEC
+  ( 1 N-000002 )
+  ( 2 /USB_D-_CON )
+  ( 3 /USB_D+_CON )
+  ( 4 GND )
+  ( 5 GND )
+  ( 6 GND )
+ )
+ ( /501FE780 TE-5650478-5 U3 TE-5650478-5
+  ( A1 GND )
+  ( A2 GND )
+  ( A3 GND )
+  ( A4 /EXT_SYNC_CON3 )
+  ( A5 VDD )
+  ( A6 VDD )
+  ( A7 VCC )
+  ( A8 VCC )
+  ( A9 GND )
+  ( A10 GND )
+  ( A11 GND )
+  ( A12 GND )
+  ( A13 GND )
+  ( A14 GND )
+  ( A15 GND )
+  ( A16 GND )
+  ( B1 GND )
+  ( B2 GND )
+  ( B3 GND )
+  ( B4 /EXT_SYNC_CON2 )
+  ( B5 VDD )
+  ( B6 VDD )
+  ( B7 VCC )
+  ( B8 VCC )
+  ( B9 GND )
+  ( B10 /CLK_10M_CON )
+  ( B11 /nCLK_10M_CON )
+  ( B12 GND )
+  ( B13 /USB_D+_CON )
+  ( B14 /USB_D-_CON )
+  ( B15 GND )
+  ( B16 GND )
+  ( C1 GND )
+  ( C2 GND )
+  ( C3 GND )
+  ( C4 /EXT_SYNC_CON )
+  ( C5 VDD )
+  ( C6 VDD )
+  ( C7 VCC )
+  ( C8 VCC )
+  ( C9 GND )
+  ( C10 GND )
+  ( C11 GND )
+  ( C12 GND )
+  ( C13 GND )
+  ( C14 GND )
+  ( C15 GND )
+  ( C16 GND )
+  ( D1 GND )
+  ( D2 GND )
+ )
+ ( /5020E5CF TSOT-23 U4 LTC4365CTS8#TRMPBF
+  ( 1 N-000003 )
+  ( 2 N-000021 )
+  ( 3 N-000022 )
+  ( 4 GND )
+  ( 5 N-000023 )
+  ( 6 ? )
+  ( 7 VDD )
+  ( 8 N-000024 )
+ )
+ ( /5020EE29 2-1825027-0 U5 2-1825027-0
+  ( 1 GND )
+  ( 2 GND )
+  ( 3 /EXT_SYNC_CON3 )
+  ( 4 GND )
+ )
+ ( /5020EE3B 2-1825027-0 U6 2-1825027-0
+  ( 1 GND )
+  ( 2 GND )
+  ( 3 /EXT_SYNC_CON2 )
+  ( 4 GND )
+ )
+ ( /5020EE3E 2-1825027-0 U7 2-1825027-0
+  ( 1 GND )
+  ( 2 GND )
+  ( 3 /EXT_SYNC_CON )
+  ( 4 GND )
+ )
+ ( /502114AD SOT23-5-SN U8 SN65LVDS1DBVR
+  ( 1 +3.3V )
+  ( 2 GND )
+  ( 3 /nCLK_10M_CON )
+  ( 4 /CLK_10M_CON )
+  ( 5 N-000011 )
+ )
+ ( /50210AC8 SOT23-5-SN U9 LP2985A-33DBVR
+  ( 1 VCC )
+  ( 2 GND )
+  ( 3 VCC )
+  ( 4 N-000013 )
+  ( 5 +3.3V )
+ )
+ ( /50212540 FOX924B U10 FOX924B
+  ( 1 ? )
+  ( 2 GND )
+  ( 3 N-000011 )
+  ( 4 +3.3V )
+ )
+ ( /50223482 TROU_FIX_GAP U11 TROU_FIX
+  ( FIX GND )
+ )
+ ( /5022348A TROU_FIX_GAP U12 TROU_FIX
+  ( FIX GND )
+ )
+ ( /50223494 TROU_FIX_GAP U13 TROU_FIX
+  ( FIX GND )
+ )
+ ( /50223497 TROU_FIX_GAP U14 TROU_FIX
+  ( FIX GND )
+ )
+ ( /50226224 SO8E U15 MIC4680-5.0YM
+  ( 1 GND )
+  ( 2 VDD )
+  ( 3 N-000025 )
+  ( 4 /5V_STEPDN )
+  ( 5 GND )
+  ( 6 GND )
+  ( 7 GND )
+  ( 8 GND )
+ )
+ ( /50227650 TSSOP-8 U16 TPS2111APWR
+  ( 1 ? )
+  ( 2 GND )
+  ( 3 /5V_STEPDN )
+  ( 4 N-000015 )
+  ( 5 GND )
+  ( 6 /Vusb )
+  ( 7 VCC )
+  ( 8 /5V_STEPDN )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ SM*
+ C?
+ C1-1
+$endlist
+$component C5
+ SM*
+ C?
+ C1-1
+$endlist
+$component C6
+ SM*
+ C?
+ C1-1
+$endlist
+$component C7
+ SM*
+ C?
+ C1-1
+$endlist
+$component C8
+ SM*
+ C?
+ C1-1
+$endlist
+$component C9
+ SM*
+ C?
+ C1-1
+$endlist
+$component C10
+ SM*
+ C?
+ C1-1
+$endlist
+$component C11
+ SM*
+ C?
+ C1-1
+$endlist
+$component D1
+ D?
+ S*
+$endlist
+$component D3
+ D?
+ SO*
+ SM*
+$endlist
+$component D4
+ D?
+ SO*
+ SM*
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R5
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R7
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R8
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R9
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$endfootprintlist
+}

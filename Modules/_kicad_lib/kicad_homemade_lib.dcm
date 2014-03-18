@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 04.03.2014 17:15:09
+EESchema-DOCLIB  Version 2.0  Date: 17.03.2014 09:49:19
 #
 $CMP BFS520
 D NPN 5 GHz wideband transistor
@@ -112,6 +112,10 @@ $CMP TPS542941
 D 2A/3A Dual Channel Synchronous Step-Down Switcher with Integrated FET
 K DC/DC
 F http://www.ti.com/lit/ds/symlink/tps542941.pdf
+$ENDCMP
+#
+$CMP TPS7A45XX
+D LOW-NOISE FAST-TRANSIENT-RESPONSE 1.5-A LOW-DROPOUT VOLTAGE REGULATORS
 $ENDCMP
 #
 $CMP TVS_BIDIR

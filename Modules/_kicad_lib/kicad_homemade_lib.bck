@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 03.03.2014 17:55:38
+EESchema-DOCLIB  Version 2.0  Date: 14.03.2014 14:08:41
 #
 $CMP BFS520
 D NPN 5 GHz wideband transistor
@@ -85,6 +85,10 @@ $CMP NB6L295MNG
 D Dual Channel Programmable Delay with Differential LVPECL Outputs
 $ENDCMP
 #
+$CMP NB7L14MNG
+D 1:4 LVPECL FanOut
+$ENDCMP
+#
 $CMP SN65LVDS20
 D LVDS REPEATER/TRANSLATOR WITH ENABLE
 F http://www.ti.com/lit/ds/symlink/sn65lvp20.pdf
@@ -108,6 +112,10 @@ $CMP TPS542941
 D 2A/3A Dual Channel Synchronous Step-Down Switcher with Integrated FET
 K DC/DC
 F http://www.ti.com/lit/ds/symlink/tps542941.pdf
+$ENDCMP
+#
+$CMP TPS7A45XX
+D LOW-NOISE FAST-TRANSIENT-RESPONSE 1.5-A LOW-DROPOUT VOLTAGE REGULATORS
 $ENDCMP
 #
 $CMP TVS_BIDIR
