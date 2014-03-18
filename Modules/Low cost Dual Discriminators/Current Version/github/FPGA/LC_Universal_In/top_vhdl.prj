@@ -1,0 +1,4 @@
+vhdl work "F:\PROJECTS\EASYPHI\FPGA_Low_Cost_Universal_Input\source\IPCORES\chipscope_icon.vhd"
+vhdl work "F:\PROJECTS\EASYPHI\FPGA_Low_Cost_Universal_Input\source\IPCORES\chipscope_ila.vhd"
+vhdl work "F:\PROJECTS\EASYPHI\FPGA_Low_Cost_Universal_Input\tests\clk_man.vhd"
+vhdl work "F:\PROJECTS\EASYPHI\FPGA_Low_Cost_Universal_Input\source\top.vhd"

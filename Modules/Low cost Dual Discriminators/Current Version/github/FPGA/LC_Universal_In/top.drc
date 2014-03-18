@@ -1,0 +1,407 @@
+Release 14.4 Drc P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Fri Jan 17 11:22:01 2014
+
+drc -z top.ncd top.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net CONTROL0<13> is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal <SYNC2_IN_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <SYNC3_IN_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <SYNC4_IN_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <EXT_SYNC_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp clk_man_inst/DCM_SP_INST,
+   consult the device Interactive Data Sheet.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB16> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB17> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB18> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB19> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB20> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB21> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB22> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB23> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB24> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB25> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB26> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB27> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB28> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB29> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB30> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB31> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB16> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB17> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB18> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB19> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB20> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB21> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB22> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB23> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB24> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB25> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB26> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB27> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB28> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB29> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB30> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB31> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB16> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB17> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB18> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB19> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB20> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB21> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB22> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB23> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB24> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB25> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB26> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB27> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB28> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB29> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB30> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB31> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+DRC detected 0 errors and 101 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

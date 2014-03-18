@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Port Id="SPI_MOSI" Dir="IN"/>
+		<Port Id="SPI_CS" Dir="IN"/>
+		<Port Id="SPI_CLK" Dir="IN"/>
+		<Port Id="SPI_MISO" Dir="OUT"/>
+		<Port Id="CLK_10MHz" Dir="IN"/>
+		<Port Id="EXT_SYNC" Dir="IN"/>
+		<Port Id="FPGA_INT" Dir="OUT"/>
+		<Port Id="CH2_IN" Dir="IN"/>
+		<Port Id="CH1_IN" Dir="IN"/>
+		<Port Id="CH1_ACDC" Dir="OUT"/>
+		<Port Id="CH2_ACDC" Dir="OUT"/>
+		<Port Id="CH2_BIAS" Dir="OUT"/>
+		<Port Id="CH1_BIAS" Dir="OUT"/>
+		<Port Id="FPGA_OUT4" Dir="OUT"/>
+		<Port Id="FPGA_OUT3" Dir="OUT"/>
+		<Port Id="FPGA_OUT2" Dir="OUT"/>
+		<Port Id="FPGA_OUT1" Dir="OUT"/>
+		<Port Id="LED1_1" Dir="OUT"/>
+		<Port Id="LED1_2" Dir="OUT"/>
+		<Port Id="LED1_3" Dir="OUT"/>
+		<Port Id="LED2_1" Dir="OUT"/>
+		<Port Id="LED2_2" Dir="OUT"/>
+		<Port Id="LED2_3" Dir="OUT"/>
+		<Port Id="LED3_1" Dir="OUT"/>
+		<Port Id="LED3_2" Dir="OUT"/>
+		<Port Id="LED3_3" Dir="OUT"/>
+		<Port Id="LED4_1" Dir="OUT"/>
+		<Port Id="LED4_2" Dir="OUT"/>
+		<Port Id="LED4_3" Dir="OUT"/>
+		<Port Id="LED5_1" Dir="OUT"/>
+		<Port Id="LED5_2" Dir="OUT"/>
+		<Port Id="LED5_3" Dir="OUT"/>
+		<Port Id="LED6_1" Dir="OUT"/>
+		<Port Id="LED6_2" Dir="OUT"/>
+		<Port Id="LED6_3" Dir="OUT"/>
+		<Port Id="SYNC2_IN" Dir="IN"/>
+		<Port Id="SYNC4_IN" Dir="IN"/>
+		<Port Id="SYNC3_IN" Dir="IN"/>
+		<Port Id="SYNC2_OUT" Dir="OUT"/>
+		<Port Id="SYNC4_OUT" Dir="OUT"/>
+		<Port Id="SYNC3_OUT" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

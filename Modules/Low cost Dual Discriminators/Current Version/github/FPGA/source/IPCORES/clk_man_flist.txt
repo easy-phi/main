@@ -1,0 +1,2 @@
+# Output products list for <clk_man>
+clk_man_flist.txt

@@ -1,4 +1,0 @@
-vhdl work "ipcore_dir/DCM.vhd"
-vhdl work "ipcore_dir/c_counter_binary_v11_0.vhd"
-vhdl work "edge_detect.vhd"
-vhdl work "Counter_top.vhd"

@@ -1,8 +1,0 @@
-INTSTYLE=impact
-INFILE=P:\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\impact.xsl
-OUTFILE=P:\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\impact.xsl
-FAMILY=Multiple
-PART=Multiple
-WORKINGDIR=P:\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn
-LICENSE=iMPACT
-USER_INFO=iMPACT

@@ -1,4 +1,0 @@
-vhdl work "spi_slave.vhd"
-vhdl work "spi_master.vhd"
-vhdl work "grp_debouncer.vhd"
-vhdl work "spi_master_atlys_top.vhd"

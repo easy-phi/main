@@ -1,0 +1,421 @@
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.xst" -ofn "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../source/IPCORES -nt timestamp -uc F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf -p xc3s50an-tqg144-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 

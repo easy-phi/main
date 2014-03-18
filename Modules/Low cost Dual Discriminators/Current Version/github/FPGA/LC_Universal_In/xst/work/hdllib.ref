@@ -1,0 +1,8 @@
+EN chipscope_icon NULL F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/source/IPCORES/chipscope_icon.vhd sub00/vhpl04 1389954069
+AR chipscope_ila chipscope_ila_a F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/source/IPCORES/chipscope_ila.vhd sub00/vhpl07 1389954072
+AR top behave F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/source/top.vhd sub00/vhpl01 1389954074
+EN top NULL F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/source/top.vhd sub00/vhpl00 1389954073
+EN chipscope_ila NULL F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/source/IPCORES/chipscope_ila.vhd sub00/vhpl06 1389954071
+AR clk_man behavioral F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/clk_man.vhd sub00/vhpl03 1389954068
+EN clk_man NULL F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/clk_man.vhd sub00/vhpl02 1389954067
+AR chipscope_icon chipscope_icon_a F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/source/IPCORES/chipscope_icon.vhd sub00/vhpl05 1389954070

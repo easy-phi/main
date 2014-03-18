@@ -1,0 +1,800 @@
+Release 14.4 Map P.49d (nt64)
+Xilinx Mapping Report File for Design 'top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off
+-c 100 -o top_map.ncd top.ngd top.pcf 
+Target Device  : xc3s50an
+Target Package : tqg144
+Target Speed   : -5
+Mapper Version : spartan3a -- $Revision: 1.55 $
+Mapped Date    : Fri Jan 17 11:21:30 2014
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:  101
+Logic Utilization:
+  Total Number Slice Registers:         821 out of   1,408   58%
+    Number used as Flip Flops:          820
+    Number used as Latches:               1
+  Number of 4 input LUTs:               499 out of   1,408   35%
+Logic Distribution:
+  Number of occupied Slices:            636 out of     704   90%
+    Number of Slices containing only related logic:     636 out of     636 100%
+    Number of Slices containing unrelated logic:          0 out of     636   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         693 out of   1,408   49%
+    Number used as logic:               328
+    Number used as a route-thru:        194
+    Number used as Shift registers:     171
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 41 out of     108   37%
+    IOB Flip Flops:                       1
+  Number of BUFGMUXs:                     3 out of      24   12%
+  Number of DCMs:                         1 out of       2   50%
+  Number of BSCANs:                       1 out of       1  100%
+  Number of BSCAN_SPARTAN3As:             1 out of       1  100%
+  Number of RAMB16BWEs:                   3 out of       3  100%
+
+Average Fanout of Non-Clock Nets:                2.57
+
+Peak Memory Usage:  294 MB
+Total REAL time to MAP completion:  7 secs 
+Total CPU time to MAP completion:   3 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:43 - No license file was found in the standard Xilinx license
+directory.
+WARNING:Security:44 - Since no license file was found,
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net CONTROL0<13> is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal <SYNC2_IN_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <SYNC3_IN_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <SYNC4_IN_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <EXT_SYNC_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB16> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB17> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB18> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB19> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB20> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB21> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB22> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB23> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB24> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB25> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB26> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB27> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB28> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB29> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB30> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB31> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB16> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB17> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB18> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB19> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB20> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB21> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB22> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB23> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB24> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB25> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB26> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB27> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB28> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB29> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB30> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB31> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB16> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB17> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB18> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB19> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB20> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB21> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB22> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB23> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB24> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB25> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB26> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB27> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB28> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB29> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB30> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+WARNING:PhysDesignRules:812 - Dangling pin <DOB31> on
+   block:<chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_R
+   AM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i>:<RAMB16BWE_RAMB16BWE>
+   .
+
+Section 3 - Informational
+-------------------------
+INFO:Security:51 - The XILINXD_LICENSE_FILE environment variable is not set.
+INFO:Security:52 - The LM_LICENSE_FILE environment variable is set to
+'C:\Microsemi\License.dat;C:\flexlm\Xilinx.lic;7418@129.194.185.168;7419@129.194
+.185.168;7423@129.194.185.168;1717@129.194.185.168'.
+INFO:Security:54 - 'xc3s50an' is a WebPack part.
+INFO:LIT:243 - Logical network CONTROL0<10> has no load.
+INFO:LIT:395 - The above info message is repeated 26 more times for the
+   following (max. 5 shown):
+   CONTROL0<11>,
+   CONTROL0<15>,
+   CONTROL0<16>,
+   CONTROL0<17>,
+   CONTROL0<18>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp clk_man_inst/DCM_SP_INST,
+   consult the device Interactive Data Sheet.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  47 block(s) removed
+  87 block(s) optimized away
+  31 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block
+"chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[10].U_LUT" (ROM)
+removed.
+Loadless block
+"chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[11].U_LUT" (ROM)
+removed.
+Loadless block
+"chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[12].U_LUT" (ROM)
+removed.
+Loadless block
+"chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[13].U_LUT" (ROM)
+removed.
+Loadless block
+"chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[14].U_LUT" (ROM)
+removed.
+Loadless block
+"chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[1].U_LUT" (ROM)
+removed.
+Loadless block
+"chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[2].U_LUT" (ROM)
+removed.
+Loadless block
+"chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[3].U_LUT" (ROM)
+removed.
+Loadless block
+"chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[4].U_LUT" (ROM)
+removed.
+Loadless block
+"chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[5].U_LUT" (ROM)
+removed.
+Loadless block
+"chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[6].U_LUT" (ROM)
+removed.
+Loadless block
+"chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[7].U_LUT" (ROM)
+removed.
+Loadless block
+"chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[8].U_LUT" (ROM)
+removed.
+Loadless block
+"chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[9].U_LUT" (ROM)
+removed.
+Loadless block "chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSR" (ROM) removed.
+Loadless block
+"chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_CAP_B" (ROM)
+removed.
+The signal "CONTROL0<10>" is sourceless and has been removed.
+The signal "CONTROL0<11>" is sourceless and has been removed.
+The signal "CONTROL0<15>" is sourceless and has been removed.
+The signal "CONTROL0<16>" is sourceless and has been removed.
+The signal "CONTROL0<17>" is sourceless and has been removed.
+The signal "CONTROL0<18>" is sourceless and has been removed.
+The signal "CONTROL0<19>" is sourceless and has been removed.
+The signal "CONTROL0<21>" is sourceless and has been removed.
+The signal "CONTROL0<22>" is sourceless and has been removed.
+The signal "CONTROL0<23>" is sourceless and has been removed.
+The signal "CONTROL0<24>" is sourceless and has been removed.
+The signal "CONTROL0<25>" is sourceless and has been removed.
+The signal "CONTROL0<26>" is sourceless and has been removed.
+The signal "CONTROL0<27>" is sourceless and has been removed.
+The signal "CONTROL0<28>" is sourceless and has been removed.
+The signal "CONTROL0<29>" is sourceless and has been removed.
+The signal "CONTROL0<30>" is sourceless and has been removed.
+The signal "CONTROL0<31>" is sourceless and has been removed.
+The signal "CONTROL0<32>" is sourceless and has been removed.
+The signal "CONTROL0<33>" is sourceless and has been removed.
+The signal "CONTROL0<34>" is sourceless and has been removed.
+The signal "CONTROL0<35>" is sourceless and has been removed.
+The signal "CONTROL0<7>" is sourceless and has been removed.
+The signal "chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<3>" is sourceless and has
+been removed.
+ Sourceless block
+"chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_HCE" (ROM)
+removed.
+ Sourceless block
+"chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_LCE" (ROM)
+removed.
+The signal "chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<6>" is sourceless and has
+been removed.
+ Sourceless block
+"chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_HCE" (ROM)
+removed.
+ Sourceless block
+"chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_LCE" (ROM)
+removed.
+The signal "chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<7>" is sourceless and has
+been removed.
+ Sourceless block
+"chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[7].U_HCE" (ROM)
+removed.
+ Sourceless block
+"chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[7].U_LCE" (ROM)
+removed.
+The signal "chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<11>" is sourceless and
+has been removed.
+ Sourceless block
+"chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[11].U_HCE" (ROM)
+removed.
+ Sourceless block
+"chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[11].U_LCE" (ROM)
+removed.
+The signal "chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<12>" is sourceless and
+has been removed.
+ Sourceless block
+"chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[12].U_HCE" (ROM)
+removed.
+ Sourceless block
+"chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[12].U_LCE" (ROM)
+removed.
+The signal "chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<13>" is sourceless and
+has been removed.
+ Sourceless block
+"chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_HCE" (ROM)
+removed.
+ Sourceless block
+"chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_LCE" (ROM)
+removed.
+The signal "chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<14>" is sourceless and
+has been removed.
+ Sourceless block
+"chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_HCE" (ROM)
+removed.
+ Sourceless block
+"chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_LCE" (ROM)
+removed.
+The signal "chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<15>" is sourceless and
+has been removed.
+ Sourceless block
+"chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[15].U_HCE" (ROM)
+removed.
+ Sourceless block
+"chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[15].U_LCE" (ROM)
+removed.
+Unused block "chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[11].U_LUT"
+(ROM) removed.
+Unused block "chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[12].U_LUT"
+(ROM) removed.
+Unused block "chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[13].U_LUT"
+(ROM) removed.
+Unused block "chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[14].U_LUT"
+(ROM) removed.
+Unused block "chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[15].U_LUT"
+(ROM) removed.
+Unused block "chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[3].U_LUT"
+(ROM) removed.
+Unused block "chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[6].U_LUT"
+(ROM) removed.
+Unused block "chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[7].U_LUT"
+(ROM) removed.
+Unused block "chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[10].U_HCE"
+(ROM) removed.
+Unused block "chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[1].U_HCE"
+(ROM) removed.
+Unused block "chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[2].U_HCE"
+(ROM) removed.
+Unused block "chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[4].U_HCE"
+(ROM) removed.
+Unused block "chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_HCE"
+(ROM) removed.
+Unused block "chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[8].U_HCE"
+(ROM) removed.
+Unused block "chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_HCE"
+(ROM) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		chipscope_icon_inst/XST_GND
+VCC 		chipscope_icon_inst/XST_VCC
+LUT4 		chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/F_SSTAT[6].I_STAT.U_STAT
+   optimized to 0
+GND 		chipscope_ila_inst/XST_GND
+VCC 		chipscope_ila_inst/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew    | Reg (s)      | Resistor | IBUF/IFD | SUSPEND          |
+|                                    |                  |           |                      | Term  | Strength | Rate    |              |          | Delay    |                  |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| CH1_ACDC                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| CH1_BIAS                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| CH1_IN                             | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
+| CH2_ACDC                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| CH2_BIAS                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| CH2_IN                             | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
+| CLK_10MHz                          | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
+| EXT_SYNC                           | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
+| FPGA_INT                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| FPGA_OUT1                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| FPGA_OUT2                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| FPGA_OUT3                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| FPGA_OUT4                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED1_1                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED1_2                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED1_3                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED2_1                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED2_2                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED2_3                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED3_1                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED3_2                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED3_3                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED4_1                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED4_2                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED4_3                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED5_1                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED5_2                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED5_3                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED6_1                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED6_2                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED6_3                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SPI_CLK                            | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
+| SPI_CS                             | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
+| SPI_MISO                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | TFF1         |          | 0 / 0    | 3STATE           |
+| SPI_MOSI                           | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
+| SYNC2_IN                           | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
+| SYNC2_OUT                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SYNC3_IN                           | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
+| SYNC3_OUT                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SYNC4_IN                           | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
+| SYNC4_OUT                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

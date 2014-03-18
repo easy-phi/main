@@ -1,0 +1,4 @@
+vhdl work "../source/IPCORES/chipscope_icon.vhd"
+vhdl work "../source/IPCORES/chipscope_ila.vhd"
+vhdl work "clk_man.vhd"
+vhdl work "../source/top.vhd"

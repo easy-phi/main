@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=P:\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\Counter\counter_top.ncd
-OUTFILE=P:\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\Counter\counter_top.bit
-FAMILY=Spartan3E
-PART=xc3s500e-4fg320
-WORKINGDIR=P:\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\Counter
-LICENSE=WebPack
-USER_INFO=210819535_0_0_576

@@ -1,0 +1,1286 @@
+--------------------------------------------------------------------------------
+Release 14.4 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf
+
+Design file:              top.ncd
+Physical constraint file: top.pcf
+Device,package,speed:     xc3s50an,tqg144,-5 (PRODUCTION 1.42 2012-12-04)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_CLK_10MHz = PERIOD TIMEGRP "CLK_10MHz" 100 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is  20.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_CLK_10MHz = PERIOD TIMEGRP "CLK_10MHz" 100 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 0.998ns (period - min period limit)
+  Period: 4.000ns
+  Min period limit: 3.002ns (333.111MHz) ()
+  Physical resource: clk_man_inst/DCM_SP_INST/CLKFX
+  Logical resource: clk_man_inst/DCM_SP_INST/CLKFX
+  Location pin: DCM_X1Y0.CLKFX
+  Clock network: clk_man_inst/CLKFX_BUF
+--------------------------------------------------------------------------------
+Slack: 80.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 100.000ns
+  Low pulse: 50.000ns
+  Low pulse limit: 10.000ns (Tdcmpw_CLKIN_10_25)
+  Physical resource: clk_man_inst/DCM_SP_INST/CLKIN
+  Logical resource: clk_man_inst/DCM_SP_INST/CLKIN
+  Location pin: DCM_X1Y0.CLKIN
+  Clock network: CLK_10MHz_IBUFG
+--------------------------------------------------------------------------------
+Slack: 80.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 100.000ns
+  High pulse: 50.000ns
+  High pulse limit: 10.000ns (Tdcmpw_CLKIN_10_25)
+  Physical resource: clk_man_inst/DCM_SP_INST/CLKIN
+  Logical resource: clk_man_inst/DCM_SP_INST/CLKIN
+  Location pin: DCM_X1Y0.CLKIN
+  Clock network: CLK_10MHz_IBUFG
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clk_man_inst_CLK0_BUF = PERIOD TIMEGRP 
+"clk_man_inst_CLK0_BUF" TS_CLK_10MHz         HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 6125 paths analyzed, 1181 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  91.575ns.
+--------------------------------------------------------------------------------
+
+Paths for end point SPI_Data_Out_s_2 (SLICE_X10Y12.G2), 7 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.337ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Channel_2_Cnt_stored_s_2 (FF)
+  Destination:          SPI_Data_Out_s_2 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.455ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.208ns (0.754 - 0.962)
+  Source Clock:         Clock_250 rising at 96.000ns
+  Destination Clock:    Clock_10 rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Channel_2_Cnt_stored_s_2 to SPI_Data_Out_s_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y16.YQ       Tcko                  0.596   Channel_2_Cnt_stored_s<3>
+                                                       Channel_2_Cnt_stored_s_2
+    SLICE_X10Y16.G4      net (fanout=1)        0.699   Channel_2_Cnt_stored_s<2>
+    SLICE_X10Y16.X       Tif5x                 0.853   SPI_Data_Out_s_mux0001<2>32
+                                                       SPI_Data_Out_s_mux0001<2>32_F
+                                                       SPI_Data_Out_s_mux0001<2>32
+    SLICE_X10Y12.G2      net (fanout=1)        0.636   SPI_Data_Out_s_mux0001<2>32
+    SLICE_X10Y12.CLK     Tgck                  0.671   SPI_Data_Out_s<4>
+                                                       SPI_Data_Out_s_mux0001<2>56
+                                                       SPI_Data_Out_s_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.455ns (2.120ns logic, 1.335ns route)
+                                                       (61.4% logic, 38.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.460ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Channel_1_Cnt_stored_s_2 (FF)
+  Destination:          SPI_Data_Out_s_2 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.345ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.195ns (0.754 - 0.949)
+  Source Clock:         Clock_250 rising at 96.000ns
+  Destination Clock:    Clock_10 rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Channel_1_Cnt_stored_s_2 to SPI_Data_Out_s_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y16.YQ       Tcko                  0.596   Channel_1_Cnt_stored_s<3>
+                                                       Channel_1_Cnt_stored_s_2
+    SLICE_X10Y16.G2      net (fanout=1)        0.589   Channel_1_Cnt_stored_s<2>
+    SLICE_X10Y16.X       Tif5x                 0.853   SPI_Data_Out_s_mux0001<2>32
+                                                       SPI_Data_Out_s_mux0001<2>32_F
+                                                       SPI_Data_Out_s_mux0001<2>32
+    SLICE_X10Y12.G2      net (fanout=1)        0.636   SPI_Data_Out_s_mux0001<2>32
+    SLICE_X10Y12.CLK     Tgck                  0.671   SPI_Data_Out_s<4>
+                                                       SPI_Data_Out_s_mux0001<2>56
+                                                       SPI_Data_Out_s_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.345ns (2.120ns logic, 1.225ns route)
+                                                       (63.4% logic, 36.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.496ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Channel_2_Cnt_stored_s_18 (FF)
+  Destination:          SPI_Data_Out_s_2 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.295ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.209ns (0.754 - 0.963)
+  Source Clock:         Clock_250 rising at 96.000ns
+  Destination Clock:    Clock_10 rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Channel_2_Cnt_stored_s_18 to SPI_Data_Out_s_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y20.YQ      Tcko                  0.596   Channel_2_Cnt_stored_s<19>
+                                                       Channel_2_Cnt_stored_s_18
+    SLICE_X10Y16.F2      net (fanout=1)        0.539   Channel_2_Cnt_stored_s<18>
+    SLICE_X10Y16.X       Tif5x                 0.853   SPI_Data_Out_s_mux0001<2>32
+                                                       SPI_Data_Out_s_mux0001<2>32_G
+                                                       SPI_Data_Out_s_mux0001<2>32
+    SLICE_X10Y12.G2      net (fanout=1)        0.636   SPI_Data_Out_s_mux0001<2>32
+    SLICE_X10Y12.CLK     Tgck                  0.671   SPI_Data_Out_s<4>
+                                                       SPI_Data_Out_s_mux0001<2>56
+                                                       SPI_Data_Out_s_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.295ns (2.120ns logic, 1.175ns route)
+                                                       (64.3% logic, 35.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point SPI_Data_Out_s_3 (SLICE_X14Y15.F2), 11 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.562ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Channel_1_Cnt_stored_s_3 (FF)
+  Destination:          SPI_Data_Out_s_3 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.209ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.229ns (0.720 - 0.949)
+  Source Clock:         Clock_250 rising at 96.000ns
+  Destination Clock:    Clock_10 rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Channel_1_Cnt_stored_s_3 to SPI_Data_Out_s_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y16.XQ       Tcko                  0.521   Channel_1_Cnt_stored_s<3>
+                                                       Channel_1_Cnt_stored_s_3
+    SLICE_X14Y15.G2      net (fanout=1)        0.854   Channel_1_Cnt_stored_s<3>
+    SLICE_X14Y15.Y       Tilo                  0.616   SPI_Data_Out_s<3>
+                                                       SPI_Data_Out_s_mux0001<3>2
+    SLICE_X14Y15.F2      net (fanout=1)        0.562   SPI_Data_Out_s_mux0001<3>2
+    SLICE_X14Y15.CLK     Tfck                  0.656   SPI_Data_Out_s<3>
+                                                       SPI_Data_Out_s_mux0001<3>45
+                                                       SPI_Data_Out_s_3
+    -------------------------------------------------  ---------------------------
+    Total                                      3.209ns (1.793ns logic, 1.416ns route)
+                                                       (55.9% logic, 44.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     94.060ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               SPI_Data_In_s_3 (FF)
+  Destination:          SPI_Data_Out_s_3 (FF)
+  Requirement:          100.000ns
+  Data Path Delay:      5.889ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.051ns (0.011 - 0.062)
+  Source Clock:         Clock_10 rising at 0.000ns
+  Destination Clock:    Clock_10 rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: SPI_Data_In_s_3 to SPI_Data_Out_s_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y11.XQ      Tcko                  0.495   SPI_Data_In_s<3>
+                                                       SPI_Data_In_s_3
+    SLICE_X15Y3.G1       net (fanout=3)        0.834   SPI_Data_In_s<3>
+    SLICE_X15Y3.X        Tif5x                 0.791   SPI_Data_Out_s_and0000
+                                                       SPI_Data_Out_s_and00001
+                                                       SPI_Data_Out_s_and0000_f5
+    SLICE_X15Y14.F3      net (fanout=7)        1.311   SPI_Data_Out_s_and0000
+    SLICE_X15Y14.X       Tilo                  0.562   SPI_Data_Out_s<0>
+                                                       SPI_Data_Out_s_mux0001<1>21
+    SLICE_X14Y15.G3      net (fanout=8)        0.062   N9
+    SLICE_X14Y15.Y       Tilo                  0.616   SPI_Data_Out_s<3>
+                                                       SPI_Data_Out_s_mux0001<3>2
+    SLICE_X14Y15.F2      net (fanout=1)        0.562   SPI_Data_Out_s_mux0001<3>2
+    SLICE_X14Y15.CLK     Tfck                  0.656   SPI_Data_Out_s<3>
+                                                       SPI_Data_Out_s_mux0001<3>45
+                                                       SPI_Data_Out_s_3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.889ns (3.120ns logic, 2.769ns route)
+                                                       (53.0% logic, 47.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     94.312ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               SPI_Data_In_s_4 (FF)
+  Destination:          SPI_Data_Out_s_3 (FF)
+  Requirement:          100.000ns
+  Data Path Delay:      5.482ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.206ns (0.215 - 0.421)
+  Source Clock:         Clock_10 rising at 0.000ns
+  Destination Clock:    Clock_10 rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: SPI_Data_In_s_4 to SPI_Data_Out_s_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y2.YQ       Tcko                  0.524   SPI_Data_In_s<5>
+                                                       SPI_Data_In_s_4
+    SLICE_X15Y3.G2       net (fanout=3)        0.398   SPI_Data_In_s<4>
+    SLICE_X15Y3.X        Tif5x                 0.791   SPI_Data_Out_s_and0000
+                                                       SPI_Data_Out_s_and00001
+                                                       SPI_Data_Out_s_and0000_f5
+    SLICE_X15Y14.F3      net (fanout=7)        1.311   SPI_Data_Out_s_and0000
+    SLICE_X15Y14.X       Tilo                  0.562   SPI_Data_Out_s<0>
+                                                       SPI_Data_Out_s_mux0001<1>21
+    SLICE_X14Y15.G3      net (fanout=8)        0.062   N9
+    SLICE_X14Y15.Y       Tilo                  0.616   SPI_Data_Out_s<3>
+                                                       SPI_Data_Out_s_mux0001<3>2
+    SLICE_X14Y15.F2      net (fanout=1)        0.562   SPI_Data_Out_s_mux0001<3>2
+    SLICE_X14Y15.CLK     Tfck                  0.656   SPI_Data_Out_s<3>
+                                                       SPI_Data_Out_s_mux0001<3>45
+                                                       SPI_Data_Out_s_3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.482ns (3.149ns logic, 2.333ns route)
+                                                       (57.4% logic, 42.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point SPI_Data_Out_s_0 (SLICE_X15Y14.G2), 7 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.673ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Channel_1_Cnt_stored_s_0 (FF)
+  Destination:          SPI_Data_Out_s_0 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.096ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.231ns (0.720 - 0.951)
+  Source Clock:         Clock_250 rising at 96.000ns
+  Destination Clock:    Clock_10 rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Channel_1_Cnt_stored_s_0 to SPI_Data_Out_s_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y13.YQ       Tcko                  0.596   Channel_1_Cnt_stored_s<1>
+                                                       Channel_1_Cnt_stored_s_0
+    SLICE_X7Y13.G4       net (fanout=1)        0.289   Channel_1_Cnt_stored_s<0>
+    SLICE_X7Y13.X        Tif5x                 0.791   SPI_Data_Out_s_mux0001<0>46
+                                                       SPI_Data_Out_s_mux0001<0>46_F
+                                                       SPI_Data_Out_s_mux0001<0>46
+    SLICE_X15Y14.G2      net (fanout=1)        0.819   SPI_Data_Out_s_mux0001<0>46
+    SLICE_X15Y14.CLK     Tgck                  0.601   SPI_Data_Out_s<0>
+                                                       SPI_Data_Out_s_mux0001<0>76
+                                                       SPI_Data_Out_s_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.096ns (1.988ns logic, 1.108ns route)
+                                                       (64.2% logic, 35.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.684ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Channel_1_Cnt_stored_s_16 (FF)
+  Destination:          SPI_Data_Out_s_0 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.087ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.229ns (0.720 - 0.949)
+  Source Clock:         Clock_250 rising at 96.000ns
+  Destination Clock:    Clock_10 rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Channel_1_Cnt_stored_s_16 to SPI_Data_Out_s_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y14.YQ       Tcko                  0.596   Channel_1_Cnt_stored_s<17>
+                                                       Channel_1_Cnt_stored_s_16
+    SLICE_X7Y13.F3       net (fanout=1)        0.280   Channel_1_Cnt_stored_s<16>
+    SLICE_X7Y13.X        Tif5x                 0.791   SPI_Data_Out_s_mux0001<0>46
+                                                       SPI_Data_Out_s_mux0001<0>46_G
+                                                       SPI_Data_Out_s_mux0001<0>46
+    SLICE_X15Y14.G2      net (fanout=1)        0.819   SPI_Data_Out_s_mux0001<0>46
+    SLICE_X15Y14.CLK     Tgck                  0.601   SPI_Data_Out_s<0>
+                                                       SPI_Data_Out_s_mux0001<0>76
+                                                       SPI_Data_Out_s_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.087ns (1.988ns logic, 1.099ns route)
+                                                       (64.4% logic, 35.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     96.078ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               SPI_Data_In_s_0 (FF)
+  Destination:          SPI_Data_Out_s_0 (FF)
+  Requirement:          100.000ns
+  Data Path Delay:      3.777ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.145ns (0.215 - 0.360)
+  Source Clock:         Clock_10 rising at 0.000ns
+  Destination Clock:    Clock_10 rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: SPI_Data_In_s_0 to SPI_Data_Out_s_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y9.YQ       Tcko                  0.596   SPI_Data_In_s<1>
+                                                       SPI_Data_In_s_0
+    SLICE_X7Y13.BX       net (fanout=18)       1.134   SPI_Data_In_s<0>
+    SLICE_X7Y13.X        Tbxx                  0.627   SPI_Data_Out_s_mux0001<0>46
+                                                       SPI_Data_Out_s_mux0001<0>46
+    SLICE_X15Y14.G2      net (fanout=1)        0.819   SPI_Data_Out_s_mux0001<0>46
+    SLICE_X15Y14.CLK     Tgck                  0.601   SPI_Data_Out_s<0>
+                                                       SPI_Data_Out_s_mux0001<0>76
+                                                       SPI_Data_Out_s_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.777ns (1.824ns logic, 1.953ns route)
+                                                       (48.3% logic, 51.7% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk_man_inst_CLK0_BUF = PERIOD TIMEGRP "clk_man_inst_CLK0_BUF" TS_CLK_10MHz
+        HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[3].I_SRLT_NE_0.DLY9/SRL16E (SLICE_X8Y1.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.501ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               chipscope_ila_inst/U0/I_TQ0.G_TW[3].U_TQ (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[3].I_SRLT_NE_0.DLY9/SRL16E (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.560ns (Levels of Logic = 1)
+  Clock Path Skew:      0.059ns (0.443 - 0.384)
+  Source Clock:         Clock_10 rising at 100.000ns
+  Destination Clock:    Clock_10 rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: chipscope_ila_inst/U0/I_TQ0.G_TW[3].U_TQ to chipscope_ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[3].I_SRLT_NE_0.DLY9/SRL16E
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y0.XQ        Tcko                  0.396   chipscope_ila_inst/U0/iTRIG_IN<3>
+                                                       chipscope_ila_inst/U0/I_TQ0.G_TW[3].U_TQ
+    SLICE_X8Y1.BX        net (fanout=2)        0.316   chipscope_ila_inst/U0/iTRIG_IN<3>
+    SLICE_X8Y1.CLK       Tdh         (-Th)     0.152   chipscope_ila_inst/U0/I_NO_D.U_ILA/iDATA<3>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[3].I_SRLT_NE_0.DLY9/SRL16E
+    -------------------------------------------------  ---------------------------
+    Total                                      0.560ns (0.244ns logic, 0.316ns route)
+                                                       (43.6% logic, 56.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[27].I_SRLT_NE_0.DLY9/SRL16E (SLICE_X8Y5.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.504ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               chipscope_ila_inst/U0/I_TQ0.G_TW[27].U_TQ (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[27].I_SRLT_NE_0.DLY9/SRL16E (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.560ns (Levels of Logic = 1)
+  Clock Path Skew:      0.056ns (0.419 - 0.363)
+  Source Clock:         Clock_10 rising at 100.000ns
+  Destination Clock:    Clock_10 rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: chipscope_ila_inst/U0/I_TQ0.G_TW[27].U_TQ to chipscope_ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[27].I_SRLT_NE_0.DLY9/SRL16E
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y4.XQ        Tcko                  0.396   chipscope_ila_inst/U0/iTRIG_IN<27>
+                                                       chipscope_ila_inst/U0/I_TQ0.G_TW[27].U_TQ
+    SLICE_X8Y5.BX        net (fanout=2)        0.316   chipscope_ila_inst/U0/iTRIG_IN<27>
+    SLICE_X8Y5.CLK       Tdh         (-Th)     0.152   chipscope_ila_inst/U0/I_NO_D.U_ILA/iDATA<27>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[27].I_SRLT_NE_0.DLY9/SRL16E
+    -------------------------------------------------  ---------------------------
+    Total                                      0.560ns (0.244ns logic, 0.316ns route)
+                                                       (43.6% logic, 56.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[1].I_SRLT_NE_0.DLY9/SRL16E (SLICE_X16Y1.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.515ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               chipscope_ila_inst/U0/I_TQ0.G_TW[1].U_TQ (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[1].I_SRLT_NE_0.DLY9/SRL16E (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.570ns (Levels of Logic = 1)
+  Clock Path Skew:      0.055ns (0.350 - 0.295)
+  Source Clock:         Clock_10 rising at 100.000ns
+  Destination Clock:    Clock_10 rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: chipscope_ila_inst/U0/I_TQ0.G_TW[1].U_TQ to chipscope_ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[1].I_SRLT_NE_0.DLY9/SRL16E
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X19Y0.XQ       Tcko                  0.396   chipscope_ila_inst/U0/iTRIG_IN<1>
+                                                       chipscope_ila_inst/U0/I_TQ0.G_TW[1].U_TQ
+    SLICE_X16Y1.BX       net (fanout=2)        0.326   chipscope_ila_inst/U0/iTRIG_IN<1>
+    SLICE_X16Y1.CLK      Tdh         (-Th)     0.152   chipscope_ila_inst/U0/I_NO_D.U_ILA/iDATA<1>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[1].I_SRLT_NE_0.DLY9/SRL16E
+    -------------------------------------------------  ---------------------------
+    Total                                      0.570ns (0.244ns logic, 0.326ns route)
+                                                       (42.8% logic, 57.2% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk_man_inst_CLK0_BUF = PERIOD TIMEGRP "clk_man_inst_CLK0_BUF" TS_CLK_10MHz
+        HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 97.237ns (period - min period limit)
+  Period: 100.000ns
+  Min period limit: 2.763ns (361.925MHz) (Trper_CLKB)
+  Physical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i/CLKB
+  Logical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[2].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i/CLKB
+  Location pin: RAMB16_X0Y0.CLKB
+  Clock network: Clock_10
+--------------------------------------------------------------------------------
+Slack: 97.237ns (period - min period limit)
+  Period: 100.000ns
+  Min period limit: 2.763ns (361.925MHz) (Trper_CLKB)
+  Physical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i/CLKB
+  Logical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[1].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i/CLKB
+  Location pin: RAMB16_X0Y1.CLKB
+  Clock network: Clock_10
+--------------------------------------------------------------------------------
+Slack: 97.237ns (period - min period limit)
+  Period: 100.000ns
+  Min period limit: 2.763ns (361.925MHz) (Trper_CLKB)
+  Physical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i/CLKB
+  Logical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i/CLKB
+  Location pin: RAMB16_X0Y2.CLKB
+  Clock network: Clock_10
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clk_man_inst_CLKFX_BUF = PERIOD TIMEGRP 
+"clk_man_inst_CLKFX_BUF"         TS_CLK_10MHz / 25 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 994 paths analyzed, 299 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   3.936ns.
+--------------------------------------------------------------------------------
+
+Paths for end point Channel_2_Cnt_s_23 (SLICE_X7Y26.CIN), 22 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.064ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Channel_2_Cnt_s_1 (FF)
+  Destination:          Channel_2_Cnt_s_23 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.969ns (Levels of Logic = 12)
+  Clock Path Skew:      0.033ns (0.291 - 0.258)
+  Source Clock:         Clock_250 rising at 0.000ns
+  Destination Clock:    Clock_250 rising at 4.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Channel_2_Cnt_s_1 to Channel_2_Cnt_s_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y15.YQ       Tcko                  0.524   Channel_2_Cnt_s<0>
+                                                       Channel_2_Cnt_s_1
+    SLICE_X7Y15.G1       net (fanout=2)        0.432   Channel_2_Cnt_s<1>
+    SLICE_X7Y15.COUT     Topcyg                1.009   Channel_2_Cnt_s<0>
+                                                       Channel_2_Cnt_s<1>_rt
+                                                       Mcount_Channel_2_Cnt_s_cy<1>
+    SLICE_X7Y16.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<1>
+    SLICE_X7Y16.COUT     Tbyp                  0.130   Channel_2_Cnt_s<2>
+                                                       Mcount_Channel_2_Cnt_s_cy<2>
+                                                       Mcount_Channel_2_Cnt_s_cy<3>
+    SLICE_X7Y17.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<3>
+    SLICE_X7Y17.COUT     Tbyp                  0.130   Channel_2_Cnt_s<4>
+                                                       Mcount_Channel_2_Cnt_s_cy<4>
+                                                       Mcount_Channel_2_Cnt_s_cy<5>
+    SLICE_X7Y18.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<5>
+    SLICE_X7Y18.COUT     Tbyp                  0.130   Channel_2_Cnt_s<6>
+                                                       Mcount_Channel_2_Cnt_s_cy<6>
+                                                       Mcount_Channel_2_Cnt_s_cy<7>
+    SLICE_X7Y19.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<7>
+    SLICE_X7Y19.COUT     Tbyp                  0.130   Channel_2_Cnt_s<8>
+                                                       Mcount_Channel_2_Cnt_s_cy<8>
+                                                       Mcount_Channel_2_Cnt_s_cy<9>
+    SLICE_X7Y20.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<9>
+    SLICE_X7Y20.COUT     Tbyp                  0.130   Channel_2_Cnt_s<10>
+                                                       Mcount_Channel_2_Cnt_s_cy<10>
+                                                       Mcount_Channel_2_Cnt_s_cy<11>
+    SLICE_X7Y21.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<11>
+    SLICE_X7Y21.COUT     Tbyp                  0.130   Channel_2_Cnt_s<12>
+                                                       Mcount_Channel_2_Cnt_s_cy<12>
+                                                       Mcount_Channel_2_Cnt_s_cy<13>
+    SLICE_X7Y22.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<13>
+    SLICE_X7Y22.COUT     Tbyp                  0.130   Channel_2_Cnt_s<14>
+                                                       Mcount_Channel_2_Cnt_s_cy<14>
+                                                       Mcount_Channel_2_Cnt_s_cy<15>
+    SLICE_X7Y23.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<15>
+    SLICE_X7Y23.COUT     Tbyp                  0.130   Channel_2_Cnt_s<16>
+                                                       Mcount_Channel_2_Cnt_s_cy<16>
+                                                       Mcount_Channel_2_Cnt_s_cy<17>
+    SLICE_X7Y24.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<17>
+    SLICE_X7Y24.COUT     Tbyp                  0.130   Channel_2_Cnt_s<18>
+                                                       Mcount_Channel_2_Cnt_s_cy<18>
+                                                       Mcount_Channel_2_Cnt_s_cy<19>
+    SLICE_X7Y25.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<19>
+    SLICE_X7Y25.COUT     Tbyp                  0.130   Channel_2_Cnt_s<20>
+                                                       Mcount_Channel_2_Cnt_s_cy<20>
+                                                       Mcount_Channel_2_Cnt_s_cy<21>
+    SLICE_X7Y26.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<21>
+    SLICE_X7Y26.CLK      Tcinck                0.704   Channel_2_Cnt_s<22>
+                                                       Mcount_Channel_2_Cnt_s_cy<22>
+                                                       Mcount_Channel_2_Cnt_s_xor<23>
+                                                       Channel_2_Cnt_s_23
+    -------------------------------------------------  ---------------------------
+    Total                                      3.969ns (3.537ns logic, 0.432ns route)
+                                                       (89.1% logic, 10.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.185ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Channel_2_Cnt_s_0 (FF)
+  Destination:          Channel_2_Cnt_s_23 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.848ns (Levels of Logic = 12)
+  Clock Path Skew:      0.033ns (0.291 - 0.258)
+  Source Clock:         Clock_250 rising at 0.000ns
+  Destination Clock:    Clock_250 rising at 4.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Channel_2_Cnt_s_0 to Channel_2_Cnt_s_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y15.XQ       Tcko                  0.495   Channel_2_Cnt_s<0>
+                                                       Channel_2_Cnt_s_0
+    SLICE_X7Y15.F4       net (fanout=2)        0.323   Channel_2_Cnt_s<0>
+    SLICE_X7Y15.COUT     Topcyf                1.026   Channel_2_Cnt_s<0>
+                                                       Mcount_Channel_2_Cnt_s_lut<0>_INV_0
+                                                       Mcount_Channel_2_Cnt_s_cy<0>
+                                                       Mcount_Channel_2_Cnt_s_cy<1>
+    SLICE_X7Y16.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<1>
+    SLICE_X7Y16.COUT     Tbyp                  0.130   Channel_2_Cnt_s<2>
+                                                       Mcount_Channel_2_Cnt_s_cy<2>
+                                                       Mcount_Channel_2_Cnt_s_cy<3>
+    SLICE_X7Y17.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<3>
+    SLICE_X7Y17.COUT     Tbyp                  0.130   Channel_2_Cnt_s<4>
+                                                       Mcount_Channel_2_Cnt_s_cy<4>
+                                                       Mcount_Channel_2_Cnt_s_cy<5>
+    SLICE_X7Y18.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<5>
+    SLICE_X7Y18.COUT     Tbyp                  0.130   Channel_2_Cnt_s<6>
+                                                       Mcount_Channel_2_Cnt_s_cy<6>
+                                                       Mcount_Channel_2_Cnt_s_cy<7>
+    SLICE_X7Y19.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<7>
+    SLICE_X7Y19.COUT     Tbyp                  0.130   Channel_2_Cnt_s<8>
+                                                       Mcount_Channel_2_Cnt_s_cy<8>
+                                                       Mcount_Channel_2_Cnt_s_cy<9>
+    SLICE_X7Y20.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<9>
+    SLICE_X7Y20.COUT     Tbyp                  0.130   Channel_2_Cnt_s<10>
+                                                       Mcount_Channel_2_Cnt_s_cy<10>
+                                                       Mcount_Channel_2_Cnt_s_cy<11>
+    SLICE_X7Y21.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<11>
+    SLICE_X7Y21.COUT     Tbyp                  0.130   Channel_2_Cnt_s<12>
+                                                       Mcount_Channel_2_Cnt_s_cy<12>
+                                                       Mcount_Channel_2_Cnt_s_cy<13>
+    SLICE_X7Y22.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<13>
+    SLICE_X7Y22.COUT     Tbyp                  0.130   Channel_2_Cnt_s<14>
+                                                       Mcount_Channel_2_Cnt_s_cy<14>
+                                                       Mcount_Channel_2_Cnt_s_cy<15>
+    SLICE_X7Y23.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<15>
+    SLICE_X7Y23.COUT     Tbyp                  0.130   Channel_2_Cnt_s<16>
+                                                       Mcount_Channel_2_Cnt_s_cy<16>
+                                                       Mcount_Channel_2_Cnt_s_cy<17>
+    SLICE_X7Y24.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<17>
+    SLICE_X7Y24.COUT     Tbyp                  0.130   Channel_2_Cnt_s<18>
+                                                       Mcount_Channel_2_Cnt_s_cy<18>
+                                                       Mcount_Channel_2_Cnt_s_cy<19>
+    SLICE_X7Y25.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<19>
+    SLICE_X7Y25.COUT     Tbyp                  0.130   Channel_2_Cnt_s<20>
+                                                       Mcount_Channel_2_Cnt_s_cy<20>
+                                                       Mcount_Channel_2_Cnt_s_cy<21>
+    SLICE_X7Y26.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<21>
+    SLICE_X7Y26.CLK      Tcinck                0.704   Channel_2_Cnt_s<22>
+                                                       Mcount_Channel_2_Cnt_s_cy<22>
+                                                       Mcount_Channel_2_Cnt_s_xor<23>
+                                                       Channel_2_Cnt_s_23
+    -------------------------------------------------  ---------------------------
+    Total                                      3.848ns (3.525ns logic, 0.323ns route)
+                                                       (91.6% logic, 8.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.234ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Channel_2_Cnt_s_5 (FF)
+  Destination:          Channel_2_Cnt_s_23 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.824ns (Levels of Logic = 10)
+  Clock Path Skew:      0.058ns (0.068 - 0.010)
+  Source Clock:         Clock_250 rising at 0.000ns
+  Destination Clock:    Clock_250 rising at 4.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Channel_2_Cnt_s_5 to Channel_2_Cnt_s_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y17.YQ       Tcko                  0.524   Channel_2_Cnt_s<4>
+                                                       Channel_2_Cnt_s_5
+    SLICE_X7Y17.G4       net (fanout=2)        0.547   Channel_2_Cnt_s<5>
+    SLICE_X7Y17.COUT     Topcyg                1.009   Channel_2_Cnt_s<4>
+                                                       Channel_2_Cnt_s<5>_rt
+                                                       Mcount_Channel_2_Cnt_s_cy<5>
+    SLICE_X7Y18.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<5>
+    SLICE_X7Y18.COUT     Tbyp                  0.130   Channel_2_Cnt_s<6>
+                                                       Mcount_Channel_2_Cnt_s_cy<6>
+                                                       Mcount_Channel_2_Cnt_s_cy<7>
+    SLICE_X7Y19.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<7>
+    SLICE_X7Y19.COUT     Tbyp                  0.130   Channel_2_Cnt_s<8>
+                                                       Mcount_Channel_2_Cnt_s_cy<8>
+                                                       Mcount_Channel_2_Cnt_s_cy<9>
+    SLICE_X7Y20.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<9>
+    SLICE_X7Y20.COUT     Tbyp                  0.130   Channel_2_Cnt_s<10>
+                                                       Mcount_Channel_2_Cnt_s_cy<10>
+                                                       Mcount_Channel_2_Cnt_s_cy<11>
+    SLICE_X7Y21.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<11>
+    SLICE_X7Y21.COUT     Tbyp                  0.130   Channel_2_Cnt_s<12>
+                                                       Mcount_Channel_2_Cnt_s_cy<12>
+                                                       Mcount_Channel_2_Cnt_s_cy<13>
+    SLICE_X7Y22.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<13>
+    SLICE_X7Y22.COUT     Tbyp                  0.130   Channel_2_Cnt_s<14>
+                                                       Mcount_Channel_2_Cnt_s_cy<14>
+                                                       Mcount_Channel_2_Cnt_s_cy<15>
+    SLICE_X7Y23.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<15>
+    SLICE_X7Y23.COUT     Tbyp                  0.130   Channel_2_Cnt_s<16>
+                                                       Mcount_Channel_2_Cnt_s_cy<16>
+                                                       Mcount_Channel_2_Cnt_s_cy<17>
+    SLICE_X7Y24.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<17>
+    SLICE_X7Y24.COUT     Tbyp                  0.130   Channel_2_Cnt_s<18>
+                                                       Mcount_Channel_2_Cnt_s_cy<18>
+                                                       Mcount_Channel_2_Cnt_s_cy<19>
+    SLICE_X7Y25.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<19>
+    SLICE_X7Y25.COUT     Tbyp                  0.130   Channel_2_Cnt_s<20>
+                                                       Mcount_Channel_2_Cnt_s_cy<20>
+                                                       Mcount_Channel_2_Cnt_s_cy<21>
+    SLICE_X7Y26.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<21>
+    SLICE_X7Y26.CLK      Tcinck                0.704   Channel_2_Cnt_s<22>
+                                                       Mcount_Channel_2_Cnt_s_cy<22>
+                                                       Mcount_Channel_2_Cnt_s_xor<23>
+                                                       Channel_2_Cnt_s_23
+    -------------------------------------------------  ---------------------------
+    Total                                      3.824ns (3.277ns logic, 0.547ns route)
+                                                       (85.7% logic, 14.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Channel_2_Cnt_s_24 (SLICE_X7Y27.CIN), 24 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.109ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Channel_2_Cnt_s_1 (FF)
+  Destination:          Channel_2_Cnt_s_24 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.924ns (Levels of Logic = 13)
+  Clock Path Skew:      0.033ns (0.291 - 0.258)
+  Source Clock:         Clock_250 rising at 0.000ns
+  Destination Clock:    Clock_250 rising at 4.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Channel_2_Cnt_s_1 to Channel_2_Cnt_s_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y15.YQ       Tcko                  0.524   Channel_2_Cnt_s<0>
+                                                       Channel_2_Cnt_s_1
+    SLICE_X7Y15.G1       net (fanout=2)        0.432   Channel_2_Cnt_s<1>
+    SLICE_X7Y15.COUT     Topcyg                1.009   Channel_2_Cnt_s<0>
+                                                       Channel_2_Cnt_s<1>_rt
+                                                       Mcount_Channel_2_Cnt_s_cy<1>
+    SLICE_X7Y16.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<1>
+    SLICE_X7Y16.COUT     Tbyp                  0.130   Channel_2_Cnt_s<2>
+                                                       Mcount_Channel_2_Cnt_s_cy<2>
+                                                       Mcount_Channel_2_Cnt_s_cy<3>
+    SLICE_X7Y17.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<3>
+    SLICE_X7Y17.COUT     Tbyp                  0.130   Channel_2_Cnt_s<4>
+                                                       Mcount_Channel_2_Cnt_s_cy<4>
+                                                       Mcount_Channel_2_Cnt_s_cy<5>
+    SLICE_X7Y18.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<5>
+    SLICE_X7Y18.COUT     Tbyp                  0.130   Channel_2_Cnt_s<6>
+                                                       Mcount_Channel_2_Cnt_s_cy<6>
+                                                       Mcount_Channel_2_Cnt_s_cy<7>
+    SLICE_X7Y19.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<7>
+    SLICE_X7Y19.COUT     Tbyp                  0.130   Channel_2_Cnt_s<8>
+                                                       Mcount_Channel_2_Cnt_s_cy<8>
+                                                       Mcount_Channel_2_Cnt_s_cy<9>
+    SLICE_X7Y20.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<9>
+    SLICE_X7Y20.COUT     Tbyp                  0.130   Channel_2_Cnt_s<10>
+                                                       Mcount_Channel_2_Cnt_s_cy<10>
+                                                       Mcount_Channel_2_Cnt_s_cy<11>
+    SLICE_X7Y21.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<11>
+    SLICE_X7Y21.COUT     Tbyp                  0.130   Channel_2_Cnt_s<12>
+                                                       Mcount_Channel_2_Cnt_s_cy<12>
+                                                       Mcount_Channel_2_Cnt_s_cy<13>
+    SLICE_X7Y22.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<13>
+    SLICE_X7Y22.COUT     Tbyp                  0.130   Channel_2_Cnt_s<14>
+                                                       Mcount_Channel_2_Cnt_s_cy<14>
+                                                       Mcount_Channel_2_Cnt_s_cy<15>
+    SLICE_X7Y23.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<15>
+    SLICE_X7Y23.COUT     Tbyp                  0.130   Channel_2_Cnt_s<16>
+                                                       Mcount_Channel_2_Cnt_s_cy<16>
+                                                       Mcount_Channel_2_Cnt_s_cy<17>
+    SLICE_X7Y24.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<17>
+    SLICE_X7Y24.COUT     Tbyp                  0.130   Channel_2_Cnt_s<18>
+                                                       Mcount_Channel_2_Cnt_s_cy<18>
+                                                       Mcount_Channel_2_Cnt_s_cy<19>
+    SLICE_X7Y25.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<19>
+    SLICE_X7Y25.COUT     Tbyp                  0.130   Channel_2_Cnt_s<20>
+                                                       Mcount_Channel_2_Cnt_s_cy<20>
+                                                       Mcount_Channel_2_Cnt_s_cy<21>
+    SLICE_X7Y26.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<21>
+    SLICE_X7Y26.COUT     Tbyp                  0.130   Channel_2_Cnt_s<22>
+                                                       Mcount_Channel_2_Cnt_s_cy<22>
+                                                       Mcount_Channel_2_Cnt_s_cy<23>
+    SLICE_X7Y27.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<23>
+    SLICE_X7Y27.CLK      Tcinck                0.529   Channel_2_Cnt_s<24>
+                                                       Mcount_Channel_2_Cnt_s_xor<24>
+                                                       Channel_2_Cnt_s_24
+    -------------------------------------------------  ---------------------------
+    Total                                      3.924ns (3.492ns logic, 0.432ns route)
+                                                       (89.0% logic, 11.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.230ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Channel_2_Cnt_s_0 (FF)
+  Destination:          Channel_2_Cnt_s_24 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.803ns (Levels of Logic = 13)
+  Clock Path Skew:      0.033ns (0.291 - 0.258)
+  Source Clock:         Clock_250 rising at 0.000ns
+  Destination Clock:    Clock_250 rising at 4.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Channel_2_Cnt_s_0 to Channel_2_Cnt_s_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y15.XQ       Tcko                  0.495   Channel_2_Cnt_s<0>
+                                                       Channel_2_Cnt_s_0
+    SLICE_X7Y15.F4       net (fanout=2)        0.323   Channel_2_Cnt_s<0>
+    SLICE_X7Y15.COUT     Topcyf                1.026   Channel_2_Cnt_s<0>
+                                                       Mcount_Channel_2_Cnt_s_lut<0>_INV_0
+                                                       Mcount_Channel_2_Cnt_s_cy<0>
+                                                       Mcount_Channel_2_Cnt_s_cy<1>
+    SLICE_X7Y16.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<1>
+    SLICE_X7Y16.COUT     Tbyp                  0.130   Channel_2_Cnt_s<2>
+                                                       Mcount_Channel_2_Cnt_s_cy<2>
+                                                       Mcount_Channel_2_Cnt_s_cy<3>
+    SLICE_X7Y17.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<3>
+    SLICE_X7Y17.COUT     Tbyp                  0.130   Channel_2_Cnt_s<4>
+                                                       Mcount_Channel_2_Cnt_s_cy<4>
+                                                       Mcount_Channel_2_Cnt_s_cy<5>
+    SLICE_X7Y18.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<5>
+    SLICE_X7Y18.COUT     Tbyp                  0.130   Channel_2_Cnt_s<6>
+                                                       Mcount_Channel_2_Cnt_s_cy<6>
+                                                       Mcount_Channel_2_Cnt_s_cy<7>
+    SLICE_X7Y19.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<7>
+    SLICE_X7Y19.COUT     Tbyp                  0.130   Channel_2_Cnt_s<8>
+                                                       Mcount_Channel_2_Cnt_s_cy<8>
+                                                       Mcount_Channel_2_Cnt_s_cy<9>
+    SLICE_X7Y20.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<9>
+    SLICE_X7Y20.COUT     Tbyp                  0.130   Channel_2_Cnt_s<10>
+                                                       Mcount_Channel_2_Cnt_s_cy<10>
+                                                       Mcount_Channel_2_Cnt_s_cy<11>
+    SLICE_X7Y21.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<11>
+    SLICE_X7Y21.COUT     Tbyp                  0.130   Channel_2_Cnt_s<12>
+                                                       Mcount_Channel_2_Cnt_s_cy<12>
+                                                       Mcount_Channel_2_Cnt_s_cy<13>
+    SLICE_X7Y22.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<13>
+    SLICE_X7Y22.COUT     Tbyp                  0.130   Channel_2_Cnt_s<14>
+                                                       Mcount_Channel_2_Cnt_s_cy<14>
+                                                       Mcount_Channel_2_Cnt_s_cy<15>
+    SLICE_X7Y23.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<15>
+    SLICE_X7Y23.COUT     Tbyp                  0.130   Channel_2_Cnt_s<16>
+                                                       Mcount_Channel_2_Cnt_s_cy<16>
+                                                       Mcount_Channel_2_Cnt_s_cy<17>
+    SLICE_X7Y24.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<17>
+    SLICE_X7Y24.COUT     Tbyp                  0.130   Channel_2_Cnt_s<18>
+                                                       Mcount_Channel_2_Cnt_s_cy<18>
+                                                       Mcount_Channel_2_Cnt_s_cy<19>
+    SLICE_X7Y25.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<19>
+    SLICE_X7Y25.COUT     Tbyp                  0.130   Channel_2_Cnt_s<20>
+                                                       Mcount_Channel_2_Cnt_s_cy<20>
+                                                       Mcount_Channel_2_Cnt_s_cy<21>
+    SLICE_X7Y26.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<21>
+    SLICE_X7Y26.COUT     Tbyp                  0.130   Channel_2_Cnt_s<22>
+                                                       Mcount_Channel_2_Cnt_s_cy<22>
+                                                       Mcount_Channel_2_Cnt_s_cy<23>
+    SLICE_X7Y27.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<23>
+    SLICE_X7Y27.CLK      Tcinck                0.529   Channel_2_Cnt_s<24>
+                                                       Mcount_Channel_2_Cnt_s_xor<24>
+                                                       Channel_2_Cnt_s_24
+    -------------------------------------------------  ---------------------------
+    Total                                      3.803ns (3.480ns logic, 0.323ns route)
+                                                       (91.5% logic, 8.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.279ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Channel_2_Cnt_s_5 (FF)
+  Destination:          Channel_2_Cnt_s_24 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.779ns (Levels of Logic = 11)
+  Clock Path Skew:      0.058ns (0.068 - 0.010)
+  Source Clock:         Clock_250 rising at 0.000ns
+  Destination Clock:    Clock_250 rising at 4.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Channel_2_Cnt_s_5 to Channel_2_Cnt_s_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y17.YQ       Tcko                  0.524   Channel_2_Cnt_s<4>
+                                                       Channel_2_Cnt_s_5
+    SLICE_X7Y17.G4       net (fanout=2)        0.547   Channel_2_Cnt_s<5>
+    SLICE_X7Y17.COUT     Topcyg                1.009   Channel_2_Cnt_s<4>
+                                                       Channel_2_Cnt_s<5>_rt
+                                                       Mcount_Channel_2_Cnt_s_cy<5>
+    SLICE_X7Y18.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<5>
+    SLICE_X7Y18.COUT     Tbyp                  0.130   Channel_2_Cnt_s<6>
+                                                       Mcount_Channel_2_Cnt_s_cy<6>
+                                                       Mcount_Channel_2_Cnt_s_cy<7>
+    SLICE_X7Y19.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<7>
+    SLICE_X7Y19.COUT     Tbyp                  0.130   Channel_2_Cnt_s<8>
+                                                       Mcount_Channel_2_Cnt_s_cy<8>
+                                                       Mcount_Channel_2_Cnt_s_cy<9>
+    SLICE_X7Y20.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<9>
+    SLICE_X7Y20.COUT     Tbyp                  0.130   Channel_2_Cnt_s<10>
+                                                       Mcount_Channel_2_Cnt_s_cy<10>
+                                                       Mcount_Channel_2_Cnt_s_cy<11>
+    SLICE_X7Y21.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<11>
+    SLICE_X7Y21.COUT     Tbyp                  0.130   Channel_2_Cnt_s<12>
+                                                       Mcount_Channel_2_Cnt_s_cy<12>
+                                                       Mcount_Channel_2_Cnt_s_cy<13>
+    SLICE_X7Y22.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<13>
+    SLICE_X7Y22.COUT     Tbyp                  0.130   Channel_2_Cnt_s<14>
+                                                       Mcount_Channel_2_Cnt_s_cy<14>
+                                                       Mcount_Channel_2_Cnt_s_cy<15>
+    SLICE_X7Y23.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<15>
+    SLICE_X7Y23.COUT     Tbyp                  0.130   Channel_2_Cnt_s<16>
+                                                       Mcount_Channel_2_Cnt_s_cy<16>
+                                                       Mcount_Channel_2_Cnt_s_cy<17>
+    SLICE_X7Y24.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<17>
+    SLICE_X7Y24.COUT     Tbyp                  0.130   Channel_2_Cnt_s<18>
+                                                       Mcount_Channel_2_Cnt_s_cy<18>
+                                                       Mcount_Channel_2_Cnt_s_cy<19>
+    SLICE_X7Y25.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<19>
+    SLICE_X7Y25.COUT     Tbyp                  0.130   Channel_2_Cnt_s<20>
+                                                       Mcount_Channel_2_Cnt_s_cy<20>
+                                                       Mcount_Channel_2_Cnt_s_cy<21>
+    SLICE_X7Y26.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<21>
+    SLICE_X7Y26.COUT     Tbyp                  0.130   Channel_2_Cnt_s<22>
+                                                       Mcount_Channel_2_Cnt_s_cy<22>
+                                                       Mcount_Channel_2_Cnt_s_cy<23>
+    SLICE_X7Y27.CIN      net (fanout=1)        0.000   Mcount_Channel_2_Cnt_s_cy<23>
+    SLICE_X7Y27.CLK      Tcinck                0.529   Channel_2_Cnt_s<24>
+                                                       Mcount_Channel_2_Cnt_s_xor<24>
+                                                       Channel_2_Cnt_s_24
+    -------------------------------------------------  ---------------------------
+    Total                                      3.779ns (3.232ns logic, 0.547ns route)
+                                                       (85.5% logic, 14.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Channel_1_Cnt_s_23 (SLICE_X5Y26.CIN), 22 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.136ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Channel_1_Cnt_s_0 (FF)
+  Destination:          Channel_1_Cnt_s_23 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.878ns (Levels of Logic = 12)
+  Clock Path Skew:      0.014ns (0.274 - 0.260)
+  Source Clock:         Clock_250 rising at 0.000ns
+  Destination Clock:    Clock_250 rising at 4.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Channel_1_Cnt_s_0 to Channel_1_Cnt_s_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y15.XQ       Tcko                  0.495   Channel_1_Cnt_s<0>
+                                                       Channel_1_Cnt_s_0
+    SLICE_X5Y15.F3       net (fanout=2)        0.353   Channel_1_Cnt_s<0>
+    SLICE_X5Y15.COUT     Topcyf                1.026   Channel_1_Cnt_s<0>
+                                                       Mcount_Channel_1_Cnt_s_lut<0>_INV_0
+                                                       Mcount_Channel_1_Cnt_s_cy<0>
+                                                       Mcount_Channel_1_Cnt_s_cy<1>
+    SLICE_X5Y16.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<1>
+    SLICE_X5Y16.COUT     Tbyp                  0.130   Channel_1_Cnt_s<2>
+                                                       Mcount_Channel_1_Cnt_s_cy<2>
+                                                       Mcount_Channel_1_Cnt_s_cy<3>
+    SLICE_X5Y17.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<3>
+    SLICE_X5Y17.COUT     Tbyp                  0.130   Channel_1_Cnt_s<4>
+                                                       Mcount_Channel_1_Cnt_s_cy<4>
+                                                       Mcount_Channel_1_Cnt_s_cy<5>
+    SLICE_X5Y18.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<5>
+    SLICE_X5Y18.COUT     Tbyp                  0.130   Channel_1_Cnt_s<6>
+                                                       Mcount_Channel_1_Cnt_s_cy<6>
+                                                       Mcount_Channel_1_Cnt_s_cy<7>
+    SLICE_X5Y19.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<7>
+    SLICE_X5Y19.COUT     Tbyp                  0.130   Channel_1_Cnt_s<8>
+                                                       Mcount_Channel_1_Cnt_s_cy<8>
+                                                       Mcount_Channel_1_Cnt_s_cy<9>
+    SLICE_X5Y20.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<9>
+    SLICE_X5Y20.COUT     Tbyp                  0.130   Channel_1_Cnt_s<10>
+                                                       Mcount_Channel_1_Cnt_s_cy<10>
+                                                       Mcount_Channel_1_Cnt_s_cy<11>
+    SLICE_X5Y21.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<11>
+    SLICE_X5Y21.COUT     Tbyp                  0.130   Channel_1_Cnt_s<12>
+                                                       Mcount_Channel_1_Cnt_s_cy<12>
+                                                       Mcount_Channel_1_Cnt_s_cy<13>
+    SLICE_X5Y22.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<13>
+    SLICE_X5Y22.COUT     Tbyp                  0.130   Channel_1_Cnt_s<14>
+                                                       Mcount_Channel_1_Cnt_s_cy<14>
+                                                       Mcount_Channel_1_Cnt_s_cy<15>
+    SLICE_X5Y23.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<15>
+    SLICE_X5Y23.COUT     Tbyp                  0.130   Channel_1_Cnt_s<16>
+                                                       Mcount_Channel_1_Cnt_s_cy<16>
+                                                       Mcount_Channel_1_Cnt_s_cy<17>
+    SLICE_X5Y24.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<17>
+    SLICE_X5Y24.COUT     Tbyp                  0.130   Channel_1_Cnt_s<18>
+                                                       Mcount_Channel_1_Cnt_s_cy<18>
+                                                       Mcount_Channel_1_Cnt_s_cy<19>
+    SLICE_X5Y25.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<19>
+    SLICE_X5Y25.COUT     Tbyp                  0.130   Channel_1_Cnt_s<20>
+                                                       Mcount_Channel_1_Cnt_s_cy<20>
+                                                       Mcount_Channel_1_Cnt_s_cy<21>
+    SLICE_X5Y26.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<21>
+    SLICE_X5Y26.CLK      Tcinck                0.704   Channel_1_Cnt_s<22>
+                                                       Mcount_Channel_1_Cnt_s_cy<22>
+                                                       Mcount_Channel_1_Cnt_s_xor<23>
+                                                       Channel_1_Cnt_s_23
+    -------------------------------------------------  ---------------------------
+    Total                                      3.878ns (3.525ns logic, 0.353ns route)
+                                                       (90.9% logic, 9.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.154ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Channel_1_Cnt_s_1 (FF)
+  Destination:          Channel_1_Cnt_s_23 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.860ns (Levels of Logic = 12)
+  Clock Path Skew:      0.014ns (0.274 - 0.260)
+  Source Clock:         Clock_250 rising at 0.000ns
+  Destination Clock:    Clock_250 rising at 4.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Channel_1_Cnt_s_1 to Channel_1_Cnt_s_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y15.YQ       Tcko                  0.524   Channel_1_Cnt_s<0>
+                                                       Channel_1_Cnt_s_1
+    SLICE_X5Y15.G4       net (fanout=2)        0.323   Channel_1_Cnt_s<1>
+    SLICE_X5Y15.COUT     Topcyg                1.009   Channel_1_Cnt_s<0>
+                                                       Channel_1_Cnt_s<1>_rt
+                                                       Mcount_Channel_1_Cnt_s_cy<1>
+    SLICE_X5Y16.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<1>
+    SLICE_X5Y16.COUT     Tbyp                  0.130   Channel_1_Cnt_s<2>
+                                                       Mcount_Channel_1_Cnt_s_cy<2>
+                                                       Mcount_Channel_1_Cnt_s_cy<3>
+    SLICE_X5Y17.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<3>
+    SLICE_X5Y17.COUT     Tbyp                  0.130   Channel_1_Cnt_s<4>
+                                                       Mcount_Channel_1_Cnt_s_cy<4>
+                                                       Mcount_Channel_1_Cnt_s_cy<5>
+    SLICE_X5Y18.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<5>
+    SLICE_X5Y18.COUT     Tbyp                  0.130   Channel_1_Cnt_s<6>
+                                                       Mcount_Channel_1_Cnt_s_cy<6>
+                                                       Mcount_Channel_1_Cnt_s_cy<7>
+    SLICE_X5Y19.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<7>
+    SLICE_X5Y19.COUT     Tbyp                  0.130   Channel_1_Cnt_s<8>
+                                                       Mcount_Channel_1_Cnt_s_cy<8>
+                                                       Mcount_Channel_1_Cnt_s_cy<9>
+    SLICE_X5Y20.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<9>
+    SLICE_X5Y20.COUT     Tbyp                  0.130   Channel_1_Cnt_s<10>
+                                                       Mcount_Channel_1_Cnt_s_cy<10>
+                                                       Mcount_Channel_1_Cnt_s_cy<11>
+    SLICE_X5Y21.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<11>
+    SLICE_X5Y21.COUT     Tbyp                  0.130   Channel_1_Cnt_s<12>
+                                                       Mcount_Channel_1_Cnt_s_cy<12>
+                                                       Mcount_Channel_1_Cnt_s_cy<13>
+    SLICE_X5Y22.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<13>
+    SLICE_X5Y22.COUT     Tbyp                  0.130   Channel_1_Cnt_s<14>
+                                                       Mcount_Channel_1_Cnt_s_cy<14>
+                                                       Mcount_Channel_1_Cnt_s_cy<15>
+    SLICE_X5Y23.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<15>
+    SLICE_X5Y23.COUT     Tbyp                  0.130   Channel_1_Cnt_s<16>
+                                                       Mcount_Channel_1_Cnt_s_cy<16>
+                                                       Mcount_Channel_1_Cnt_s_cy<17>
+    SLICE_X5Y24.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<17>
+    SLICE_X5Y24.COUT     Tbyp                  0.130   Channel_1_Cnt_s<18>
+                                                       Mcount_Channel_1_Cnt_s_cy<18>
+                                                       Mcount_Channel_1_Cnt_s_cy<19>
+    SLICE_X5Y25.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<19>
+    SLICE_X5Y25.COUT     Tbyp                  0.130   Channel_1_Cnt_s<20>
+                                                       Mcount_Channel_1_Cnt_s_cy<20>
+                                                       Mcount_Channel_1_Cnt_s_cy<21>
+    SLICE_X5Y26.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<21>
+    SLICE_X5Y26.CLK      Tcinck                0.704   Channel_1_Cnt_s<22>
+                                                       Mcount_Channel_1_Cnt_s_cy<22>
+                                                       Mcount_Channel_1_Cnt_s_xor<23>
+                                                       Channel_1_Cnt_s_23
+    -------------------------------------------------  ---------------------------
+    Total                                      3.860ns (3.537ns logic, 0.323ns route)
+                                                       (91.6% logic, 8.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.229ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Channel_1_Cnt_s_3 (FF)
+  Destination:          Channel_1_Cnt_s_23 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.813ns (Levels of Logic = 11)
+  Clock Path Skew:      0.042ns (0.049 - 0.007)
+  Source Clock:         Clock_250 rising at 0.000ns
+  Destination Clock:    Clock_250 rising at 4.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Channel_1_Cnt_s_3 to Channel_1_Cnt_s_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y16.YQ       Tcko                  0.524   Channel_1_Cnt_s<2>
+                                                       Channel_1_Cnt_s_3
+    SLICE_X5Y16.G2       net (fanout=2)        0.406   Channel_1_Cnt_s<3>
+    SLICE_X5Y16.COUT     Topcyg                1.009   Channel_1_Cnt_s<2>
+                                                       Channel_1_Cnt_s<3>_rt
+                                                       Mcount_Channel_1_Cnt_s_cy<3>
+    SLICE_X5Y17.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<3>
+    SLICE_X5Y17.COUT     Tbyp                  0.130   Channel_1_Cnt_s<4>
+                                                       Mcount_Channel_1_Cnt_s_cy<4>
+                                                       Mcount_Channel_1_Cnt_s_cy<5>
+    SLICE_X5Y18.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<5>
+    SLICE_X5Y18.COUT     Tbyp                  0.130   Channel_1_Cnt_s<6>
+                                                       Mcount_Channel_1_Cnt_s_cy<6>
+                                                       Mcount_Channel_1_Cnt_s_cy<7>
+    SLICE_X5Y19.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<7>
+    SLICE_X5Y19.COUT     Tbyp                  0.130   Channel_1_Cnt_s<8>
+                                                       Mcount_Channel_1_Cnt_s_cy<8>
+                                                       Mcount_Channel_1_Cnt_s_cy<9>
+    SLICE_X5Y20.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<9>
+    SLICE_X5Y20.COUT     Tbyp                  0.130   Channel_1_Cnt_s<10>
+                                                       Mcount_Channel_1_Cnt_s_cy<10>
+                                                       Mcount_Channel_1_Cnt_s_cy<11>
+    SLICE_X5Y21.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<11>
+    SLICE_X5Y21.COUT     Tbyp                  0.130   Channel_1_Cnt_s<12>
+                                                       Mcount_Channel_1_Cnt_s_cy<12>
+                                                       Mcount_Channel_1_Cnt_s_cy<13>
+    SLICE_X5Y22.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<13>
+    SLICE_X5Y22.COUT     Tbyp                  0.130   Channel_1_Cnt_s<14>
+                                                       Mcount_Channel_1_Cnt_s_cy<14>
+                                                       Mcount_Channel_1_Cnt_s_cy<15>
+    SLICE_X5Y23.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<15>
+    SLICE_X5Y23.COUT     Tbyp                  0.130   Channel_1_Cnt_s<16>
+                                                       Mcount_Channel_1_Cnt_s_cy<16>
+                                                       Mcount_Channel_1_Cnt_s_cy<17>
+    SLICE_X5Y24.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<17>
+    SLICE_X5Y24.COUT     Tbyp                  0.130   Channel_1_Cnt_s<18>
+                                                       Mcount_Channel_1_Cnt_s_cy<18>
+                                                       Mcount_Channel_1_Cnt_s_cy<19>
+    SLICE_X5Y25.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<19>
+    SLICE_X5Y25.COUT     Tbyp                  0.130   Channel_1_Cnt_s<20>
+                                                       Mcount_Channel_1_Cnt_s_cy<20>
+                                                       Mcount_Channel_1_Cnt_s_cy<21>
+    SLICE_X5Y26.CIN      net (fanout=1)        0.000   Mcount_Channel_1_Cnt_s_cy<21>
+    SLICE_X5Y26.CLK      Tcinck                0.704   Channel_1_Cnt_s<22>
+                                                       Mcount_Channel_1_Cnt_s_cy<22>
+                                                       Mcount_Channel_1_Cnt_s_xor<23>
+                                                       Channel_1_Cnt_s_23
+    -------------------------------------------------  ---------------------------
+    Total                                      3.813ns (3.407ns logic, 0.406ns route)
+                                                       (89.4% logic, 10.6% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk_man_inst_CLKFX_BUF = PERIOD TIMEGRP "clk_man_inst_CLKFX_BUF"
+        TS_CLK_10MHz / 25 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point Channel_2_Cnt_stored_s_9 (SLICE_X9Y19.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.776ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Channel_2_Cnt_s_9 (FF)
+  Destination:          Channel_2_Cnt_stored_s_9 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.800ns (Levels of Logic = 0)
+  Clock Path Skew:      0.024ns (0.270 - 0.246)
+  Source Clock:         Clock_250 rising at 4.000ns
+  Destination Clock:    Clock_250 rising at 4.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: Channel_2_Cnt_s_9 to Channel_2_Cnt_stored_s_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y19.YQ       Tcko                  0.419   Channel_2_Cnt_s<8>
+                                                       Channel_2_Cnt_s_9
+    SLICE_X9Y19.BX       net (fanout=2)        0.319   Channel_2_Cnt_s<9>
+    SLICE_X9Y19.CLK      Tckdi       (-Th)    -0.062   Channel_2_Cnt_stored_s<9>
+                                                       Channel_2_Cnt_stored_s_9
+    -------------------------------------------------  ---------------------------
+    Total                                      0.800ns (0.481ns logic, 0.319ns route)
+                                                       (60.1% logic, 39.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Channel_2_Cnt_stored_s_0 (SLICE_X9Y12.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.797ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Channel_2_Cnt_s_0 (FF)
+  Destination:          Channel_2_Cnt_stored_s_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.829ns (Levels of Logic = 0)
+  Clock Path Skew:      0.032ns (0.252 - 0.220)
+  Source Clock:         Clock_250 rising at 4.000ns
+  Destination Clock:    Clock_250 rising at 4.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: Channel_2_Cnt_s_0 to Channel_2_Cnt_stored_s_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y15.XQ       Tcko                  0.396   Channel_2_Cnt_s<0>
+                                                       Channel_2_Cnt_s_0
+    SLICE_X9Y12.BY       net (fanout=2)        0.311   Channel_2_Cnt_s<0>
+    SLICE_X9Y12.CLK      Tckdi       (-Th)    -0.122   Channel_2_Cnt_stored_s<1>
+                                                       Channel_2_Cnt_stored_s_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.829ns (0.518ns logic, 0.311ns route)
+                                                       (62.5% logic, 37.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Channel_2_Cnt_stored_s_7 (SLICE_X8Y19.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.816ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Channel_2_Cnt_s_7 (FF)
+  Destination:          Channel_2_Cnt_stored_s_7 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.840ns (Levels of Logic = 0)
+  Clock Path Skew:      0.024ns (0.270 - 0.246)
+  Source Clock:         Clock_250 rising at 4.000ns
+  Destination Clock:    Clock_250 rising at 4.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: Channel_2_Cnt_s_7 to Channel_2_Cnt_stored_s_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y18.YQ       Tcko                  0.419   Channel_2_Cnt_s<6>
+                                                       Channel_2_Cnt_s_7
+    SLICE_X8Y19.BX       net (fanout=2)        0.319   Channel_2_Cnt_s<7>
+    SLICE_X8Y19.CLK      Tckdi       (-Th)    -0.102   Channel_2_Cnt_stored_s<7>
+                                                       Channel_2_Cnt_stored_s_7
+    -------------------------------------------------  ---------------------------
+    Total                                      0.840ns (0.521ns logic, 0.319ns route)
+                                                       (62.0% logic, 38.0% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk_man_inst_CLKFX_BUF = PERIOD TIMEGRP "clk_man_inst_CLKFX_BUF"
+        TS_CLK_10MHz / 25 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 1.344ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 4.000ns
+  Low pulse: 2.000ns
+  Low pulse limit: 1.328ns (Trpw)
+  Physical resource: Channel_1_change_s/SR
+  Logical resource: Channel_1_change_s/SR
+  Location pin: SLICE_X14Y22.SR
+  Clock network: Reset_s
+--------------------------------------------------------------------------------
+Slack: 1.344ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 4.000ns
+  High pulse: 2.000ns
+  High pulse limit: 1.328ns (Trpw)
+  Physical resource: Channel_1_change_s/SR
+  Logical resource: Channel_1_change_s/SR
+  Location pin: SLICE_X14Y22.SR
+  Clock network: Reset_s
+--------------------------------------------------------------------------------
+Slack: 1.344ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 4.000ns
+  Low pulse: 2.000ns
+  Low pulse limit: 1.328ns (Trpw)
+  Physical resource: LED2_all_s/SR
+  Logical resource: LED2_all_s/SR
+  Location pin: SLICE_X14Y23.SR
+  Clock network: Reset_s
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_CLK_10MHz
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_CLK_10MHz                   |    100.000ns|     20.000ns|     98.400ns|            0|            0|            0|         7119|
+| TS_clk_man_inst_CLK0_BUF      |    100.000ns|     91.575ns|          N/A|            0|            0|         6125|            0|
+| TS_clk_man_inst_CLKFX_BUF     |      4.000ns|      3.936ns|          N/A|            0|            0|          994|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLK_10MHz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_10MHz      |    6.219|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 7119 paths, 0 nets, and 2517 connections
+
+Design statistics:
+   Minimum period:  91.575ns{1}   (Maximum frequency:  10.920MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Jan 17 11:21:58 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 185 MB
+
+
+

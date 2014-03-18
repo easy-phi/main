@@ -1,0 +1,188 @@
+<!--
+Easy-phi project: http://easy-phi.ch/
+Developer : Raphael Houlmann, University of Geneva  2014
+Licensed under GPL, for details report to: http://easy-phi.ch/index.php/about/licensing
+Do NOT remove this notice
+-->
+<link rel="stylesheet" href="/jquery/css/ui-lightness/jquery-ui-1.10.3.custom.css" />
+<script src="/jquery/js/jquery-1.9.1.js"></script>
+<script src="/jquery/js/jquery-ui-1.10.3.custom.js"></script>
+<link rel="stylesheet" href="/css/easy-phi-custom.css" />
+
+<html>
+<head>
+<title>Easy-phi interface</title>
+
+  <script>
+  $(function() {
+    //$( "#tabs" ).tabs();
+    $("#tabs").tabs({
+        select: function (e, ui) {
+            e.preventDefault();
+            var sel = ui.index;
+            $("[id*=SelectedTab]").val(sel);
+            $("[id*=ChangeTabButton]").click();
+        },
+        selected: $("[id*=SelectedTab]").val()
+    });
+    //$( "#tabs" ).resizable();
+  });
+  </script>
+
+  
+  <script lang="text/javascript">
+  $(document).ready(function(){
+ 
+  function request_serial(callback, arg, text){
+        $.ajax({
+            url: "/php/easy-phi.php?p=5555&q=" + text,              
+            async: true,
+            success : function(data){callback(data, arg);}
+        });     
+    }
+    function write_to_box(data, arg){
+        $('#mqueuewindow').text(data);
+        $('#mqueuewindow').scrollTop($('#mqueuewindow')[0].scrollHeight);    
+    }
+
+    function none(data, arg){
+    }
+    
+  	$('#mqueueform').button().click(function(e) {
+        request_serial(write_to_box, "", $('#mqueuebox').val()); 
+  		e.stopPropagation();
+  		e.preventDefault();
+  	});
+
+    function write_status(data, arg){
+        $('#s' + arg + 's').html(' ' + unescape(data));
+    };    
+      
+    function write_type(data, arg){
+        $('#s' + arg + 't').html(' - ' + unescape(data));
+        $('#text' + arg).text(unescape(data));
+        request_serial(write_status, arg, ('SLot:' + arg + ':STATus?'));
+    };    
+        
+      
+    function updatebuttons(data, arg){
+        if (unescape(data)=="unlocked")
+        {   
+            $('#load' + arg).button( "option", "disabled", false);
+            $('#s' + arg + 'l').html(' - Unlocked');
+        } else {
+            $('#load' + arg).button( "option", "disabled", true);
+            $('#s' + arg + 'l').html(' - Locked');
+        }
+        request_serial(write_type, arg, ('SLot:' + arg + ':TYpe?'));
+    };
+  	$('#lport').spinner({min: 1, max: 5, step: 1}).val(1);
+    $( "#forceul" ).button().click(function(e) {request_serial(none, "", ("SLot:" + $('#lport').val() + ":LOcked 0"));e.preventDefault();});
+    $( "#forcel" ).button().click(function(e) {request_serial(none, "", ("SLot:" + $('#lport').val() + ":LOcked 1"));e.preventDefault();});
+    
+    var slot_loaded = []
+    for (var i = 0; i < 5; i += 1) {
+        slot_loaded.push(false);
+        $( "#load"+(i+1) ).button().click(function(e) {
+            sl = ($(this).parent().attr('id').replace(/[^0-9]/g, ''));
+            $('#container'+sl).html('<object width="900" height="500" type="text/html" data="/sd_cards/slot_'+sl+'/PHP/slot.php?s='+sl+'"></object>');
+            $('#release'+sl).button( "option", "disabled", false ); 
+            $('#load'+sl).button( "option", "disabled", true);      
+            slot_loaded[(sl-1)] = true
+            request_serial(none, "", ("SLot:"+sl+":LOcked 1" )); 
+  	    	e.stopPropagation();
+  	    	e.preventDefault();
+        });
+        $( "#release"+(i+1) ).button().click(function(e) {
+            sl = ($(this).parent().attr('id').replace(/[^0-9]/g, ''));
+            $('#container'+sl).html('');
+            $('#release'+sl).button( "option", "disabled", true);      
+            slot_loaded[(sl-1)] = false
+            request_serial(none, "", ("SLot:"+sl+":LOcked 0" )); 
+  	    	e.stopPropagation();
+  	    	e.preventDefault();
+        });
+        $('#load'+(i+1)).button( "option", "disabled", true ); 
+        $('#release'+(i+1)).button( "option", "disabled", true ); 
+    }
+    
+      
+    setInterval(function(){request_serial(updatebuttons, 1, "SLot:1:LOcked?"); },1000);
+    setInterval(function(){request_serial(updatebuttons, 2, "SLot:2:LOcked?"); },1000);
+    setInterval(function(){request_serial(updatebuttons, 3, "SLot:3:LOcked?"); },1000);
+    setInterval(function(){request_serial(updatebuttons, 4, "SLot:4:LOcked?"); },1000);
+    setInterval(function(){request_serial(updatebuttons, 5, "SLot:5:LOcked?"); },1000);
+ 
+  });	
+  </script>
+
+  
+  
+</head>
+<body><div class="container ui-tabs ui-widget ui-corner-all ui-resizable">
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-ctrl">Control</a></li>
+    <li><a href="#tabs-1">Slot 1</a></li>
+    <li><a href="#tabs-2">Slot 2</a></li>
+    <li><a href="#tabs-3">Slot 3</a></li>
+    <li><a href="#tabs-4">Slot 4</a></li>
+    <li><a href="#tabs-5">Slot 5</a></li>
+  </ul>
+  
+  <div id="tabs-ctrl">
+    <form>
+        <input id="forceul" type="submit" value="Force unlock port:">
+        <input id="forcel" type="submit" value="Force lock port:">
+        <input type="text"   name="lport" id="lport"><br><br><br>
+    </form>
+    <span>Slot 1: </span><span id="s1s">not connected </span><span id="s1t"></span><span id="s1l"></span><br>
+    <span>Slot 2: </span><span id="s2s">not connected </span><span id="s2t"></span><span id="s2l"></span><br>
+    <span>Slot 3: </span><span id="s3s">not connected </span><span id="s3t"></span><span id="s3l"></span><br>
+    <span>Slot 4: </span><span id="s4s">not connected </span><span id="s4t"></span><span id="s4l"></span><br>
+    <span>Slot 5: </span><span id="s5s">not connected </span><span id="s5t"></span><span id="s5l"></span><br>
+    <br><br><br><br><br>
+    <form>
+        <input id="mqueueform" name="mqueueform" type="submit" value="Write" /> 
+        <input id="mqueuebox" name="mqueuebox" type="textarea" value="" /> 
+        <div id="mqueuewindow"></div>
+    </form>
+  </div>
+
+  <div id="tabs-1">
+    <input id="load1" type="submit" value="Load"><input id="release1" type="submit" value="Release"><span id="text1">No Module</span><br>
+    <div id="container1"></div>
+  </div>
+
+  <div id="tabs-2">
+    <input id="load2" type="submit" value="Load"><input id="release2" type="submit" value="Release"><span id="text2">No Module</span><br>
+    <div id="container2"></div>
+  </div>
+
+  <div id="tabs-3">
+    <input id="load3" type="submit" value="Load"><input id="release3" type="submit" value="Release"><span id="text3">No Module</span><br>
+    <div id="container3"></div>
+  </div>
+
+  <div id="tabs-4">
+    <input id="load4" type="submit" value="Load"><input id="release4" type="submit" value="Release"><span id="text4">No Module</span><br>
+    <div id="container4"></div>
+  </div>
+
+  <div id="tabs-5">
+    <input id="load5" type="submit" value="Load"><input id="release5" type="submit" value="Release"><span id="text5">No Module</span><br>
+    <div id="container5"></div>
+  </div>
+</div>
+
+<p><a href="http://www.gnu.org/licenses/gpl.html">
+<img src="/image/gplv3-127x51.png" alt="Creative Commons License"/></a>&nbsp;&nbsp;&nbsp;
+<b><big>University of Geneva 2014 </big></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.easy-phi.ch" target="_blank"><img src="/image/easy-phi.jpg" width="100" height="40"/></a>&nbsp;&nbsp;
+<a href="http://github.com/easy-phi/main" target="_blank">[github]</a>
+<a href="inline.html">Page layout</a>
+</p>
+
+</div></body>
+
+

@@ -1,0 +1,86 @@
+High speed clock generator
+***************************
+CONFigure:OUT1? 
+CONFigure:OUT2? 
+CONFigure:OUT3? 
+CONFigure:OUT4? 
+CONFigure:MUX? 
+CONFigure:PLLin?
+CONFigure:FREQuence?
+
+CONFigure:OUT1 [IN,PLL1,PLL2,MUX]
+CONFigure:OUT2 [IN,PLL1,PLL2,MUX]
+CONFigure:OUT3 [IN,PLL1,PLL2,MUX]
+CONFigure:OUT4 [IN,PLL1,PLL2,MUX]
+CONFigure:MUX  [UC,REF_CLK]
+CONFigure:PLLin [IN,REF_CLK]
+CONFigure:FREQuence integer (in Hz)
+
+
+High_speed_dual_delay_lines
+*********************************
+CONFigure:DELay:A:ENable?
+CONFigure:DELay:B:ENable?
+CONFigure:DELay:A:VALue?
+CONFigure:DELay:B:VALue? 
+
+CONFigure:DELay:A:ENable [0,1]
+CONFigure:DELay:B:ENable [0,1]
+CONFigure:DELay:A:VALue integer (in ps)
+CONFigure:DELay:B:VALue integer (in ps)
+
+
+High_Speed_Logic_Gate
+*************************
+CONFigure:OUT1? 
+CONFigure:OUT2? 
+CONFigure:OUT3? 
+CONFigure:OUT4? 
+
+CONFigure:OUT1 [OR,AND,IN1,IN2]
+CONFigure:OUT2 [OR,AND,IN1,IN2]
+CONFigure:OUT3 [OR,AND,IN1,IN2]
+CONFigure:OUT4 [OR,AND,IN1,IN2]
+
+Low_cost_dual_10MHz_counters
+************************************
+CONFigure:COUnter:A:ENable? 
+CONFigure:COUnter:B:ENable? 
+CONFigure:COUnter:A:Read?  (Read counter A)
+CONFigure:COUnter:B:Read?  (Read counter B)
+CONFigure:COUnter:A:INTegrationtime? 
+CONFigure:COUnter:B:INTegrationtime? 
+CONFigure:TTLinputenable?     booleen
+CONFigure:FREQuence?         integer 
+CONFigure:DUTYcycle?    integer    
+
+CONFigure:COUnter:A:ENable  [0,1]   (Enable counter A)
+CONFigure:COUnter:B:ENable  [0,1]   (Enable counter B)
+CONFigure:COUnter:A:INTegrationtime   integer (Set integration time of counter A in ms)
+CONFigure:COUnter:B:INTegrationtime   integer (Set integration time of counter B in ms)
+CONFigure:TTLinputenable     [0,1]                   (Set QMA out to the TTL input)
+CONFigure:FREQuence         integer    (Set frequency on QMA out)
+CONFigure:DUTYcycle    integer    (Set duty cycle on QMA out)
+
+Low_cost_dual_discriminator
+******************************
+CONFigure:CHAnnel:A:OFFset:ENable?
+CONFigure:CHAnnel:B:OFFset:ENable?
+CONFigure:CHAnnel:A:OFFset:VALue?
+CONFigure:CHAnnel:B:OFFset:VALue?
+CONFigure:CHAnnel:A:THReshold?
+CONFigure:CHAnnel:B:THReshold?
+CONFigure:CHAnnel:A:COUpling?
+CONFigure:CHAnnel:B:COUpling?
+CONFigure:COUnter:A:Read?  (Read counter A)
+CONFigure:COUnter:B:Read?  (Read counter B)
+
+CONFigure:CHAnnel:A:OFFset:ENable [0,1] 
+CONFigure:CHAnnel:B:OFFset:ENable [0,1] 
+CONFigure:CHAnnel:A:OFFset:VALue integer
+CONFigure:CHAnnel:B:OFFset:VALue integer
+CONFigure:CHAnnel:A:THReshold integer
+CONFigure:CHAnnel:B:THReshold integer
+CONFigure:CHAnnel:A:COUpling [AC,DC]
+CONFigure:CHAnnel:B:COUpling [AC,DC]
+

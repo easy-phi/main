@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# PlanAhead v14.4 (64-bit)
+# Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+# Start of session at: Mon Dec 09 16:18:57 2013
+# Process ID: 4948
+# Log file: F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/planAhead_run_1/planAhead.log
+# Journal file: F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P47 [get_ports CH1_ACDC]
+endgroup
+save_constraints

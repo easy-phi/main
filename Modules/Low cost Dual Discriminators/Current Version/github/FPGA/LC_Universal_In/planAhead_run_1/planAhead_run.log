@@ -1,0 +1,98 @@
+
+****** PlanAhead v14.4 (64-bit)
+  **** Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+    ** Copyright 1986-1999, 2001-2012 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -252 day(s)
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.4/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+INFO: [Common 17-81] Feature available: PartialReconfiguration
+source F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/pa.fromHdl.tcl
+# create_project -name tests -dir "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/planAhead_run_1" -part xc3s50antqg144-5
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf" [current_fileset -constrset]
+Adding file 'F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {../source/top.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set_property top top $srcset
+# add_files [list {F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc3s50antqg144-5
+Using Verific elaboration
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/source/top.vhd" into library work
+INFO: [Designutils 20-910] Reading macro library C:/Xilinx/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/hd_int_macros.edn
+Parsing EDIF File [C:/Xilinx/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/hd_int_macros.edn]
+Finished Parsing EDIF File [C:/Xilinx/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/hd_int_macros.edn]
+Loading clock regions from C:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/xc3s50an/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/xc3s50an/ClockBuffers.xml
+Loading package from C:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/xc3s50an/tqg144/Package.xml
+Loading io standards from C:/Xilinx/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from C:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/xc3s50an/tqg144/SSORules.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/drc.xml
+INFO: [Timing 38-77] Reading timing library C:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/spartan3a-5.lib.
+INFO: [Timing 38-34] Done reading timing library C:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/spartan3a-5.lib.
+Parsing UCF File [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 71 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:1]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 70 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:2]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 72 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:3]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 69 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:4]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 60 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:5]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 82 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:6]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 78 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:7]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 132 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:8]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 127 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:9]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 111 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:10]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 3 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:11]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 11 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:12]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 125 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:13]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 35 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:14]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 30 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:15]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 141 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:16]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 124 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:17]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 110 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:18]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 113 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:19]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 112 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:20]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 114 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:21]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 121 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:22]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 116 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:23]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 129 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:24]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 142 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:25]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 139 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:26]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 4 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:27]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 6 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:28]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 5 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:29]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 7 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:30]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 10 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:31]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 8 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:32]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 31 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:33]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 33 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:34]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 32 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:35]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 103 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:36]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 105 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:37]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 101 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:38]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 102 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:39]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 104 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:40]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 99 [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf:41]
+Finished Parsing UCF File [F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/constraints/LC_Discr.ucf]
+INFO: [Designutils 20-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 9bce6a13
+open_rtl_design: Time (s): elapsed = 00:00:14 . Memory (MB): peak = 540.059 ; gain = 133.785
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P47 [get_ports CH1_ACDC]
+endgroup
+save_constraints
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Mon Dec 09 16:20:18 2013...
+INFO: [Common 17-83] Releasing license: PlanAhead

@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=P:\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master_atlys_top.ncd
-OUTFILE=P:\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn\spi_master_atlys_top.bit
-FAMILY=Spartan6
-PART=xc6slx45-2csg324
-WORKINGDIR=P:\EasyPhi\Modules\Low cost Universal Input\Current Version\github\FPGA\spi_master_slave\trunk\syn
-LICENSE=WebPack
-USER_INFO=210819535_0_0_576

@@ -1,0 +1,669 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc3s50an-5-tqg144
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"../source/IPCORES"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/clk_man.vhd" in Library work.
+Architecture behavioral of Entity clk_man is up to date.
+Compiling vhdl file "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/source/IPCORES/chipscope_icon.vhd" in Library work.
+Architecture chipscope_icon_a of Entity chipscope_icon is up to date.
+Compiling vhdl file "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/source/IPCORES/chipscope_ila.vhd" in Library work.
+Architecture chipscope_ila_a of Entity chipscope_ila is up to date.
+Compiling vhdl file "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/source/top.vhd" in Library work.
+Entity <top> compiled.
+Entity <top> (Architecture <behave>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top> in library <work> (architecture <behave>).
+
+Analyzing hierarchy for entity <clk_man> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top> in library <work> (Architecture <behave>).
+INFO:Xst:1561 - "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/source/top.vhd" line 381: Mux is complete : default of case is discarded
+WARNING:Xst:2211 - "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/source/top.vhd" line 450: Instantiating black box module <chipscope_icon>.
+WARNING:Xst:2211 - "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/source/top.vhd" line 453: Instantiating black box module <chipscope_ila>.
+Entity <top> analyzed. Unit <top> generated.
+
+Analyzing Entity <clk_man> in library <work> (Architecture <behavioral>).
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_INST> in unit <clk_man>.
+    Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_SP_INST> in unit <clk_man>.
+    Set user-defined property "CLKFX_MULTIPLY =  25" for instance <DCM_SP_INST> in unit <clk_man>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <clk_man>.
+    Set user-defined property "CLKIN_PERIOD =  100.0000000000000000" for instance <DCM_SP_INST> in unit <clk_man>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <clk_man>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <clk_man>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <clk_man>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <clk_man>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <clk_man>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <clk_man>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <clk_man>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <clk_man>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <clk_man>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <clk_man>.
+Entity <clk_man> analyzed. Unit <clk_man> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clk_man>.
+    Related source file is "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/tests/clk_man.vhd".
+Unit <clk_man> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "F:/PROJECTS/EASYPHI/FPGA_Low_Cost_Universal_Input/source/top.vhd".
+WARNING:Xst:647 - Input <SYNC2_IN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <SYNC4_IN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <EXT_SYNC> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <SYNC3_IN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <SPI_MOSI_Sync2_s> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <Led_test> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Channel_2_Cnt_stored_s<25>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Channel_1_Cnt_stored_s<25>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit tristate buffer for signal <SPI_MISO>.
+    Found 1-bit register for signal <CH1_ACDC_testm_s>.
+    Found 1-bit register for signal <CH1_BIAS_testm_s>.
+    Found 1-bit register for signal <CH2_ACDC_testm_s>.
+    Found 1-bit register for signal <CH2_BIAS_testm_s>.
+    Found 1-bit register for signal <Channel_1_change_s>.
+    Found 1-bit xor2 for signal <Channel_1_change_s$xor0000> created at line 273.
+    Found 26-bit up counter for signal <Channel_1_Cnt_s>.
+    Found 26-bit register for signal <Channel_1_Cnt_stored_s>.
+    Found 1-bit register for signal <Channel_1_s>.
+    Found 1-bit register for signal <Channel_1_sync_s>.
+    Found 1-bit register for signal <Channel_2_change_s>.
+    Found 1-bit xor2 for signal <Channel_2_change_s$xor0000> created at line 274.
+    Found 26-bit up counter for signal <Channel_2_Cnt_s>.
+    Found 26-bit register for signal <Channel_2_Cnt_stored_s>.
+    Found 1-bit register for signal <Channel_2_s>.
+    Found 1-bit register for signal <Channel_2_sync_s>.
+    Found 1-bit register for signal <CLT_INT_s>.
+    Found 1-bit register for signal <FPGA_INT_s>.
+    Found 1-bit register for signal <LED1_all_s>.
+    Found 1-bit register for signal <LED2_all_s>.
+    Found 1-bit register for signal <LED3_all_s>.
+    Found 1-bit register for signal <LED4_all_s>.
+    Found 1-bit register for signal <LED5_all_s>.
+    Found 1-bit register for signal <LED6_all_s>.
+    Found 1-bit register for signal <LED_1_testm_s>.
+    Found 1-bit register for signal <LED_2_testm_s>.
+    Found 1-bit register for signal <LED_3_testm_s>.
+    Found 32-bit up counter for signal <LED_Cnt_s>.
+    Found 1-bit register for signal <LED_Trig_s>.
+    Found 1-bit register for signal <LED_trig_sync_s>.
+    Found 16-bit register for signal <Relay_Data_s>.
+    Found 1-bit register for signal <Reset_s>.
+    Found 8-bit register for signal <SPI_Address_s>.
+    Found 1-bit register for signal <SPI_CLK_Sync1_s>.
+    Found 1-bit register for signal <SPI_CLK_Sync2_s>.
+    Found 1-bit register for signal <SPI_CS_Sync1_s>.
+    Found 1-bit register for signal <SPI_CS_Sync2_s>.
+    Found 16-bit register for signal <SPI_Data_In_s>.
+    Found 1-bit register for signal <SPI_Data_In_We_s>.
+    Found 16-bit register for signal <SPI_Data_Out_s>.
+    Found 16-bit register for signal <SPI_Data_Shift_In_s>.
+    Found 16-bit register for signal <SPI_Data_Shift_Out_s>.
+    Found 1-bit register for signal <SPI_MOSI_Sync1_s>.
+    Found 1-bit register for signal <SPI_State>.
+    Found 26-bit up counter for signal <Sync_Cnt_s>.
+    Found 3-bit register for signal <Sync_Value_s>.
+    Found 2-bit up counter for signal <Test_mode_cnt_s>.
+    Found 1-bit register for signal <Test_mode_s>.
+    Found 32-bit up counter for signal <Time_Cnt_s>.
+    Found 1-bit register for signal <Time_Trig_s>.
+    Found 1-bit register for signal <Time_Trig_Sync_s>.
+    Summary:
+	inferred   6 Counter(s).
+	inferred 177 D-type flip-flop(s).
+	inferred   1 Tristate(s).
+Unit <top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 6
+ 2-bit up counter                                      : 1
+ 26-bit up counter                                     : 3
+ 32-bit up counter                                     : 2
+# Registers                                            : 75
+ 1-bit register                                        : 69
+ 16-bit register                                       : 3
+ 26-bit register                                       : 2
+ 8-bit register                                        : 1
+# Tristates                                            : 1
+ 1-bit tristate buffer                                 : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <../source/IPCORES/chipscope_icon.ngc>.
+Reading core <../source/IPCORES/chipscope_ila.ngc>.
+Loading core <chipscope_icon> for timing and area information for instance <chipscope_icon_inst>.
+Loading core <chipscope_ila> for timing and area information for instance <chipscope_ila_inst>.
+WARNING:Xst:2677 - Node <Channel_2_Cnt_stored_s_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Channel_1_Cnt_stored_s_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Channel_2_Cnt_stored_s_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Channel_1_Cnt_stored_s_25> of sequential type is unconnected in block <top>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 6
+ 2-bit up counter                                      : 1
+ 26-bit up counter                                     : 3
+ 32-bit up counter                                     : 2
+# Registers                                            : 175
+ Flip-Flops                                            : 175
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <Channel_1_Cnt_s_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Channel_2_Cnt_s_25> of sequential type is unconnected in block <top>.
+
+Optimizing unit <top> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 93.
+FlipFlop SPI_CS_Sync1_s has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 318
+ Flip-Flops                                            : 318
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 41
+
+Cell Usage :
+# BELS                             : 1063
+#      GND                         : 3
+#      INV                         : 21
+#      LUT1                        : 186
+#      LUT2                        : 119
+#      LUT3                        : 63
+#      LUT3_L                      : 1
+#      LUT4                        : 180
+#      LUT4_L                      : 1
+#      MUXCY                       : 157
+#      MUXCY_L                     : 93
+#      MUXF5                       : 36
+#      MUXF6                       : 9
+#      VCC                         : 3
+#      XORCY                       : 191
+# FlipFlops/Latches                : 822
+#      FD                          : 86
+#      FDC                         : 99
+#      FDCE                        : 86
+#      FDE                         : 174
+#      FDP                         : 81
+#      FDPE                        : 171
+#      FDR                         : 45
+#      FDRE                        : 65
+#      FDRS                        : 4
+#      FDS                         : 10
+#      LDC                         : 1
+# RAMS                             : 3
+#      RAMB16BWE                   : 3
+# Shift Registers                  : 171
+#      SRL16                       : 80
+#      SRL16E                      : 1
+#      SRLC16E                     : 90
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 37
+#      IBUF                        : 5
+#      IBUFG                       : 1
+#      OBUF                        : 30
+#      OBUFT                       : 1
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# Others                           : 1
+#      BSCAN_SPARTAN3A             : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50antqg144-5 
+
+ Number of Slices:                      658  out of    704    93%  
+ Number of Slice Flip Flops:            821  out of   1408    58%  
+ Number of 4 input LUTs:                742  out of   1408    52%  
+    Number used as logic:               571
+    Number used as Shift registers:     171
+ Number of IOs:                          41
+ Number of bonded IOBs:                  37  out of    108    34%  
+    IOB Flip Flops:                       1
+ Number of BRAMs:                         3  out of      3   100%  
+ Number of GCLKs:                         3  out of     24    12%  
+ Number of DCMs:                          1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------------------------------------------------------------+---------------------------------------------------------------+-------+
+Clock Signal                                                                                        | Clock buffer(FF name)                                         | Load  |
+----------------------------------------------------------------------------------------------------+---------------------------------------------------------------+-------+
+chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1                                                | BUFG                                                          | 174   |
+chipscope_icon_inst/U0/iUPDATE_OUT                                                                  | NONE(chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD)               | 1     |
+CLK_10MHz                                                                                           | clk_man_inst/DCM_SP_INST:CLK0                                 | 708   |
+chipscope_icon_inst/CONTROL0<13>(chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)| NONE(*)(chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC)| 1     |
+CLK_10MHz                                                                                           | clk_man_inst/DCM_SP_INST:CLKFX                                | 115   |
+----------------------------------------------------------------------------------------------------+---------------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                 | Buffer(FF name)                                                                                                                | Load  |
+-------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+-------+
+Reset_s(Reset_s:Q)                                                                                                             | NONE(CH1_ACDC_testm_s)                                                                                                         | 169   |
+chipscope_icon_inst/CONTROL0<20>(chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_HCE:O)                           | NONE(chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_SRL16.U_GANDX_SRL16/F_TW[0].U_TREG)| 160   |
+chipscope_ila_inst/N0(chipscope_ila_inst/XST_GND:G)                                                                            | NONE(chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_POR)                                                                           | 81    |
+chipscope_icon_inst/U0/U_ICON/U_CMD/iSEL_n(chipscope_icon_inst/U0/U_ICON/U_CMD/U_SEL_n:O)                                      | NONE(chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[10].I_NE0.U_TARGET)                                                          | 10    |
+chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/iCLR(chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_CLEAR:O)        | NONE(chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_DOUT0)                                                              | 4     |
+chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/iCLR(chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_CLEAR:O)      | NONE(chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0)                                                             | 4     |
+chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/iCLR(chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_CLEAR:O)              | NONE(chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT0)                                                                 | 4     |
+chipscope_ila_inst/U0/I_NO_D.U_ILA/iARM(chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD:Q)             | NONE(chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE)                                                                   | 2     |
+chipscope_icon_inst/CONTROL0<13>(chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)                           | NONE(chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE)                                                                   | 1     |
+chipscope_icon_inst/U0/U_ICON/iSEL_n(chipscope_icon_inst/U0/U_ICON/U_iSEL_n:O)                                                 | NONE(chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD)                                                                                | 1     |
+chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/ACTRESET_pulse(chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_RESET_EDGE/I_H2L.U_DOUT:Q)| NONE(chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_RISING)                                                                       | 1     |
+chipscope_ila_inst/U0/I_NO_D.U_ILA/iRESET<1>(chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/G_RST[1].U_RST:Q)                        | NONE(chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_OREG.I_YES_OREG.U_OREG)                                | 1     |
+-------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 108.699ns (Maximum Frequency: 9.200MHz)
+   Minimum input arrival time before clock: 6.396ns
+   Maximum output required time after clock: 6.993ns
+   Maximum combinational path delay: 5.671ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1'
+  Clock period: 7.318ns (frequency: 136.651MHz)
+  Total number of paths / destination ports: 2798 / 376
+-------------------------------------------------------------------------
+Delay:               7.318ns (Levels of Logic = 5)
+  Source:            chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET (FF)
+  Destination:       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/U_HC/G[13].U_FDRE (FF)
+  Source Clock:      chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising
+  Destination Clock: chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising
+
+  Data Path: chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/U_HC/G[13].U_FDRE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            19   0.495   1.030  U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET (U0/U_ICON/iCORE_ID<0>)
+     LUT4:I0->O           32   0.561   1.096  U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[0].U_LUT (U0/U_ICON/iCORE_ID_SEL<0>)
+     LUT4:I2->O           15   0.561   0.887  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[10].U_LCE (CONTROL0<14>)
+     end scope: 'chipscope_icon_inst'
+     begin scope: 'chipscope_ila_inst'
+     LUT3:I2->O            3   0.561   0.559  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/I_NI_GT_1.I2.U_LUT (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/lowAddr_rst)
+     LUT2:I0->O           14   0.561   0.850  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/I_NI_GT_1.U_highAddr_ce (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/highAddr_ce)
+     FDRE:CE                   0.156          U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/U_HC/G[13].U_FDRE
+    ----------------------------------------
+    Total                      7.318ns (2.895ns logic, 4.423ns route)
+                                       (39.6% logic, 60.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'chipscope_icon_inst/U0/iUPDATE_OUT'
+  Clock period: 2.062ns (frequency: 484.884MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.062ns (Levels of Logic = 1)
+  Source:            chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:       chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Source Clock:      chipscope_icon_inst/U0/iUPDATE_OUT rising
+  Destination Clock: chipscope_icon_inst/U0/iUPDATE_OUT rising
+
+  Data Path: chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD to chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.495   0.451  U0/U_ICON/U_iDATA_CMD (U0/U_ICON/iDATA_CMD)
+     INV:I->O              1   0.562   0.357  U0/U_ICON/U_iDATA_CMD_n (U0/U_ICON/iDATA_CMD_n)
+     FDC:D                     0.197          U0/U_ICON/U_iDATA_CMD
+    ----------------------------------------
+    Total                      2.062ns (1.254ns logic, 0.808ns route)
+                                       (60.8% logic, 39.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_10MHz'
+  Clock period: 108.699ns (frequency: 9.200MHz)
+  Total number of paths / destination ports: 6638 / 1217
+-------------------------------------------------------------------------
+Delay:               4.348ns (Levels of Logic = 25)
+  Source:            Channel_1_Cnt_s_1 (FF)
+  Destination:       Channel_1_Cnt_s_24 (FF)
+  Source Clock:      CLK_10MHz rising 25.0X
+  Destination Clock: CLK_10MHz rising 25.0X
+
+  Data Path: Channel_1_Cnt_s_1 to Channel_1_Cnt_s_24
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.495   0.488  Channel_1_Cnt_s_1 (Channel_1_Cnt_s_1)
+     LUT1:I0->O            1   0.561   0.000  Mcount_Channel_1_Cnt_s_cy<1>_rt (Mcount_Channel_1_Cnt_s_cy<1>_rt)
+     MUXCY:S->O            1   0.523   0.000  Mcount_Channel_1_Cnt_s_cy<1> (Mcount_Channel_1_Cnt_s_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<2> (Mcount_Channel_1_Cnt_s_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<3> (Mcount_Channel_1_Cnt_s_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<4> (Mcount_Channel_1_Cnt_s_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<5> (Mcount_Channel_1_Cnt_s_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<6> (Mcount_Channel_1_Cnt_s_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<7> (Mcount_Channel_1_Cnt_s_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<8> (Mcount_Channel_1_Cnt_s_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<9> (Mcount_Channel_1_Cnt_s_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<10> (Mcount_Channel_1_Cnt_s_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<11> (Mcount_Channel_1_Cnt_s_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<12> (Mcount_Channel_1_Cnt_s_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<13> (Mcount_Channel_1_Cnt_s_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<14> (Mcount_Channel_1_Cnt_s_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<15> (Mcount_Channel_1_Cnt_s_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<16> (Mcount_Channel_1_Cnt_s_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<17> (Mcount_Channel_1_Cnt_s_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<18> (Mcount_Channel_1_Cnt_s_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<19> (Mcount_Channel_1_Cnt_s_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<20> (Mcount_Channel_1_Cnt_s_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<21> (Mcount_Channel_1_Cnt_s_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<22> (Mcount_Channel_1_Cnt_s_cy<22>)
+     MUXCY:CI->O           0   0.065   0.000  Mcount_Channel_1_Cnt_s_cy<23> (Mcount_Channel_1_Cnt_s_cy<23>)
+     XORCY:CI->O           1   0.654   0.000  Mcount_Channel_1_Cnt_s_xor<24> (Result<24>4)
+     FDCE:D                    0.197          Channel_1_Cnt_s_24
+    ----------------------------------------
+    Total                      4.348ns (3.860ns logic, 0.488ns route)
+                                       (88.8% logic, 11.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1'
+  Total number of paths / destination ports: 218 / 194
+-------------------------------------------------------------------------
+Offset:              6.396ns (Levels of Logic = 5)
+  Source:            chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3A.U_BS:SHIFT (PAD)
+  Destination:       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/U_HC/G[13].U_FDRE (FF)
+  Destination Clock: chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising
+
+  Data Path: chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3A.U_BS:SHIFT to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/U_HC/G[13].U_FDRE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN3A:SHIFT    3   0.000   0.517  U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3A.U_BS (U0/iSHIFT_OUT)
+     LUT2:I1->O           32   0.562   1.181  U0/U_ICON/U_CTRL_OUT/U_DATA_VALID (U0/U_ICON/U_CTRL_OUT/iDATA_VALID)
+     LUT4:I0->O           15   0.561   0.887  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[10].U_LCE (CONTROL0<14>)
+     end scope: 'chipscope_icon_inst'
+     begin scope: 'chipscope_ila_inst'
+     LUT3:I2->O            3   0.561   0.559  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/I_NI_GT_1.I2.U_LUT (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/lowAddr_rst)
+     LUT2:I0->O           14   0.561   0.850  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/I_NI_GT_1.U_highAddr_ce (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/highAddr_ce)
+     FDRE:CE                   0.156          U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/U_HC/G[13].U_FDRE
+    ----------------------------------------
+    Total                      6.396ns (2.401ns logic, 3.995ns route)
+                                       (37.5% logic, 62.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_10MHz'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              1.472ns (Levels of Logic = 1)
+  Source:            CH1_IN (PAD)
+  Destination:       Channel_1_s (FF)
+  Destination Clock: CLK_10MHz rising 25.0X
+
+  Data Path: CH1_IN to Channel_1_s
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.824   0.451  CH1_IN_IBUF (FPGA_OUT2_OBUF)
+     FDC:D                     0.197          Channel_1_s
+    ----------------------------------------
+    Total                      1.472ns (1.021ns logic, 0.451ns route)
+                                       (69.3% logic, 30.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_10MHz'
+  Total number of paths / destination ports: 60 / 27
+-------------------------------------------------------------------------
+Offset:              6.993ns (Levels of Logic = 2)
+  Source:            Test_mode_s (FF)
+  Destination:       LED1_1 (PAD)
+  Source Clock:      CLK_10MHz rising
+
+  Data Path: Test_mode_s to LED1_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             15   0.495   0.972  Test_mode_s (Test_mode_s)
+     LUT2:I0->O            6   0.561   0.569  LED2_11 (LED2_1_OBUF)
+     OBUF:I->O                 4.396          LED1_1_OBUF (LED1_1)
+    ----------------------------------------
+    Total                      6.993ns (5.452ns logic, 1.541ns route)
+                                       (78.0% logic, 22.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.495ns (Levels of Logic = 0)
+  Source:            chipscope_icon_inst/U0/U_ICON/U_TDO_reg (FF)
+  Destination:       chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3A.U_BS:TDO1 (PAD)
+  Source Clock:      chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising
+
+  Data Path: chipscope_icon_inst/U0/U_ICON/U_TDO_reg to chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3A.U_BS:TDO1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              0   0.495   0.000  U0/U_ICON/U_TDO_reg (U0/U_ICON/iTDO)
+    BSCAN_SPARTAN3A:TDO1        0.000          U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3A.U_BS
+    ----------------------------------------
+    Total                      0.495ns (0.495ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               5.671ns (Levels of Logic = 2)
+  Source:            CH1_IN (PAD)
+  Destination:       FPGA_OUT1 (PAD)
+
+  Data Path: CH1_IN to FPGA_OUT1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.824   0.451  CH1_IN_IBUF (FPGA_OUT2_OBUF)
+     OBUF:I->O                 4.396          FPGA_OUT1_OBUF (FPGA_OUT1)
+    ----------------------------------------
+    Total                      5.671ns (5.220ns logic, 0.451ns route)
+                                       (92.0% logic, 8.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.03 secs
+ 
+--> 
+
+Total memory usage is 290548 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+
