@@ -1,0 +1,273 @@
+Installation tried with lubuntu server:
+
+in the NAND flash (using:  phoenixsuit) downloaded from: 
+http://dl.cubieboard.org/software/a20-cubieboard/lubuntu/cb-a20-lubuntu-12.10-v1.06/cb2-lubuntu-server-20131026/lubuntu-server-nand.img
+
+in the SD Card (using:  dd) downloaded from: 
+http://dl.cubieboard.org/software/a20-cubieboard/lubuntu/cb-a20-lubuntu-desktop-card-v105.img.gz
+
+The original image disk are available in:
+  cubieboard2_nand_imgs
+  cubieboard2_sd_imgs
+An image disk of the SD card after the installation procedure (below) is available in
+  cubieboard_easy-phi_imgs
+
+  
+  
+  
+    *-------------------------*
+    | INSTALLATION  PRODEDURE |
+    *-------------------------*
+
+
+    
+**************************************************************************
+SSH
+**************************************************************************
+
+sudo apt-get install ssh
+passwd   # created root passwd 
+
+From this point it is possible to continue installation with an ssh terminal
+
+**************************************************************************
+NETWORK
+**************************************************************************
+
+sudo apt-get install dhcp3-server hostapd
+sudo apt-get install iw 
+sudo apt-get install wifi-radar
+
+cd /lib/firmware/
+wget http://wireless.kernel.org/download/htc_fw/1.3/htc_9271.fw
+chown 1003 htc_9271.fw
+chgrp 1003 htc_9271.fw
+(should be: apt-get install firmware-atheros for other distributions)
+
+Connect the USB WIFI stick and run ifconfig, in the nexts files replace wlan0 with the name of the interface (normally wlan0/1/2/3...)
+
+vi /etc/hostapd/hostapd.conf
+
+interface=wlan0
+ssid=EasyPHI
+hw_mode=g
+channel=11
+wpa=1
+wpa_passphrase=cubieboard
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=TKIP CCMP
+wpa_ptk_rekey=600
+
+vi /etc/default/hostapd
+
+DAEMON_CONF="/etc/hostapd/hostapd.conf"
+
+vi /etc/network/interfaces
+
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+auto eth0
+allow-hotplug-eth0
+auto wlan0
+allow-hotplug-wlan0
+
+# configuring manual IP
+iface eth0 inet dhcp
+
+iface wlan0inet static
+ address 10.42.1.1
+ netmask 255.255.255.0
+ gateway 10.42.1.250
+
+mv /etc/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf.org
+(mv /etc/dhcp3/dhcpd.conf /etc/dhcp3/dhcpd.conf.org)
+
+vi /etc/dhcp/dhcpd.conf #(or /etc/dhcp3/dhcpd.conf)
+
+subnet 10.42.1.0 netmask 255.255.255.0 {
+        range 10.42.1.25 10.42.1.50;
+}
+
+vi /etc/default/dhcp3-server
+
+INTERFACES="wlan0"
+
+vi /etc/default/dhcp-server
+
+INTERFACES="wlan0"
+
+service isc-dhcp-server start
+ifdown eth0; ifup eth0
+ifdown wlan3 ; ifup wlan3 
+sudo ifconfig wlan3 up
+sudo iwconfig wlan3 mode master
+
+reboot
+
+From this point it is possible to connect to the cubieboard with the wifi
+
+**************************************************************************
+HTTP
+**************************************************************************
+
+apt-get update
+apt-get install apache2
+
+**************************************************************************
+PYTHON
+**************************************************************************
+
+sudo apt-get install python-setuptools
+sudo apt-get install python-dev
+easy_install pyzmq
+easy_install pyserial
+
+**************************************************************************
+PHP
+**************************************************************************
+
+apt-get install php5
+apt-get install php5-cli   (to run php in console)
+apt-get install php5-dev
+apt-get install libzmq-dev
+apt-get install git
+apt-get install pkg-config
+apt-get install make
+
+ 
+
+git clone git://github.com/mkoppanen/php-zmq.git
+cd php-zmq/
+phpize && ./configure
+make 
+make install
+echo "extension=zmq.so" >> /etc/php5/apache2/php.ini
+service apache2 restart
+
+**************************************************************************
+FTP
+**************************************************************************
+
+sudo useradd easy-phi
+sudo passwd easy-phi
+sudo usermod -d /var/www easy-phi
+sudo apt-get install vsftpd
+mv /etc/vsftpd.conf /etc/vsftpd.conf.org
+
+vi /etc/vsftpd.conf
+
+listen=YES
+anonymous_enable=NO
+local_enable=YES
+userlist_enable=YES
+userlist_deny=NO
+write_enable=YES
+local_umask=000
+dirmessage_enable=YES
+use_localtime=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+secure_chroot_dir=/var/run/vsftpd/empty
+pam_service_name=vsftpd
+rsa_cert_file=/etc/ssl/private/vsftpd.pem
+
+vi /etc/vsftpd.user_list
+
+easy-phi
+
+sudo service vsftpd restart
+chmod 777 /var/www/
+
+Copy all http server files for easy-phi to /var/www using a FTP client
+
+**************************************************************************
+EASY_PHI SERVICE
+**************************************************************************
+
+cp /var/www/server/easy-phi-service.sh /etc/init.d/easy-phi-service
+chmod 777 /etc/init.d/easy-phi-service
+sudo update-rc.d easy-phi-service defaults
+chmod 777 /var/www/server/server.py
+service easy-phi-service start
+
+**************************************************************************
+USB OTG Gadget
+**************************************************************************
+
+from: http://linux-sunxi.org/USB_Gadget
+
+modprobe g_ether
+sudo echo g_ether >>  /etc/modules
+dmesg | grep "HOST MAC"
+
+Use the mac address to replace 00:11:22:33:44:55 in the file:
+
+vi /etc/modprobe.d/g_ether.conf
+
+options g_ether host_addr=00:11:22:33:44:55
+
+vi /etc/network/interfaces
+
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+auto eth0
+allow-hotplug-eth0
+auto wlan0
+allow-hotplug-wlan0
+
+# configuring manual IP
+iface eth0 inet dhcp
+
+iface wlan0 inet static
+ address 10.42.1.1
+ netmask 255.255.255.0
+ gateway 10.42.1.250
+
+auto usb0
+allow-hotplug-usb0
+iface usb0 inet static
+ address 10.42.2.1
+ netmask 255.255.255.0
+
+vi /etc/dhcp/dhcpd.conf #(or /etc/dhcp3/dhcpd.conf)
+
+subnet 10.42.1.0 netmask 255.255.255.0 {
+        range 10.42.1.25 10.42.1.50;
+}
+
+subnet 10.42.2.0 netmask 255.255.255.0 {
+        range 10.42.2.25 10.42.2.50;
+}
+
+**************************************************************************
+**************************************************************************
+**************************************************************************
+**************************************************************************
+**************************************************************************
+
+(QUICK INSTALL)
+
+apt-get update
+
+apt-get install ssh dhcp3-server hostapd iw  wifi-radar git apache2 python-setuptools python-dev php5 php5-cli php5-dev libzmq-dev vsftpd pkg-config make
+
+easy_install pyzmq pyserial
+
+git clone git://github.com/mkoppanen/php-zmq.git
+
+Speed up boot when no network cable is plugged:
+
+vi /etc/init/failsafe.conf
+
+and change the sleep command to 5 seconds
+
+install on SD card through SSH
+
+dd if=cb-a20-lubuntu-desktop-card-v105.img | ssh root@10.42.2.1 "dd of=/dev/mmcblk0"  
+  
+  
+  
+  
+  

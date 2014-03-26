@@ -264,7 +264,8 @@ int main(void)
 	// Init SCPI parser
     console_init();	
 		
-	//set_user_led_colour(0, 300, 0);
+	set_user_led_colour(300, 300, 300);
+	
 	while (true) 
 	{
 		console_process();		

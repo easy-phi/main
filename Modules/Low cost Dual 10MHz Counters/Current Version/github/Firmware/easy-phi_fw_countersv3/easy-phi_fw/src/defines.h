@@ -11,6 +11,9 @@
 
 #include "asf.h"
 
+// Add for test firmware
+//#define TEST_FW
+
 #define FALSE	0
 #define TRUE	!FALSE
 

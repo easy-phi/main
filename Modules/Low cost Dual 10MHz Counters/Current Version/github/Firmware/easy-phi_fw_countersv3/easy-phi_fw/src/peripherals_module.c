@@ -83,6 +83,22 @@ uint32_t led_last_counter1_val = 0;
 /* Routine for LED blinking */
 void led_activity_routine(void)
 {
+	#ifdef TEST_FW
+		ioport_toggle_pin_level(IN_CH1_LED1_GPIO);
+		ioport_toggle_pin_level(IN_CH1_LED2_GPIO);
+		ioport_toggle_pin_level(IN_CH1_LED3_GPIO);
+		ioport_toggle_pin_level(IN_CH2_LED1_GPIO);
+		ioport_toggle_pin_level(IN_CH2_LED2_GPIO);
+		ioport_toggle_pin_level(IN_CH2_LED3_GPIO);
+		ioport_toggle_pin_level(IN_CH3_LED1_GPIO);
+		ioport_toggle_pin_level(IN_CH3_LED2_GPIO);
+		ioport_toggle_pin_level(IN_CH3_LED3_GPIO);
+		ioport_toggle_pin_level(OUT_CH3_LED1_GPIO);
+		ioport_toggle_pin_level(OUT_CH3_LED2_GPIO);
+		ioport_toggle_pin_level(OUT_CH3_LED3_GPIO);
+		return;
+	#endif
+	
 	if(led_last_counter0_val != tc_read_cv(TC1, 2))
 	{		
 		if(ch1_in_out_color == GREEN)

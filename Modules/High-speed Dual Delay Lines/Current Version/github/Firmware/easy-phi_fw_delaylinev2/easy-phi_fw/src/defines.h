@@ -11,6 +11,9 @@
 
 #include "asf.h"
 
+//remove to activate test FW
+//#define TEST_FW
+
 #define FALSE	0
 #define TRUE	!FALSE
 

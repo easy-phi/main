@@ -99,7 +99,12 @@ int main(void)
 	// Init SCPI parser
     console_init();	
 	
-	enable_12v();
+	if(get_12v_status() == RETURN_OK)
+	{
+		enable_12v();
+		set_user_led_colour(300,300,300);
+	}
+	
 	while (true) 
 	{
 		console_process();
