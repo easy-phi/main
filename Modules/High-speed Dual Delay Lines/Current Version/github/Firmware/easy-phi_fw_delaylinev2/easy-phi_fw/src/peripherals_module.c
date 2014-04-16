@@ -73,18 +73,18 @@ uint16_t ch2_out_color = BLUE;
 void led_activity_routine(void)
 {
 	#ifdef TEST_FW
-		ioport_toggle_pin_level(IN_CH1_LED1_GPIO);
-		ioport_toggle_pin_level(IN_CH1_LED2_GPIO);
-		ioport_toggle_pin_level(IN_CH1_LED3_GPIO);
-		ioport_toggle_pin_level(IN_CH2_LED1_GPIO);
-		ioport_toggle_pin_level(IN_CH2_LED2_GPIO);
-		ioport_toggle_pin_level(IN_CH2_LED3_GPIO);
-		ioport_toggle_pin_level(OUT_CH1_LED1_GPIO);
-		ioport_toggle_pin_level(OUT_CH1_LED2_GPIO);
-		ioport_toggle_pin_level(OUT_CH1_LED3_GPIO);
-		ioport_toggle_pin_level(OUT_CH2_LED1_GPIO);
-		ioport_toggle_pin_level(OUT_CH2_LED2_GPIO);
-		ioport_toggle_pin_level(OUT_CH2_LED3_GPIO);
+		ioport_set_pin_level(IN_CH1_LED1_GPIO, IOPORT_PIN_LEVEL_LOW);
+		ioport_set_pin_level(IN_CH1_LED2_GPIO, IOPORT_PIN_LEVEL_LOW);
+		ioport_set_pin_level(IN_CH1_LED3_GPIO, IOPORT_PIN_LEVEL_LOW);
+		ioport_set_pin_level(IN_CH2_LED1_GPIO, IOPORT_PIN_LEVEL_LOW);
+		ioport_set_pin_level(IN_CH2_LED2_GPIO, IOPORT_PIN_LEVEL_LOW);
+		ioport_set_pin_level(IN_CH2_LED3_GPIO, IOPORT_PIN_LEVEL_LOW);
+		ioport_set_pin_level(OUT_CH1_LED1_GPIO, IOPORT_PIN_LEVEL_LOW);
+		ioport_set_pin_level(OUT_CH1_LED2_GPIO, IOPORT_PIN_LEVEL_LOW);
+		ioport_set_pin_level(OUT_CH1_LED3_GPIO, IOPORT_PIN_LEVEL_LOW);
+		ioport_set_pin_level(OUT_CH2_LED1_GPIO, IOPORT_PIN_LEVEL_LOW);
+		ioport_set_pin_level(OUT_CH2_LED2_GPIO, IOPORT_PIN_LEVEL_LOW);
+		ioport_set_pin_level(OUT_CH2_LED3_GPIO, IOPORT_PIN_LEVEL_LOW);
 		return;
 	#endif
 	

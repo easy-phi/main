@@ -37,7 +37,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 3 9
 Title "High-speed Logic Gate"
-Date "6 dec 2013"
+Date "15 apr 2014"
 Rev "1.0"
 Comp "University of Geneva             www.easy-phi.ch"
 Comment1 ""
@@ -624,7 +624,7 @@ L C C16
 U 1 1 528E4F16
 P 2500 3150
 F 0 "C16" H 2500 3250 40  0000 L CNN
-F 1 "1nF" H 2506 3065 40  0000 L CNN
+F 1 "100nF" H 2506 3065 40  0000 L CNN
 F 2 "~" H 2538 3000 30  0000 C CNN
 F 3 "~" H 2500 3150 60  0000 C CNN
 	1    2500 3150
@@ -1557,7 +1557,7 @@ L C C20
 U 1 1 528EBCA4
 P 2500 9400
 F 0 "C20" H 2500 9500 40  0000 L CNN
-F 1 "1nF" H 2506 9315 40  0000 L CNN
+F 1 "100nF" H 2506 9315 40  0000 L CNN
 F 2 "~" H 2538 9250 30  0000 C CNN
 F 3 "~" H 2500 9400 60  0000 C CNN
 	1    2500 9400

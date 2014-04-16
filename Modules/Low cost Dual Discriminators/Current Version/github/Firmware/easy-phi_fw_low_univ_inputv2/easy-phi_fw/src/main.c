@@ -68,6 +68,8 @@ uint16_t ch1_integration_time_goal = 1;
 uint16_t test_blinking_bool = FALSE;
 uint16_t test_blinking_state = FALSE;
 uint16_t test_mode = FALSE;
+/* bool for 12v state */
+bool last_ok_12v_state = false;
 
 
 /* Set Counter A integration time */
@@ -212,6 +214,9 @@ void enable_test_routine(void)
 	set_channel1_offset_relay(TRUE);
 	set_channel2_offset_relay(TRUE);
 	
+	// Let everything settle
+	for(j = 0; j < 48000000; j++)asm("NOP");
+	
 	// Set offset to 0
 	set_offset_channel1(2048);
 	set_offset_channel2(2048);
@@ -247,6 +252,15 @@ void enable_test_routine(void)
 		test_blinking_bool = TRUE;
 	else
 		test_blinking_bool = FALSE;
+		
+	if(measured_counter1 != 10)
+	{
+		printf("PB counter 1");
+	}
+	if(measured_counter2 != 10)
+	{
+		printf("PB counter 2");
+	}
 			
 	/* Send FPGA test mode command */
 	fpga_send_spi_16bits(261);
@@ -293,6 +307,22 @@ int main(void)
 	{
 		console_process();
 		
+		if(get_sync_signal_status() == RETURN_OK)
+		{
+			enable_test_routine();
+		}
+		
+		if((get_ok_12v_status() == RETURN_OK) && (last_ok_12v_state == false))
+		{
+			set_user_led_colour(0, 100, 0);
+			last_ok_12v_state = true;
+		}
+		else if((get_ok_12v_status() == RETURN_NOK) && (last_ok_12v_state == true))
+		{
+			set_user_led_colour(0, 0, 0);
+			last_ok_12v_state = false;
+		}
+		
 		if(get_fpga_read_available_flag() == RETURN_OK)
 		{
 			read_counters(&measured_counter1, &measured_counter2);			
@@ -329,12 +359,6 @@ int main(void)
 				}
 			}
 		}
-		
- 		if(get_user_button_status() == RETURN_OK)
- 		{
- 			set_user_led_colour(0, 100, 0);
- 			//enable_12v();
- 		}
 // 		else if(get_sync_signal_status() == RETURN_OK)
 // 			set_user_led_colour(0, 0, 100);
 // 		else if(get_ok_12v_status() == RETURN_OK)

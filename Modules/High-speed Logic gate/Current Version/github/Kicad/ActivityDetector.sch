@@ -37,7 +37,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 9 9
 Title "High-speed Logic Gate"
-Date "6 dec 2013"
+Date "15 apr 2014"
 Rev "1.0"
 Comp "University of Geneva             www.easy-phi.ch"
 Comment1 ""

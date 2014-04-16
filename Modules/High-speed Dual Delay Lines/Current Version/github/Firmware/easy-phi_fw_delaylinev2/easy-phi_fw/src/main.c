@@ -48,6 +48,8 @@
 
 static volatile bool main_b_msc_enable = false;
 static bool main_b_cdc_enable = false;
+/* bool for 12v state */
+uint16_t last_ok_12v_state = FALSE;
 
 
 bool main_msc_enable(void)
@@ -102,12 +104,26 @@ int main(void)
 	if(get_12v_status() == RETURN_OK)
 	{
 		enable_12v();
-		set_user_led_colour(300,300,300);
 	}
 	
 	while (true) 
 	{
-		console_process();		
+		console_process();	
+			
+		if((get_ok_12v_status() == RETURN_OK) && (last_ok_12v_state == FALSE))
+		{
+			#ifdef TEST_FW
+				set_user_led_colour(300, 300, 300);
+			#else
+				set_user_led_colour(0, 100, 0);
+			#endif
+			last_ok_12v_state = TRUE;
+		}
+		else if((get_ok_12v_status() == RETURN_NOK) && (last_ok_12v_state == TRUE))
+		{
+			set_user_led_colour(0, 0, 0);
+			last_ok_12v_state = FALSE;
+		}
 
 		if (main_b_msc_enable) 
 		{
