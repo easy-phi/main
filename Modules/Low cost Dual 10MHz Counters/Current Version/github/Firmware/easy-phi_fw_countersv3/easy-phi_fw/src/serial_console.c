@@ -32,8 +32,25 @@ scpi_result_t SCPI_Flush(scpi_t * context)
 
 int SCPI_Error(scpi_t * context, int_fast16_t err) 
 {
-	(void) context;
-	printf("**ERROR: %d, \"%s\"\r\n", (int32_t) err, SCPI_ErrorTranslate(err));
+	uint16_t i = 0;
+	
+	#define ONLY_OUTPUT_READ_ERRORS
+	#ifdef ONLY_OUTPUT_READ_ERRORS
+		if (context->cmd_error == 1)
+		{
+			// If it's an unknown command 
+			while(i < (context->buffer.position))
+			{
+				if (context->buffer.data[i] == '?')
+				{
+					printf("**ERROR: %d, \"%s\"\r\n", (int32_t) err, SCPI_ErrorTranslate(err));
+				}
+				i++;
+			}	
+		}
+	#endif
+	//(void) context;
+	//printf("**ERROR: %d, \"%s\"\r\n", (int32_t) err, SCPI_ErrorTranslate(err));
 	return 0;
 }
 
