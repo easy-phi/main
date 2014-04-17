@@ -37,7 +37,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 2 2
 Title "Low cost dual 10MHz Counters"
-Date "12 mar 2014"
+Date "17 apr 2014"
 Rev "1.0"
 Comp "University of Geneva                       www.easy.phi.ch"
 Comment1 ""

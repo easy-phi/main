@@ -37,7 +37,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 2
 Title "Low cost dual 10MHz Counters"
-Date "12 mar 2014"
+Date "17 apr 2014"
 Rev "1.0"
 Comp "University of Geneva                       www.easy.phi.ch"
 Comment1 ""
@@ -3947,9 +3947,9 @@ F 3 "~" H 3650 10750 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 15500 9350 0    40   ~ 0
-200ns pulse
+12ns pulse
 Text Notes 15550 7100 0    40   ~ 0
-200ns pulse
+12ns pulse
 Connection ~ 6200 3200
 Text Label 6100 3200 0    40   ~ 0
 TTL_CNT

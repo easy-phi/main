@@ -25,17 +25,20 @@ class StartQT4(QtGui.QMainWindow):
         self.logactive = 0
         self.resetactive = 0
         self.port = "5555"
-        self.ip = "192.168.250.251"
-        self.ip = "10.42.2.1"
+        self.ip = ""
+        ##self.ip = "10.42.1.1"
         ##self.ip = "10.42.1.1"
         ##self.ip = "129.194.118.114"
         ##self.ip = "10.194.116.98"
         self.nb_slots = 5
         self.context = zmq.Context()
         self.socket = self.context.socket(zmq.REQ)
-        self.socket.connect("tcp://%s:%s" % (self.ip,self.port))
         QtGui.QWidget.__init__(self, parent)
+        self.showDialog()
+        if (self.ip == ""): sys.exit(0)
+        self.socket.connect("tcp://%s:%s" % (self.ip,self.port))
         self.graphical_intf()
+        self.setWindowTitle("Easy-phi client connected with: %s" % self.ip)
 
         self.slots = [] 
         self.frames = [] 
@@ -50,6 +53,14 @@ class StartQT4(QtGui.QMainWindow):
         QtCore.QObject.connect(timer, QtCore.SIGNAL("timeout()"), self.on_timer)
         timer.start(200) ### 0.2 second
 
+        
+    def showDialog(self):
+        
+        text, ok = QtGui.QInputDialog.getText(self, 'Input Dialog', 
+            'Enter the address (IP or hostname) of your rack:')
+        
+        if ok:
+            self.ip = (str(text))
 
     def activate_tab(self):
         for i in range(self.nb_slots): 
