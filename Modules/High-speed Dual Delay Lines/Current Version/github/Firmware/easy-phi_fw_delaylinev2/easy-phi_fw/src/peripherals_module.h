@@ -11,6 +11,7 @@
 
 #include <asf.h>
 
+void switch_on_off_lights(uint16_t bool_lights);
 void enable_disable_ch1_delay(uint16_t status);
 void enable_disable_ch2_delay(uint16_t status);
 void setup_channel1_delay(uint16_t delay);

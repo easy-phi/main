@@ -48,6 +48,7 @@
 
 static volatile bool main_b_msc_enable = false;
 static bool main_b_cdc_enable = false;
+bool last_ok_12v_state = false;
 
 
 bool main_msc_enable(void)
@@ -97,23 +98,27 @@ int main(void)
 	udc_start();
 	
 	// Init SCPI parser
-    console_init();	
+    console_init();
+	
+    // Enable 12V
+    enable_12v();
+	init_module_peripherals_ap();
 	
 	while (true) 
 	{
 		console_process();
 		
- 		if(get_user_button_status() == RETURN_OK)
- 		{
- 			set_user_led_colour(0, 100, 0);
- 			enable_12v();
- 		}
-// 		else if(get_sync_signal_status() == RETURN_OK)
-// 			set_user_led_colour(0, 0, 100);
-// 		else if(get_ok_12v_status() == RETURN_OK)
-// 			set_user_led_colour(100, 0, 0);
-// 		else
-// 			set_user_led_colour(0, 0, 0);			
+		if((get_ok_12v_status() == RETURN_OK) && (last_ok_12v_state == false))
+		{
+			set_user_led_colour(0, 100, 0);
+			last_ok_12v_state = true;
+		}
+		else if((get_ok_12v_status() == RETURN_NOK) && (last_ok_12v_state == true))
+		{
+			set_user_led_colour(0, 0, 0);
+			deinit_module_peripherals();
+			last_ok_12v_state = false;
+		}		
 
 		if (main_b_msc_enable) 
 		{

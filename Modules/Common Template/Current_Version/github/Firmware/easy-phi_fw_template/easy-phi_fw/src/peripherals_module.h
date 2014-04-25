@@ -11,6 +11,7 @@
 
 #include <asf.h>
 
+void switch_on_off_lights(uint16_t bool_lights);
 void init_module_peripherals_bp(void);
 void init_module_peripherals_ap(void);
 void deinit_module_peripherals(void);

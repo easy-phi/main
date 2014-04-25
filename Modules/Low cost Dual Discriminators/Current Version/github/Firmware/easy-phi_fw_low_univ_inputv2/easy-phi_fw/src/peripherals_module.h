@@ -12,6 +12,7 @@
 #include <asf.h>
 #include "defines.h"
 
+void switch_on_off_lights(uint16_t bool_lights);
 uint16_t fpga_send_spi_16bits(uint16_t data);
 void init_module_peripherals_bp(void);
 void init_module_peripherals_ap(void);

@@ -42,6 +42,15 @@ uint16_t is_channel2_offsetted = FALSE;
 uint32_t last_counter1_meas = 0;
 uint32_t last_counter2_meas = 0;
 
+/* switch lights off bool */
+uint16_t lights_off = FALSE;
+
+
+void switch_on_off_lights(uint16_t bool_lights)
+{
+	lights_off = bool_lights;
+	// Here we should send something to the FPGA....
+}
 
 uint16_t fpga_send_spi_16bits(uint16_t data)
 {

@@ -11,6 +11,8 @@
 
 #include "asf.h"
 
+#undef FALSE
+#undef TRUE
 #define FALSE	0
 #define TRUE	!FALSE
 

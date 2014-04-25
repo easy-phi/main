@@ -12,6 +12,7 @@
 #include "SCPI/libscpi/scpi.h"
 
 /* Module commands */
+scpi_result_t SCPI_SetLightsOnOff(scpi_t * context);
 scpi_result_t SCPI_SetDelayChannelA(scpi_t* context);
 scpi_result_t SCPI_SetDelayChannelB(scpi_t* context);
 scpi_result_t SCPI_GetDelayChannelA(scpi_t* context);

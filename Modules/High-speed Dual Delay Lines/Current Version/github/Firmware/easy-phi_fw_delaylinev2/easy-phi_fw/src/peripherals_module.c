@@ -69,6 +69,14 @@ uint16_t ch1_out_color = BLUE;
 uint16_t ch2_in_color = GREEN;
 uint16_t ch2_out_color = BLUE;
 
+/* switch lights off bool */
+uint16_t lights_off = FALSE;
+
+
+void switch_on_off_lights(uint16_t bool_lights)
+{
+	lights_off = bool_lights;
+}
 
 void led_activity_routine(void)
 {
@@ -87,6 +95,22 @@ void led_activity_routine(void)
 		ioport_set_pin_level(OUT_CH2_LED3_GPIO, IOPORT_PIN_LEVEL_LOW);
 		return;
 	#endif
+	
+	if(lights_off == TRUE)
+	{
+		ioport_set_pin_level(IN_CH1_LED1_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(IN_CH1_LED2_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(IN_CH1_LED3_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(IN_CH2_LED1_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(IN_CH2_LED2_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(IN_CH2_LED3_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(OUT_CH1_LED1_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(OUT_CH1_LED2_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(OUT_CH1_LED3_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(OUT_CH2_LED1_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(OUT_CH2_LED2_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		return;
+	}
 	
 	if(ioport_get_pin_level(CH1_PULSE_GPIO))
 	{

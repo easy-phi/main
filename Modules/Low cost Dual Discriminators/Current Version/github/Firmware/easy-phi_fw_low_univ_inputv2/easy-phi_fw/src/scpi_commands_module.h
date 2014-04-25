@@ -14,6 +14,7 @@
 /* Module commands */
 scpi_result_t SCPI_TestSPISend(scpi_t* context);
 scpi_result_t SCPI_TestSPIReceive(scpi_t* context);
+scpi_result_t SCPI_SetLightsOnOff(scpi_t * context);
 
 /* Discriminator related */
 scpi_result_t SCPI_SetChannel1Offset(scpi_t* context);

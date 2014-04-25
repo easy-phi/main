@@ -165,7 +165,7 @@ src/peripherals_module.d src/peripherals_module.o: \
  ../src/ASF/common/services/usb/udc/udc.h \
  ../src/ASF/common/services/usb/udc/udd.h \
  ../src/ASF/sam/drivers/wdt/wdt.h \
- ../src/ASF/sam/drivers/pio/pio_handler.h
+ ../src/ASF/sam/drivers/pio/pio_handler.h ../src/defines.h
 
 ../src/peripherals_module.h:
 
@@ -524,3 +524,5 @@ c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.7.3.1029\arm-g
 ../src/ASF/sam/drivers/wdt/wdt.h:
 
 ../src/ASF/sam/drivers/pio/pio_handler.h:
+
+../src/defines.h:

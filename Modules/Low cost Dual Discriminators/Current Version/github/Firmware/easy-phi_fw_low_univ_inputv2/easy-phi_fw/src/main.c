@@ -309,7 +309,7 @@ int main(void)
 		
 		if(get_sync_signal_status() == RETURN_OK)
 		{
-			enable_test_routine();
+			//enable_test_routine();
 		}
 		
 		if((get_ok_12v_status() == RETURN_OK) && (last_ok_12v_state == false))
