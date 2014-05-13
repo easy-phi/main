@@ -8,8 +8,28 @@
 #include "peripherals_template.h"
 #include "peripherals_module.h"
 #include "conf_usb.h"
+#include <string.h>
 #include <math.h>
 #include "main.h"
+
+
+scpi_result_t SCPI_SetLightsOnOff(scpi_t * context)
+{
+	int32_t param;
+	
+	// read first parameter if present
+	if (!SCPI_ParamInt(context, &param, true)) {
+		// do something, if parameter not present
+		return SCPI_RES_ERR;
+	}
+	
+	if(param == 0)
+		switch_on_off_lights(FALSE);
+	else
+		switch_on_off_lights(TRUE);
+	
+	return SCPI_RES_OK;	
+}
 
 scpi_result_t SCPI_SetIntegrationT(scpi_t* context)
 {
@@ -215,4 +235,124 @@ scpi_result_t SCPI_GetFreq(scpi_t* context)
 {
 	printf("%u\x0D", get_freqgen_freq());
 	return SCPI_RES_OK;
+}
+
+scpi_result_t SCPI_GetFreqEnable(scpi_t* context)
+{
+	printf("%u\x0D", get_freqgen_enable());
+	return SCPI_RES_OK;
+}
+
+scpi_result_t SCPI_SetFreqEnable(scpi_t* context)
+{
+	uint32_t param;
+	
+	// read first parameter if present
+	if (!SCPI_ParamInt(context, &param, true)) {
+		// do something, if parameter not present
+		return SCPI_RES_ERR;
+	}
+	
+	if(param == 0)
+		disable_freq_gen();
+	else
+		enable_freq_gen();
+	
+	return SCPI_RES_OK;
+}
+
+scpi_result_t SCPI_GenPulse(scpi_t* context)
+{
+	generate_pulse();
+	return SCPI_RES_OK;
+}
+
+scpi_result_t SCPI_GetQMAOutput(scpi_t* context)
+{
+	if (get_qma_out_mode() == MODE_IN)
+	{
+		printf("IN\x0D");
+	}
+	else if (get_qma_out_mode() == MODE_GEN)
+	{
+		printf("GEN\x0D");
+	}
+	else
+	{
+		printf("STATE\x0D");
+	}	
+}
+
+scpi_result_t SCPI_SetQMAOutput(scpi_t* context)
+{
+	const char* param;
+	size_t param_len;
+
+	if(!SCPI_ParamString(context, &param, &param_len, true))
+		return SCPI_RES_ERR;
+	
+	if(param_len == 2)
+	{
+		if(strncmp(param, "IN", 2) == 0)
+		{
+			set_qma_out_mode(MODE_IN);
+			return SCPI_RES_OK;
+		}
+		else
+		{
+			return SCPI_RES_ERR;
+		}
+	}
+	else if(param_len == 3)
+	{
+		if(strncmp(param, "GEN", 3) == 0)
+		{
+			set_qma_out_mode(MODE_GEN);
+			return SCPI_RES_OK;
+		}
+		else
+		{
+			return SCPI_RES_ERR;
+		}
+	}
+	else if(param_len == 5)
+	{
+		if(strncmp(param, "STATE", 5) == 0)
+		{
+			set_qma_out_mode(MODE_STATE);
+			return SCPI_RES_OK;
+		}
+		else
+		{
+			return SCPI_RES_ERR;
+		}
+	}
+	else
+	{
+		return SCPI_RES_OK;
+	}	
+}
+
+scpi_result_t SCPI_GetQMState(scpi_t* context)
+{
+	printf("%u\x0D", get_qma_state());
+	return SCPI_RES_OK;
+}
+
+scpi_result_t SCPI_SetQMState(scpi_t* context)
+{
+	uint32_t param;
+	
+	// read first parameter if present
+	if (!SCPI_ParamInt(context, &param, true)) {
+		// do something, if parameter not present
+		return SCPI_RES_ERR;
+	}
+	
+	if(param == 0)
+		set_qma_state(0);
+	else
+		set_qma_state(1);
+	
+	return SCPI_RES_OK;	
 }

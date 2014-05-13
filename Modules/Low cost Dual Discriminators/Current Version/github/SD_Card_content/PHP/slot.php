@@ -7,6 +7,7 @@ Do NOT remove this notice
 <link rel="stylesheet" href="/jquery/css/ui-lightness/jquery-ui-1.10.3.custom.css" />
 <script src="/jquery/js/jquery-1.9.1.js"></script>
 <script src="/jquery/js/jquery-ui-1.10.3.custom.js"></script>
+<script src="/js/util.js"></script>
 <link rel="stylesheet" href="/css/easy-phi-custom.css" />
 <!--<link href="/css/flot.css" rel="stylesheet" type="text/css">
 <script language="javascript" type="text/javascript" src="/flot/jquery.js"></script>
@@ -61,23 +62,35 @@ Do NOT remove this notice
     });     
 
 	$('#offseta').spinner({min: -2500, max: 2500, step: 1, increment: 'fast', stop: function(event, ui) {
-        request_serial(none, ("CONFigure:CHAnnel:A:OFFset:VALue " + ($(this).val()))); 
-        }
+        var n = ($(this).val());
+        if (isInteger(n)) {
+            request_serial(none, ("CONFigure:CHAnnel:A:OFFset:VALue " + (parseInt(n)))); 
+        }    
+        }    
     });     
     
 	$('#offsetb').spinner({min: -2500, max: 2500, step: 1, increment: 'fast', stop: function(event, ui) {
-        request_serial(none, ("CONFigure:CHAnnel:B:OFFset:VALue " + ($(this).val()))); 
-        }
+        var n = ($(this).val());
+        if (isInteger(n)) {
+            request_serial(none, ("CONFigure:CHAnnel:B:OFFset:VALue " + (parseInt(n)))); 
+        }    
+        }    
     });     
    
 	$('#thlda').spinner({min: -5000, max: 5000, step: 1, increment: 'fast', stop: function(event, ui) {
-        request_serial(none, ("CONFigure:CHAnnel:A:THReshold " + ($(this).val()))); 
-        }
+        var n = ($(this).val());
+        if (isInteger(n)) {
+            request_serial(none, ("CONFigure:CHAnnel:A:THReshold " + (parseInt(n)))); 
+        }    
+        }    
     });     
 
 	$('#thldb').spinner({min: -5000, max: 5000, step: 1, increment: 'fast', stop: function(event, ui) {
-        request_serial(none, ("CONFigure:CHAnnel:B:THReshold " + ($(this).val()))); 
-        }
+        var n = ($(this).val());
+        if (isInteger(n)) {
+            request_serial(none, ("CONFigure:CHAnnel:B:THReshold " + (parseInt(n)))); 
+        }    
+        }    
     });     
 
     function display_cnta(data){

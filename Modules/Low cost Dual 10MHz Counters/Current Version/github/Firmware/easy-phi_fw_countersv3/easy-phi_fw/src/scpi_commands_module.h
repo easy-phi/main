@@ -33,5 +33,13 @@ scpi_result_t SCPI_GetCounterA_IT(scpi_t* context);
 scpi_result_t SCPI_GetCounterB_IT(scpi_t* context);
 scpi_result_t SCPI_GetTTLInput(scpi_t* context);
 scpi_result_t SCPI_GetFreq(scpi_t* context);
+scpi_result_t SCPI_GetFreqEnable(scpi_t* context);
+scpi_result_t SCPI_SetFreqEnable(scpi_t* context);
+scpi_result_t SCPI_GenPulse(scpi_t* context);
+scpi_result_t SCPI_GetQMAOutput(scpi_t* context);
+scpi_result_t SCPI_SetQMAOutput(scpi_t* context);
+scpi_result_t SCPI_GetQMState(scpi_t* context);
+scpi_result_t SCPI_SetQMState(scpi_t* context);
+scpi_result_t SCPI_SetLightsOnOff(scpi_t * context);
 
 #endif /* SCPI_COMMANDS_MODULE_H_ */

@@ -7,6 +7,7 @@ Do NOT remove this notice
 <link rel="stylesheet" href="/jquery/css/ui-lightness/jquery-ui-1.10.3.custom.css" />
 <script src="/jquery/js/jquery-1.9.1.js"></script>
 <script src="/jquery/js/jquery-ui-1.10.3.custom.js"></script>
+<script src="/js/util.js"></script>
 <link rel="stylesheet" href="/css/easy-phi-custom.css" />
 
 <html>

@@ -7,6 +7,7 @@ Do NOT remove this notice
 <link rel="stylesheet" href="/jquery/css/ui-lightness/jquery-ui-1.10.3.custom.css" />
 <script src="/jquery/js/jquery-1.9.1.js"></script>
 <script src="/jquery/js/jquery-ui-1.10.3.custom.js"></script>
+<script src="/js/util.js"></script>
 <link rel="stylesheet" href="/css/easy-phi-custom.css" />
 
 <!--<link href="/css/flot.css" rel="stylesheet" type="text/css">
@@ -64,6 +65,17 @@ Do NOT remove this notice
         }        
     });     
 
+  	$('#static').change(function() {
+        if ($(this).is(':checked')) {
+            request_serial(none, ("CONFigure:QMAState 1")); 
+        } else {
+            request_serial(none, ("CONFigure:QMAState 0")); 
+        }        
+    });     
+
+    
+  	$('#qmaout').change(function() {request_serial(none, ("CONFigure:QMAoutput " + ($(this).val())));});     
+    
 ////	$('#cntaintt').spinner({min: 1, max: 240, step: 1, increment: 'fast', stop: function(event, ui) {
 ////        request_serial(none, ("CONFigure:COUnter:A:INTegrationtime " + ($(this).val()))); 
 ////        }
@@ -74,17 +86,20 @@ Do NOT remove this notice
 ////        }
 ////    });     
 
-  	$('#ttl').change(function() {
-        if ($(this).is(':checked')) {
-            request_serial(none, ("CONFigure:TTLinputenable 1")); 
-        } else {
-            request_serial(none, ("CONFigure:TTLinputenable 0")); 
-        }        
-    });     
+////  	$('#ttl').change(function() {
+////        if ($(this).is(':checked')) {
+////            request_serial(none, ("CONFigure:TTLinputenable 1")); 
+////        } else {
+////            request_serial(none, ("CONFigure:TTLinputenable 0")); 
+////        }        
+////    });     
 
   	$('#freq').spinner({min: 10, max: 50000, step: 1, increment: 'fast', stop: function(event, ui) {
-        request_serial(none, ("CONFigure:FREQuence " + (($(this).val())*1000))); 
-        }
+        var n = ($(this).val());
+        if (isInteger(n)) {
+            request_serial(none, ("CONFigure:FREQuence " + (parseInt(n))*1000)); 
+        }    
+        }    
     });     
     
 
@@ -162,16 +177,24 @@ Do NOT remove this notice
 /// initialisation    
     function setenablea(data){if (data==1){$('#encnta').prop('checked', true);}};
     function setenableb(data){if (data==1){$('#encntb').prop('checked', true);}};
+    function setstatic(data){if (data==1){$('#static').prop('checked', true);}};
     function setcntaintt(data){$('#cntaintt').val(parseInt(data));};
     function setcntbintt(data){$('#cntbintt').val(parseInt(data));};
-    function setenablettl(data){if (data==1){$('#ttl').prop('checked', true);}};
+    //function setenablettl(data){if (data==1){$('#ttl').prop('checked', true);}};
     function setfreq(data){$('#freq').val(parseInt(data/1000));};
+    function initqmaout(data){
+        data = data.replace(/(\r\n|\n|\r)/gm,""); //remove CR and NL characters
+        if      (data=="STATE"){$('#qmaout').val('STATE');}
+        if      (data=="GEN"){$('#qmaout').val('GEN');}
+    }
     
     request_serial(setenablea, "CONFigure:COUnter:A:ENable?");     
     request_serial(setenableb, "CONFigure:COUnter:B:ENable?"); 
+    request_serial(setstatic, "CONFigure:QMAState?"); 
+    request_serial(initqmaout, "CONFigure:QMAoutput?");     
     //request_serial(setcntaintt, "CONFigure:COUnter:A:INTegrationtime?"); 
     //request_serial(setcntbintt, "CONFigure:COUnter:B:INTegrationtime?"); 
-    request_serial(setenablettl, "CONFigure:TTLinputenable?"); 
+    //request_serial(setenablettl, "CONFigure:TTLinputenable?"); 
     request_serial(setfreq, "CONFigure:FREQuence?"); 
     setInterval(function(){request_serial(display_cnta, "CONFigure:COUnter:A:Read?"); },200);
     setInterval(function(){request_serial(display_cntb, "CONFigure:COUnter:B:Read?"); },200);    
@@ -195,7 +218,14 @@ Do NOT remove this notice
             <label><input type="text"   name="cntaintt" id="cntaintt" min="1" max="240" value="0">  Counter A integration time </label><br>
             <label><input type="text"   name="cntbintt" id="cntbintt" min="1" max="240" value="0">  Counter B integration time </label><br><br><br>
 -->
-            <label><input type="checkbox" name="ttl" id="ttl" value="Enable"/> Set QMA to the TTL output </label><br>
+      	    <label for="select_type">Connect QMA output to :
+            <select name="qmaout" id="qmaout">
+                <option value="IN">TTL input</option>
+                <option value="STATE">Static value</option>
+                <option value="GEN">Clock Generator</option>
+            </select></label><br>
+            
+            <label><input type="checkbox" name="static" id="static" value="Enable"/> Set static output to 1 </label><br><br><br>
             <label><input type="text"   name="freq" id="freq" min="100" max="50000" value="100">  Frequence of test output kHZ </label><br><br><br>
             <span style="display: inline-block;width: 230px;" id="totcnta">Count A = <b><big>0</big></b></span><input id="rsta" type="submit" value="Reset"><br>
             <span style="display: inline-block;width: 230px;" id="totcntb">Count B = <b><big>0</big></b></span><input id="rstb" type="submit" value="Reset"><br><br><br>

@@ -5,6 +5,7 @@
  *  Author: stephan
  */ 
 
+#include "peripherals_template.h"
 #include "peripherals_module.h"
 #include "defines.h"
 
@@ -70,6 +71,8 @@ uint16_t is_freq_gen_enabled = TRUE;
 uint16_t is_qma_set_to_ttlin = TRUE;
 uint16_t is_countera_enabled = FALSE;
 uint16_t is_counterb_enabled = FALSE;
+uint16_t qma_out_mode = MODE_IN;
+uint16_t qma_out_state = 0;
 /* Color for leds */
 uint16_t ch1_in_out_color = GREEN;
 uint16_t ch2_in_out_color = GREEN;
@@ -78,7 +81,14 @@ uint16_t ch3_in_color = GREEN;
 /* logic for leds blinking */
 uint32_t led_last_counter0_val = 0;
 uint32_t led_last_counter1_val = 0;
+/* switch lights off bool */
+uint16_t lights_off = FALSE;
 
+
+void switch_on_off_lights(uint16_t bool_lights)
+{
+	lights_off = bool_lights;
+}
 
 /* Routine for LED blinking */
 void led_activity_routine(void)
@@ -98,6 +108,23 @@ void led_activity_routine(void)
 		ioport_set_pin_level(OUT_CH3_LED3_GPIO, IOPORT_PIN_LEVEL_LOW);
 		return;
 	#endif
+	
+	if(lights_off == TRUE)
+	{
+		ioport_set_pin_level(IN_CH1_LED1_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(IN_CH1_LED2_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(IN_CH1_LED3_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(IN_CH2_LED1_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(IN_CH2_LED2_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(IN_CH2_LED3_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(IN_CH3_LED1_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(IN_CH3_LED2_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(IN_CH3_LED3_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(OUT_CH3_LED1_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(OUT_CH3_LED2_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		ioport_set_pin_level(OUT_CH3_LED3_GPIO, IOPORT_PIN_LEVEL_HIGH);
+		return;
+	}
 	
 	if(led_last_counter0_val != tc_read_cv(TC1, 2))
 	{		
@@ -443,8 +470,6 @@ void init_module_peripherals_bp(void)
 	
 	// MUX
 	pmc_enable_periph_clk(MUX_IN_PIO_ID);
-	ioport_set_pin_mode(MUX_IN_GPIO, MUX_IN_FLAGS);
-	ioport_disable_pin(MUX_IN_GPIO);
 	ioport_disable_pin(PIO_PB14_IDX);
 	pmc_enable_periph_clk(MUX_SEL_PIO_ID);
 	ioport_set_pin_dir(MUX_SEL_GPIO, IOPORT_DIR_OUTPUT);
@@ -540,39 +565,17 @@ void init_module_peripherals_bp(void)
 	NVIC_EnableIRQ((IRQn_Type)ID_TC2);
 	tc_enable_interrupt(TC0, 2, TC_IER_CPCS);	
 	
-	// Init frequency generator
-	current_gen_freq = 50000;
-	/* Configure PMC. */
-	pmc_enable_periph_clk(ID_TC7);
-	/* Configure TC for a TC_FREQ frequency and trigger on RC compare. */
-	tc_find_mck_divisor(current_gen_freq, ul_sysclk, &ul_div, &ul_tcclks, ul_sysclk);
-	tc_init(TC2, 1, ul_tcclks | TC_CMR_WAVSEL_UP_RC | TC_CMR_WAVE | TC_CMR_BCPB_CLEAR | TC_CMR_BCPC_SET | TC_CMR_EEVT_XC0);
-	tc_write_rb(TC2, 1, 2);
-	tc_write_rc(TC2, 1, (ul_sysclk / ul_div) / current_gen_freq);
-	/* Configure and enable interrupt on RC compare. */
-	tc_start(TC2, 1);
-	NVIC_DisableIRQ(TC7_IRQn);
-	NVIC_ClearPendingIRQ(TC7_IRQn);	
+	if (is_freq_gen_enabled == TRUE)
+	{
+		enable_freq_gen();
+	}
 }
 
 // Setup frequency
 void setup_freqgen_freq(uint32_t frequency)
 {
 	current_gen_freq = frequency;	
-	
-	// Init LED interrupt,
-	uint32_t ul_div;
-	uint32_t ul_tcclks;
-	/* Get system clock. */
-	uint32_t ul_sysclk = sysclk_get_cpu_hz();
-	tc_stop(TC2, 1);
-	/* Configure TC for a TC_FREQ frequency and trigger on RC compare. */
-	tc_find_mck_divisor(current_gen_freq, ul_sysclk, &ul_div, &ul_tcclks, ul_sysclk);
-	tc_init(TC2, 1, ul_tcclks | TC_CMR_WAVSEL_UP_RC | TC_CMR_WAVE | TC_CMR_BCPB_CLEAR | TC_CMR_BCPC_SET | TC_CMR_EEVT_XC0);
-	tc_write_rb(TC2, 1, 2);
-	tc_write_rc(TC2, 1, (ul_sysclk / ul_div) / current_gen_freq);
-	/* Configure and enable interrupt on RC compare. */
-	tc_start(TC2, 1);
+	enable_freq_gen();
 }
 
 // Get current frequency
@@ -593,3 +596,98 @@ void deinit_module_peripherals(void)
 	
 }
 
+uint16_t get_freqgen_enable(void)
+{
+	return is_freq_gen_enabled;
+}
+
+void disable_freq_gen(void)
+{
+	is_freq_gen_enabled = FALSE;
+	
+	ioport_set_pin_mode(MUX_IN_GPIO, IOPORT_MODE_MUX_A);
+	ioport_set_pin_dir(MUX_IN_GPIO, IOPORT_DIR_OUTPUT);
+	ioport_enable_pin(MUX_IN_GPIO);
+	ioport_set_pin_level(MUX_IN_GPIO, IOPORT_PIN_LEVEL_LOW);
+}
+
+void enable_freq_gen(void)
+{
+	// Init LED interrupt,
+	uint32_t ul_div;
+	uint32_t ul_tcclks;
+	/* Get system clock. */
+	uint32_t ul_sysclk = sysclk_get_cpu_hz();
+	
+	ioport_set_pin_mode(MUX_IN_GPIO, MUX_IN_FLAGS);
+	ioport_disable_pin(MUX_IN_GPIO);
+	
+	/* Configure PMC. */
+	pmc_enable_periph_clk(ID_TC7);
+	/* Configure TC for a TC_FREQ frequency and trigger on RC compare. */
+	tc_stop(TC2, 1);
+	tc_find_mck_divisor(current_gen_freq, ul_sysclk, &ul_div, &ul_tcclks, ul_sysclk);
+	tc_init(TC2, 1, ul_tcclks | TC_CMR_WAVSEL_UP_RC | TC_CMR_WAVE | TC_CMR_BCPB_CLEAR | TC_CMR_BCPC_SET | TC_CMR_EEVT_XC0);
+	tc_write_rb(TC2, 1, 2);
+	tc_write_rc(TC2, 1, (ul_sysclk / ul_div) / current_gen_freq);
+	/* Configure and enable interrupt on RC compare. */
+	tc_start(TC2, 1);
+	NVIC_DisableIRQ(TC7_IRQn);
+	NVIC_ClearPendingIRQ(TC7_IRQn);
+
+	is_freq_gen_enabled = TRUE;
+}
+
+void generate_pulse(void)
+{
+	ioport_set_pin_level(MUX_IN_GPIO, IOPORT_PIN_LEVEL_HIGH);
+	asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");
+	ioport_set_pin_level(MUX_IN_GPIO, IOPORT_PIN_LEVEL_LOW);	
+}
+
+void set_qma_out_mode(uint16_t mode)
+{
+	qma_out_mode = mode;
+	qma_out_state = 0;
+	
+	if (mode == MODE_IN)
+	{
+		set_out_to_ttl_in();
+	}
+	else if (mode == MODE_GEN)
+	{
+		set_out_to_uc();
+		enable_freq_gen();
+	}
+	else
+	{
+		set_out_to_uc();
+		disable_freq_gen();
+	}
+}
+
+uint16_t get_qma_out_mode(void)
+{
+	return qma_out_mode;
+}
+
+void set_qma_state(uint16_t state)
+{
+	if (qma_out_mode == MODE_STATE)
+	{
+		qma_out_state = state;
+		if (state == 0)
+		{
+			ioport_set_pin_level(MUX_IN_GPIO, IOPORT_PIN_LEVEL_LOW);
+		}
+		else
+		{
+			ioport_set_pin_level(MUX_IN_GPIO, IOPORT_PIN_LEVEL_HIGH);			
+		}
+	}
+}
+
+uint16_t get_qma_state(void)
+{
+	return qma_out_state;
+}

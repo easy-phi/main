@@ -13,12 +13,6 @@ class SCPI_Functions():
         self.threads = threads
         self.error_queue = error_queue
         self.debug_mode = False
-        
-        self.zmq_port = 5556                         ### to communicate with module for broadcast commands
-        self.context = zmq.Context()                 ### to communicate with module for broadcast commands
-        self.socket = self.context.socket(zmq.REP)   ### to communicate with module for broadcast commands
-        
-        
         self.command_list = {
             "*CLS"                       : "SetCore(arg)",
             "*ESE"                       : "SetCore(arg)",
@@ -44,8 +38,7 @@ class SCPI_Functions():
             "SYSTem:ERRor:NEXT?"         : "GetNextError(arg)",
             "SYSTem:ERRor:COUNt?"        : "GetErrorCnt(arg)",
             "SYSTem:VERSion?"            : "GetSystVers(arg)",
-            "SYSTem:NUMber:SLots?"       : "GetSystNumberOfSlots(arg)",
-            "BCAST:LEDs"                 : "BroadCastSetLeds(arg)"
+            "SYSTem:NUMber:SLots?"       : "GetSystNumberOfSlots(arg)"
         }
 
         for i in range(len(self.threads)):
@@ -112,21 +105,4 @@ class SCPI_Functions():
             logging.info("Debug mode if ON for slot: %d" % s )
 
     def Getslotdebugmode(self, s, arg): return str(self.threads[s].debug)
-
-    def BroadCastSetLeds(arg):
-        if (arg == "0"):
-            for i in range(len(self.threads)):
-                if self.threads[i].connected == 1:
-                    self.zmq_port = 5556 + i
-                    self.socket.connect("tcp://127.0.0.1:%s" % self.zmq_port) ###connect to localhost
-                    self.socket.send("CONFigure:LIGhts 0")
-                    self.socket.close()
-        else:    
-            for i in range(len(self.threads)):
-                if self.threads[i].connected == 1:
-                    self.zmq_port = 5556 + i
-                    self.socket.connect("tcp://127.0.0.1:%s" % self.zmq_port) ###connect to localhost
-                    self.socket.send("CONFigure:LIGhts 1")
-                    self.socket.close()
-        
-    
+            

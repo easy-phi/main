@@ -87,6 +87,7 @@ static const scpi_command_t scpi_commands[] =
 	{.pattern = "STATus:BUTtonstatus?", .callback = SCPI_ButtonStatus,},
 		
     {.pattern = "CONFigure:LED", .callback = SCPI_SetUserLed,},
+    {.pattern = "CONFigure:LIGhts", .callback = SCPI_SetLightsOnOff,},
     {.pattern = "CONFigure:POWer", .callback = SCPI_SetPower,},
     {.pattern = "CONFigure:EEPROM", .callback = SCPI_EEPROM_Write,},
 

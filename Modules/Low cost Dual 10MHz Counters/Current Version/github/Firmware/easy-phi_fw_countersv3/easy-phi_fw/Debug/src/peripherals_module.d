@@ -1,6 +1,6 @@
 src/peripherals_module.d src/peripherals_module.o: \
- ../src/peripherals_module.c ../src/peripherals_module.h ../src/asf.h \
- ../src/ASF/sam/boards/arduino_due_x/led.h \
+ ../src/peripherals_module.c ../src/peripherals_template.h \
+ ../src/defines.h ../src/asf.h ../src/ASF/sam/boards/arduino_due_x/led.h \
  ../src/ASF/common/services/gpio/gpio.h ../src/ASF/common/utils/parts.h \
  ../src/ASF/common/services/gpio/sam_gpio/sam_gpio.h \
  ../src/ASF/sam/utils/compiler.h \
@@ -153,8 +153,9 @@ src/peripherals_module.d src/peripherals_module.o: \
  ../src/ASF/sam/drivers/usart/usart.h \
  ../src/ASF/common/services/usb/class/cdc/usb_protocol_cdc.h \
  ../src/ASF/common/services/usb/class/cdc/device/udi_cdc.h \
- ../src/config/conf_usb.h ../src/serial_console.h ../src/cdc_comms.h \
- ../src/asf.h ../src/ASF/common/services/usb/class/msc/device/udi_msc.h \
+ ../src/config/conf_usb.h ../src/serial_console.h ../src/asf.h \
+ ../src/cdc_comms.h \
+ ../src/ASF/common/services/usb/class/msc/device/udi_msc.h \
  ../src/ASF/common/services/usb/usb_protocol.h \
  ../src/ASF/common/services/usb/usb_atmel.h \
  ../src/ASF/common/services/usb/class/msc/usb_protocol_msc.h \
@@ -162,13 +163,15 @@ src/peripherals_module.d src/peripherals_module.o: \
  ../src/ASF/common/services/usb/udc/udc_desc.h \
  ../src/ASF/common/services/usb/udc/udi.h \
  ../src/ASF/common/services/usb/udc/udc_desc.h \
- ../src/ASF/common/services/usb/udc/udi.h ../src/main.h ../src/defines.h \
+ ../src/ASF/common/services/usb/udc/udi.h ../src/main.h \
  ../src/ASF/common/services/usb/udc/udc.h \
  ../src/ASF/common/services/usb/udc/udd.h \
  ../src/ASF/sam/drivers/wdt/wdt.h \
- ../src/ASF/sam/drivers/pio/pio_handler.h
+ ../src/ASF/sam/drivers/pio/pio_handler.h ../src/peripherals_module.h
 
-../src/peripherals_module.h:
+../src/peripherals_template.h:
+
+../src/defines.h:
 
 ../src/asf.h:
 
@@ -498,9 +501,9 @@ c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.7.3.1029\arm-g
 
 ../src/serial_console.h:
 
-../src/cdc_comms.h:
-
 ../src/asf.h:
+
+../src/cdc_comms.h:
 
 ../src/ASF/common/services/usb/class/msc/device/udi_msc.h:
 
@@ -522,8 +525,6 @@ c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.7.3.1029\arm-g
 
 ../src/main.h:
 
-../src/defines.h:
-
 ../src/ASF/common/services/usb/udc/udc.h:
 
 ../src/ASF/common/services/usb/udc/udd.h:
@@ -531,3 +532,5 @@ c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.7.3.1029\arm-g
 ../src/ASF/sam/drivers/wdt/wdt.h:
 
 ../src/ASF/sam/drivers/pio/pio_handler.h:
+
+../src/peripherals_module.h:

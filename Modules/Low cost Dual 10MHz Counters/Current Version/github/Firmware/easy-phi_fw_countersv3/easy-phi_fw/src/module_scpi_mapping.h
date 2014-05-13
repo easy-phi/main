@@ -28,6 +28,14 @@
 								{.pattern = "CONFigure:TTLinputenable", .callback = SCPI_TTLInput,},\
 								{.pattern = "CONFigure:FREQuence?", .callback = SCPI_GetFreq,},\
 								{.pattern = "CONFigure:FREQuence", .callback = SCPI_SetFreq,},\
+								{.pattern = "CONFigure:GENEnable?", .callback = SCPI_GetFreqEnable,},\
+								{.pattern = "CONFigure:GENEnable", .callback = SCPI_SetFreqEnable,},\
+								{.pattern = "CONFigure:GENPulse", .callback = SCPI_GenPulse,},\
+								{.pattern = "CONFigure:QMAoutput?", .callback = SCPI_GetQMAOutput,},\
+								{.pattern = "CONFigure:QMAoutput", .callback = SCPI_SetQMAOutput,},\
+								{.pattern = "CONFigure:QMAState?", .callback = SCPI_GetQMState,},\
+								{.pattern = "CONFigure:QMAState", .callback = SCPI_SetQMState,},\							
+															
 								/* 10/12/2013 SPECS From Raphael 
 								* - CONFigure:COUnter:A:ENable boolean (Enable counter A)
 								* - CONFigure:COUnter:B:ENable boolean (Enable counter B)

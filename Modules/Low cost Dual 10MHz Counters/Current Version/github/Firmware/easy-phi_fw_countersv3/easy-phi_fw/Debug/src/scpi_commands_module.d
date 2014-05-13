@@ -174,6 +174,8 @@ src/scpi_commands_module.d src/scpi_commands_module.o: \
  ../src/ASF/common/services/usb/udc/udd.h \
  ../src/ASF/sam/drivers/wdt/wdt.h \
  ../src/ASF/sam/drivers/pio/pio_handler.h ../src/peripherals_module.h \
+ c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.7.3.1029\arm-gnu-toolchain\bin\../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/include/string.h \
+ c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.7.3.1029\arm-gnu-toolchain\bin\../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/include/sys/string.h \
  c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.7.3.1029\arm-gnu-toolchain\bin\../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/include/math.h \
  ../src/main.h
 
@@ -562,6 +564,10 @@ c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.7.3.1029\arm-g
 ../src/ASF/sam/drivers/pio/pio_handler.h:
 
 ../src/peripherals_module.h:
+
+c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.7.3.1029\arm-gnu-toolchain\bin\../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/include/string.h:
+
+c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.7.3.1029\arm-gnu-toolchain\bin\../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/include/sys/string.h:
 
 c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.7.3.1029\arm-gnu-toolchain\bin\../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/include/math.h:
 

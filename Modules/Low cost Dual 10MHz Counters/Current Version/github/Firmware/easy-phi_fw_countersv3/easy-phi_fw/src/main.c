@@ -50,6 +50,9 @@
  * - CONFigure:COUnter:SETIntegrationTime	(Set integration time)
  * - CONFigure:COUnter:SETTTLInput			(Set QMA out to the TTL input)
  * - CONFigure:COUnter:SETFreqGen			(Set QMA out to the frequency generator)
+ *
+ * Changelog
+ * - 07/05/2014: adding a freqgen enable and a generate pulse command
 *************************************************************************/
 #include <asf.h>
 #include "peripherals_template.h"

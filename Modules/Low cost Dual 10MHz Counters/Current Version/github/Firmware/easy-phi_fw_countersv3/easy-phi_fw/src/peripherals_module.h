@@ -12,6 +12,9 @@
 #include <asf.h>
 #include "defines.h"
 
+enum mode_type_t{MODE_IN, MODE_GEN, MODE_STATE};
+
+void switch_on_off_lights(uint16_t bool_lights);
 void setup_freqgen_freq(uint32_t frequency);
 void init_module_peripherals_bp(void);
 void init_module_peripherals_ap(void);
@@ -33,5 +36,13 @@ uint16_t get_countera_en_status(void);
 uint16_t get_counterb_en_status(void);
 uint16_t is_qma_out_set_to_ttl(void);
 uint32_t get_freqgen_freq(void);
+uint16_t get_freqgen_enable(void);
+void disable_freq_gen(void);
+void enable_freq_gen(void);
+void generate_pulse(void);
+void set_qma_out_mode(uint16_t mode);
+uint16_t get_qma_out_mode(void);
+void set_qma_state(uint16_t state);
+uint16_t get_qma_state(void);
 
 #endif /* PERIPHERALS_MODULE_H_ */
