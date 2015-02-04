@@ -111,9 +111,9 @@ class ModuleThread(threading.Thread):
                         if (char != chr(10)):  text = text + char
                         loop_cnt = loop_cnt + 1
                         if (loop_cnt == 1000):
-                            self.error_queue.put("Error: Timout on read, port: %d" % (self.number + 1))
-
-                            self.socket.send("Error: Timout on read")
+                            self.error_queue.put("Error: Timeout on read, port: %d with message: %s" % ((self.number + 1), msg ))
+                            logging.warning("Error: Timeout on read, port: %d with message: %s" % ((self.number + 1), msg ))
+                            self.socket.send("Error: Timeout on read")
                             break
                         if (self.connected == 0): self.disconnect()
                             
